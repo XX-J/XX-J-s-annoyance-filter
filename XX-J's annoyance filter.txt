@@ -84,6 +84,7 @@ mail.google.com##div:has(> div > div > a:contains(Освободите мест�
 !
 ixbt.com#%#//scriptlet("prevent-addEventListener", "mouseout", "undefined")
 !
+kimovil.com#$#.item-options { white-space: unset!important; margin: auto!important; }
 kotofoto.ru##.bl-friday-banner
 !
 liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu")
