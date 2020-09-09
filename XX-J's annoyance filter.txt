@@ -1,8 +1,9 @@
-﻿!
-bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
+!   https://raw.githubusercontent.com/XX-J/XX-J-s-annoyance-filter/master/XX-J's%20annoyance%20filter.txt
+!
+bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 ! dostfilms.*,kimovil.com#$#:matches-css(user-select: none) { user-select: text!important; }
 habr.com,kotofoto.ru,lrepacks.ru,otvet.mail.ru,msi.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top { position: initial!important; }
-bash.im,msi.com,onlinetrade.ru,playground.ru#$#body, .navbar-page, .page-main-column { cursor: auto!important; }
+bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-default,.k-values, .navbar-page,  .page-main-column { cursor: auto!important; }
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
 !
 !
@@ -25,7 +26,6 @@ adguard.com###navigation
 ||alicdn.com/ae-*-ui/??hashmap*.js
 ||alicdn.com/g/alilog/
 ||alicdn.com/retcode/cloud-sdk/bl.js
-||assets.alicdn.com/g/ae-fe/g-loader/index.js
 ||acs.aliexpress.*/mtop.aliexpress.lighthouse.config.get/
 !   В поиске.
 ||cobra.aliexpress.*/p4pforlist.html
@@ -50,7 +50,7 @@ aliexpress.*#$#.left-affix { top: 0!important; min-height: unset!important; max-
 aliexpress.*#$#.left-menu-container { max-height: unset!important; }
 aliexpress.*#$#.gps-recommend-dialog-wrap, .p-info { width: auto!important; height: auto!important; }
 feedback.aliexpress.com#%#AG_onLoad(() => setTimeout(() => document.querySelector('#cb-translate[checked]').click(), 2500));
-aliexpress.*#$#.simple-pager { display: block!important; }
+feedback.aliexpress.com#$#.simple-pager { display: block!important; }
 aliexpress.*#$#.ui-window-content { max-height: none!important; }
 !
 allcables.ru##.wrapper:has(> .gallery-holder)
@@ -84,6 +84,7 @@ mail.google.com##div:has(> div > div > a:contains(Освободите мест�
 !
 ixbt.com#%#//scriptlet("prevent-addEventListener", "mouseout", "undefined")
 !
+kimovil.com#$#[id^="header-"] { position: absolute!important; }
 kimovil.com#$#.item-options { white-space: unset!important; margin: auto!important; }
 kotofoto.ru##.bl-friday-banner
 !
@@ -94,7 +95,7 @@ luxfilm.net,kino-serialy.net#%#//scriptlet("abort-current-inline-script", "docum
 luxfilm.net,kino-serialy.net#$#.wrap { padding-top: 0px!important; }
 luxfilm.net,kino-serialy.net##.fsubtitle, .ffour + table
 !
-e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> [class^="sidebar-"]) + div ~ div, .letter__footer, input[tabindex] + div:contains(Письмо отправлено)
+e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> [class^="sidebar-"]) + div ~ div, .spec-project-letter + div, .letter__footer, input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru#$#td:has(> .portal-menu__group) { white-space: unset!important; }
 e.mail.ru#$#div:has(> [class^="sidebar-"]) + div { margin-right: auto!important; }
 otvet.mail.ru##.fixedsticky-dummy, .nt--position
@@ -118,6 +119,10 @@ nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px!important;
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset!important; }
+||ozone.ru/graphics/js/initPerfMetrics*.js
+||ozone.ru/_nuxt/uw-desktop-sku-brand-shelf.*.js
+||ozone.ru/_nuxt/shelf-all-adv-search.*.js
+ozon.ru##[brandshelfplacement], [data-widget="webStickyProducts"],[title="Спонсорские товары"]
 !
 pikabu.ru#$#.header { position: absolute!important; }
 pravdu.ru##aside > .widget:first-child
@@ -129,6 +134,8 @@ ria.ru##.header__position, .article__quote-bg
 rutracker.org#%#//scriptlet("prevent-addEventListener", "mousedown")
 !
 online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock
+online.sberbank.ru##div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
+online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { margin: auto!important; }
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
 !
@@ -158,6 +165,7 @@ money.yandex.ru#$#[class*="StyledMenuContainer"] { overflow: auto!important; }
 translate.yandex.ru###collectionsPromo
 zen.yandex.*###article__right, .article__content:has(#article__subscribe), .feed__item-wrap:not(:has(> div > .card-wrapper)), .feed__item-wrap:has(._is-promo)
 !
+youtube.com##.ytp-cards-button
 youtube.com#$##masthead-container, app-header { position: absolute!important; margin: 0!important; left: 0!important; transform: none!important; }
 !
 ! Экспериментальные:
