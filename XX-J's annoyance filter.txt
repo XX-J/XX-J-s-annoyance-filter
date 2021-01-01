@@ -7,11 +7,18 @@ bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-defaul
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
 !
 !
-2ip.*#$#body { min-width: 1000px!important; max-width: 60%!important; margin: auto!important; }
-4pda.ru##[class]:has(> [class] > .holder-no-hidden) > [id][class][style]:nth-of-type(1):not(.device-page)
-4pda.ru#$#[class]:has(> [class] > .holder-no-hidden) > [id][class][style]:has(.container) { background-image: none!important; }
-4pda.ru##[class]:has(> .container) + [class] > :has(lspw)
-4pda.ru##[class]:has(> .container) + [class] > :has([id^="pa_"])
+4pda.ru##[class]:has(> [class] > .holder-no-hidden) > div + [id][class][style]
+4pda.ru#$#[class]:has(> [class] > .holder-no-hidden) > [id][class][style] { background-image: none!important; }
+4pda.ru##article.post:matches-css(height: 125px):upward(3)
+4pda.ru##[class]:has(> article) + [class] > :has(lspw)
+4pda.ru##[class]:has(> article) + [class] > :has([id^="pa_"])
+4pda.ru##[class]:has(> article) + [class] > div:last-child
+4pda.ru##.count-visitor
+4pda.ru#%#//scriptlet('prevent-addEventListener', '/DOM/')
+4pda.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
+4pda.ru#%#//scriptlet('prevent-addEventListener', '/touch/')
+4pda.ru#%#//scriptlet('prevent-addEventListener', '/mouse/')
+4pda.ru#%#//scriptlet('prevent-addEventListener', 'load', 'initLytebox')
 !
 adguard.com###navigation
 !
@@ -31,12 +38,10 @@ adguard.com###navigation
 ||cobra.aliexpress.*/p4pforlist.html
 ||alicdn.com/ae-search-ui/standalone/index.*.js
 !   На странице товара.
-||alicdn.com/ae-feedback-ui/display/productEvaluation/??index.*.js
 ||cobra.aliexpress.*/b2bad.html
 ||cdp.aliexpress.*/60.htm
 ||cdp.aliexpress.*/74.htm
 ||moduleanalysis.aliexpress.com/calc.htm
-||feedback.aliexpress.com/display/DiggShowAjaxService.htm
 ||aliexpress.*/check.gif
 !   В списке заказов.
 !
@@ -44,7 +49,7 @@ alibaba.com##[data-tag="gateway-wrapper"]:contains(Please update your Firefox)
 aliexpress.*##.ui-banner-slider-wrap, .list-item:has(.item-ad-tag),.ams-region, .store-header-bg,.overview-rating-balloon,.gps-recommend-dialog-wrap > :nth-child(n+2), .im-contact-tips
 !   Не даёт убирать прокрутку.
 !aliexpress.*#$#body { overflow-y: auto!important; padding-right: unset!important; }
-aliexpress.*#$?#.search-header-wrap { position: initial!important; }
+aliexpress.*#%#//scriptlet('prevent-addEventListener', 'scroll', '_headerScrollHandler')
 aliexpress.*#$##search-key { padding: 0!important; font-size: initial!important; }
 aliexpress.*#$#.left-affix { top: 0!important; min-height: unset!important; max-height: 100vh!important; }
 aliexpress.*#$#.left-menu-container { max-height: unset!important; }
@@ -54,10 +59,12 @@ aliexpress.*#$#.ui-window-content { max-height: none!important; }
 !
 allcables.ru##.wrapper:has(> .gallery-holder)
 allcables.ru##w-div
+avito.ru##.item-view-shop-header, .js-shop-showcase
+avito.ru#$#body, .b-shop { background-image: none!important; margin: 0!important; }
 !
 backit.me##.top-line-promo, .header:has(> .promotion)
 backit.me#$#.top-padding { padding-top: 80px!important; }
-bash.im#%#//scriptlet("prevent-addEventListener", "scroll")
+bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
 !
 citilink.ru##.banner_tr, tbody.between-card-banners_gtm-js
 complaneta.com#%#//scriptlet("abort-on-property-write", "snow_active")
@@ -68,6 +75,7 @@ complaneta.com#$#.pc_hd_slog2 { background-color: #f8f8ff!important; }
 ||complaneta.com/data/planetacomp/img/new_year.png
 !
 dialogdv.ru##.bxsliderleft_bl
+club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
 dostfilms.*#$#body, header, .carousel { background-image: none!important; margin: auto!important; }
 dostfilms.*##.zagolovokdp, .block-vazhno-pod-playerom
 !
@@ -77,6 +85,7 @@ epn.bz##.main__warning
 gearbest.com##.js_dropBullet:has(.icon-iphone)
 github.com##.gh-header-sticky, .gh-header-shadow
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
+||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
 ||translate.google.com/translate_a/element.js$third-party
 @@||gosuslugi.ru^$elemhide
@@ -96,10 +105,8 @@ luxfilm.net,kino-serialy.net#%#//scriptlet("abort-current-inline-script", "docum
 luxfilm.net,kino-serialy.net#$#.wrap { padding-top: 0px!important; }
 luxfilm.net,kino-serialy.net##.fsubtitle, .ffour + table
 !
-e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), .spec-project-letter + div,.renovator, .letter__footer, div:has(> [class^="sidebar-"]) + div ~ div, input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru#$#td:has(> .portal-menu__group) { white-space: unset!important; }
+e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru#$#div:has(> [class^="sidebar-"]) + div { margin-right: auto!important; }
-e.mail.ru#%#//scriptlet('remove-class', 'b-viewer_advert-line')
 otvet.mail.ru##.fixedsticky-dummy, .nt--position
 !
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
@@ -133,11 +140,40 @@ price.ru###kontainer-top
 repack.me#$#.cnt { margin-top: 0px!important; }
 ria.ru##.header__position, .article__quote-bg
 ||rmbt.ru/style_images/*/sn.gif
-rutracker.org#%#//scriptlet("prevent-addEventListener", "mousedown")
 !
-online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock
+rutracker.org#%#//scriptlet('remove-class', 'p-ext-link')
+!   Компактный интерфейс:
+rutracker.org#$##main-nav { min-width: unset!important; float: right!important; }
+rutracker.org#$##logo { min-height: unset!important; float: left!important; }
+rutracker.org#$##logo > table { height: unset!important; }
+rutracker.org#$#.site-logo { width: unset!important; height: 30px!important; }
+rutracker.org#$#.topmenu { float: right!important; }
+!
+rutracker.org#$##page_content { padding-top: unset!important; }
+rutracker.org##.maintitle
+rutracker.org#$#.maintitle ~ p { margin: 0 6px 4px!important; float: right!important; }
+rutracker.org###tr-form .thHead
+!
+rutracker.org#$##tr-submit-btn:upward(1) { padding: 0!important; }
+rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!important; }
+!
+sberbank.ru##[data-pid^="CookieWarning-"]:remove()
+!   Страница авторизации:
+||online.sberbank.ru/*/antifraud*.js
+||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
+online.sberbank.ru##a:has(> #smart-banner-app):remove()
 online.sberbank.ru##div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
 online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { margin: auto!important; }
+online.sberbank.ru#$#span:contains(использует cookie):upward(5) { remove: true; }
+!   Новый дизайн:
+||online.sberbank.ru/*GreetingScreen.js
+||online.sberbank.ru/PL/webpage.provider.bootstrap/*/background.js
+||counter.sberbank.ru/static/tag/tag.js
+!online.sberbank.ru##[type="cards"] + hr,li:has(> div > [href="/cards/credit"])
+!   Старый дизайн:
+||online.sberbank.ru/PhizIC-res/*/Thermometer.js
+||online.sberbank.ru/PhizIC-res/*/credit.detail.scroller.js
+online.sberbank.ru###design30Banner:remove(), div:has(> .bunnerArea):remove(),.ghostWrapper:remove(), #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
 !
@@ -161,14 +197,14 @@ yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.y
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
 yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
-market.yandex.*##.main > noindex,[data-apiary-widget-name="@MarketNode/VendorProductLinePromo"], [data-apiary-widget-name="@MarketNode/JournalEntrypointsMboScrollBox"], [data-zone-name="promoSection"],[data-apiary-widget-name="@MarketNode/FooterSubsriptions"]
+market.yandex.*##.main > noindex,[data-apiary-widget-name="@MarketNode/VendorProductLinePromo"], [data-apiary-widget-name="@MarketNode/JournalEntrypointsMboScrollBox"], [data-zone-name="promoSection"],[data-apiary-widget-name="@MarketNode/FooterSubsriptions"], body > div:last-child:not(:has([data-auto="gallery-modal"]))
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
-||money.yandex.ru/offerwall/
-money.yandex.ru##.balance-widget, .carousel_type_widgets
-money.yandex.ru#$#[class*="StyledMenuContainer"] { overflow: auto!important; }
 translate.yandex.ru###collectionsPromo
 zen.yandex.*###article__right, .article__content:has(#article__subscribe), .feed__item-wrap:not(:has(> div > .card-wrapper)), .feed__item-wrap:has(._is-promo)
 !
+||yoomoney.ru/offerwall/
+yoomoney.ru#$#[class*="StyledMenuContainer"] { overflow: auto!important; }
+yoomoney.ru##.balance-widget, .carousel_type_widgets, .money-app-promo2
 youtube.com##.ytp-cards-button
 youtube.com#$##masthead-container, app-header { position: absolute!important; margin: 0!important; left: 0!important; transform: none!important; }
 !
