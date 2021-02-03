@@ -94,6 +94,9 @@ ixbt.com#%#//scriptlet("prevent-addEventListener", "mouseout", "undefined")
 !
 kimovil.com#$#[id^="header-"] { position: absolute!important; }
 kimovil.com#$#.item-options { white-space: unset!important; margin: auto!important; }
+kino-serialy.net#%#//scriptlet("abort-current-inline-script", "document.ondragstart")
+kino-serialy.net#$#.wrap { padding-top: 0px!important; }
+kino-serialy.net##.fsubtitle, .ffour + table
 kinopoisk.ru##[class^="styles_branding__"]
 kinopoisk.ru#$#[class*="styles_navigation__"] { margin: unset!important; }
 kotofoto.ru##.bl-friday-banner
@@ -101,9 +104,6 @@ kotofoto.ru##.bl-friday-banner
 liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu")
 lrepacks.ru##.b-page_newyear
 lrepacks.ru#$#.logo { padding: 0px!important; }
-luxfilm.net,kino-serialy.net#%#//scriptlet("abort-current-inline-script", "document.ondragstart")
-luxfilm.net,kino-serialy.net#$#.wrap { padding-top: 0px!important; }
-luxfilm.net,kino-serialy.net##.fsubtitle, .ffour + table
 !
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru#$#div:has(> [class^="sidebar-"]) + div { margin-right: auto!important; }
@@ -150,9 +150,9 @@ rutracker.org#$#.site-logo { width: unset!important; height: 30px!important; }
 rutracker.org#$#.topmenu { float: right!important; }
 !
 rutracker.org#$##page_content { padding-top: unset!important; }
-rutracker.org##.maintitle
-rutracker.org#$#.maintitle ~ p { margin: 0 6px 4px!important; float: right!important; }
-rutracker.org###tr-form .thHead
+rutracker.org##.maintitle:contains(Трекер), #tr-form .thHead, .catTitle, tbody.hide-for-print
+rutracker.org#$#.maintitle { text-align: center!important; }
+rutracker.org#$#.maintitle ~ [style] { margin: 0 6px 4px!important; float: right!important; }
 !
 rutracker.org#$##tr-submit-btn:upward(1) { padding: 0!important; }
 rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!important; }
@@ -176,6 +176,8 @@ online.sberbank.ru#$#span:contains(использует cookie):upward(5) { remo
 online.sberbank.ru###design30Banner:remove(), div:has(> .bunnerArea):remove(),.ghostWrapper:remove(), #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
+tele2.ru##[data-cartridge-type="PersonalizedTizer"], #downloadMobileAppOfferDialog:remove()
+tele2.ru#%#//scriptlet('remove-attr', 'class|data-react-helmet', 'html')
 !
 !   Реклама на главной:
 yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has(div:matches-css(height: 90px)), .desk-notif-card_animated_yes
@@ -212,4 +214,5 @@ youtube.com#$##masthead-container, app-header { position: absolute!important; ma
 !
 stun:stun.$domain=streamguard.cc,third-party
 wss://backend.irsdn.net/$domain=streamguard.cc,third-party
+!yandex.ru#%#//scriptlet('log-addEventListener')
 !
