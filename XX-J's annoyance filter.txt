@@ -106,7 +106,16 @@ lrepacks.ru##.b-page_newyear
 lrepacks.ru#$#.logo { padding: 0px!important; }
 !
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru#$#div:has(> [class^="sidebar-"]) + div { margin-right: auto!important; }
+!   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
+e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; }
+!   Убрать 'сужатель' письма:
+e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset!important; }
+e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
+e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset!important; }
+!   Поменять расположение панелей:
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right!important; }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width)); }
 otvet.mail.ru##.fixedsticky-dummy, .nt--position
 !
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
