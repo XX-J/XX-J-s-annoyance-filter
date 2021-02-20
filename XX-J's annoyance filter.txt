@@ -2,7 +2,7 @@
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 ! dostfilms.*,kimovil.com#$#:matches-css(user-select: none) { user-select: text!important; }
-habr.com,kotofoto.ru,lrepacks.ru,otvet.mail.ru,msi.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top { position: initial!important; }
+habr.com,kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top { position: initial!important; }
 bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-default,.k-values, .navbar-page,  .page-main-column { cursor: auto!important; }
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
 !
@@ -102,8 +102,8 @@ kinopoisk.ru#$#[class*="styles_navigation__"] { margin: unset!important; }
 kotofoto.ru##.bl-friday-banner
 !
 liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu")
-lrepacks.ru##.b-page_newyear
-lrepacks.ru#$#.logo { padding: 0px!important; }
+lrepacks.*##.b-page_newyear
+lrepacks.*#$#.logo { padding: 0px!important; }
 !
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
@@ -150,10 +150,10 @@ repack.me#$#.cnt { margin-top: 0px!important; }
 ria.ru##.header__position, .article__quote-bg
 ||rmbt.ru/style_images/*/sn.gif
 !   Компактный интерфейс:
-forum.ru-board.com#%#//scriptlet('remove-attr', 'width|align', 'body > table[cellspacing="0"]:nth-of-type(-n+2)')
-forum.ru-board.com#$#body > table[cellspacing="0"]:nth-of-type(1) { float: left!important; }
-forum.ru-board.com##body > table[cellspacing="0"]:nth-of-type(1) + br
-forum.ru-board.com#$#body > table[cellspacing="0"]:nth-of-type(2) { float: right!important; }
+forum.ru-board.com#%#//scriptlet('remove-attr', 'width|align', 'body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(-n+2)')
+forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(1) { float: left!important; }
+forum.ru-board.com##body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(1) + br
+forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(2) { float: right!important; }
 !
 rutracker.org#%#//scriptlet('remove-class', 'p-ext-link')
 !   Компактный интерфейс:
@@ -171,14 +171,11 @@ rutracker.org#$#.maintitle ~ [style] { margin: 0 6px 4px!important; float: right
 rutracker.org#$##tr-submit-btn:upward(1) { padding: 0!important; }
 rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!important; }
 !
-sberbank.ru##[data-pid^="CookieWarning-"]:remove()
 !   Страница авторизации:
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
-online.sberbank.ru##a:has(> #smart-banner-app):remove()
-online.sberbank.ru##div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
+online.sberbank.ru##a:has(> #smart-banner-app), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
 online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { margin: auto!important; }
-online.sberbank.ru#$#span:contains(использует cookie):upward(5) { remove: true; }
 !   Новый дизайн:
 ||online.sberbank.ru/*GreetingScreen.js
 ||online.sberbank.ru/PL/webpage.provider.bootstrap/*/background.js
@@ -187,7 +184,7 @@ online.sberbank.ru#$#span:contains(использует cookie):upward(5) { remo
 !   Старый дизайн:
 ||online.sberbank.ru/PhizIC-res/*/Thermometer.js
 ||online.sberbank.ru/PhizIC-res/*/credit.detail.scroller.js
-online.sberbank.ru###design30Banner:remove(), div:has(> .bunnerArea):remove(),.ghostWrapper:remove(), #offerBlock:remove()
+online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
 tele2.ru##[data-cartridge-type="PersonalizedTizer"], #downloadMobileAppOfferDialog:remove()
