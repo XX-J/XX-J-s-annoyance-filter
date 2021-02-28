@@ -103,7 +103,7 @@ kotofoto.ru##.bl-friday-banner
 !
 liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu")
 lrepacks.*##.b-page_newyear
-lrepacks.*#$#.logo { padding: 0px!important; }
+lrepacks.*#$#.logo { padding: 0!important; }
 !
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
@@ -112,6 +112,9 @@ e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!importa
 e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset!important; }
 e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
 e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset!important; }
+!   Убираем лишние припуски и полосы прокрутки:
+e.mail.ru#$#.letter__body { overflow: unset!important; padding: 0!important; }
+e.mail.ru#$#.letter-body__body { overflow: unset!important; }
 !   Поменять расположение панелей:
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
@@ -180,7 +183,7 @@ online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { marg
 ||online.sberbank.ru/*GreetingScreen.js
 ||online.sberbank.ru/PL/webpage.provider.bootstrap/*/background.js
 ||counter.sberbank.ru/static/tag/tag.js
-!online.sberbank.ru##[type="cards"] + hr,li:has(> div > [href="/cards/credit"])
+online.sberbank.ru##[type="cards"] + hr,[href$="/cards/credit"]:upward(li)
 !   Старый дизайн:
 ||online.sberbank.ru/PhizIC-res/*/Thermometer.js
 ||online.sberbank.ru/PhizIC-res/*/credit.detail.scroller.js
@@ -191,29 +194,45 @@ tele2.ru##[data-cartridge-type="PersonalizedTizer"], #downloadMobileAppOfferDial
 tele2.ru#%#//scriptlet('remove-attr', 'class|data-react-helmet', 'html')
 !
 !   Реклама на главной:
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has(div:matches-css(height: 90px)), .desk-notif-card_animated_yes
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#div:has(> .home-arrow) { background-image: none!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has(iframe)
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has([href^="https://yastatic.net/www/"])
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has([class*="direct-close"])
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has(div:matches-css(height: 90px))
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#div:has(> .home-arrow) { background-image: none!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*##[id^="zen-row-"]:has([data-blockname="T3_D2"]), [id^="zen-row-"] > .feed__item-wrap:has(> div > .card-wrapper_anny)
 !   Открепить шапку:
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-header__wrapper, .navigation, .news-navigation-menu__wrapper, .header__container, .ui-lib-header-container2__wrapper { position: initial!important; }
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-navigation { position: relative!important; top: unset!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-header__wrapper, .navigation, .news-navigation-menu__wrapper, .news-navigation-menu, .header__container, .ui-lib-header-container2__wrapper { position: initial!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-navigation { position: relative!important; top: unset!important; }
 !   Курсор в поиске и в почте:
-yandex.*,~disk.yandex.*,~local.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
+yandex.*,~disk.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
 !   "Сделать поиском по умолчанию":
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header
 !   Яндекс.Новости:
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.serp-header, div:has(> div > [role="main"][aria-live]),.b-page__inner { margin: auto!important; }
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##div:contains(Реклама начнется), div:has(> .story) > [id^="uniq"], div:has(> .widget_for_rubrics-top) > [class$="-wrap"], div:has(> div > div > div > div > div > .widget_for_rubrics-top) + div,.page-content__proffit-holder
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 > [data-log-id], .news-feed > div > .mg-grid__col:has(> [data-log-id]), .news-navigation-menu__wrapper + div > div > div:last-child
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div + div
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-carousel__scrollable { overflow: auto!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_0 { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
 !   Яндекс.Картинки:
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page__advanced-search { position: unset!important; width: unset!important; display: inline-block!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
 !   Яндекс.Спорт:
-yandex.*,~disk.yandex.*,~local.yandex.*,~mail.yandex.*,~market.yandex.*,~money.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^="sport-"]:has(> [class^="turbo-"]), .mg-page-layout-item:has(> :not([style]) > [class^="sport-"] > [class^="turbo-"]), br.turbo-br, .mg-page-layout-item:has(> [class^="sport-"] > [class^="turbo-"])
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class$="_sport"] [class$="_type_media-v"]:has(> [class^="turbo-"]), .mg-page-layout-item > div > [class*="_type_media-h"] > [class^="turbo-"], br.turbo-br, .mg-page-layout-item:has(> .mg-page-layout-item__card > [class^="turbo-"]), .mg-page-layout-item:has(> span > .mg-page-layout-item__card > [class^="turbo-"])
+!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^="sport-"]:has(> [class^="turbo-"]), .mg-page-layout-item:has(> :not([style]) > [class^="sport-"] > [class^="turbo-"]), br.turbo-br, .mg-page-layout-item:has(> [class^="sport-"] > [class^="turbo-"])
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.mg-page-layout-item:has(> .mg-page-layout__item-wrapper > .sport-event-layout-right-column > .sport-event-layout-right-column__item > [class*="_type_media-v"] > [class^="turbo-"]), .sport-event-layout-left-column__item:has(> div > [class^="turbo-"])
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-page-layout-item:has(> .mg-page-layout__item-wrapper > .sport-event-layout-left-column > .sport-event-layout-left-column__item > .news-story) { width: calc(100% * 2/3 - 20px)!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-page-layout-item:has(> .mg-page-layout__item-wrapper > .sport-event-layout-middle-column > .sport-event-layout-middle-column__item > .card-vertical-list) { width: calc(100% / 3)!important; height: unset!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-page-layout-item > .mg-page-layout__item-wrapper > .sport-event-layout-left-column > .sport-event-layout-left-column__item > .news-story, .mg-page-layout-item > .mg-page-layout__item-wrapper > .sport-event-layout-middle-column > .sport-event-layout-middle-column__item > .card-vertical-list { max-width: unset!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-page-layout-heading:upward(2) { width: 90%!important; }
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
 yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
 market.yandex.*##.main > noindex,[data-apiary-widget-name="@MarketNode/VendorProductLinePromo"], [data-apiary-widget-name="@MarketNode/JournalEntrypointsMboScrollBox"], [data-zone-name="promoSection"],[data-apiary-widget-name="@MarketNode/FooterSubsriptions"], body > div:last-child:not(:has([data-auto="gallery-modal"]))
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
 translate.yandex.ru###collectionsPromo
-zen.yandex.*###article__right, .article__content:has(#article__subscribe), .feed__item-wrap:not(:has(> div > .card-wrapper)), .feed__item-wrap:has(._is-promo)
+zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
 !
 ||yoomoney.ru/offerwall/
 yoomoney.ru#$#[class*="StyledMenuContainer"] { overflow: auto!important; }
@@ -225,5 +244,3 @@ youtube.com#$##masthead-container, app-header { position: absolute!important; ma
 !
 stun:stun.$domain=streamguard.cc,third-party
 wss://backend.irsdn.net/$domain=streamguard.cc,third-party
-!yandex.ru#%#//scriptlet('log-addEventListener')
-!
