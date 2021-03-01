@@ -219,6 +219,8 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !   Яндекс.Картинки:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page__advanced-search { position: unset!important; width: unset!important; display: inline-block!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
+!   Яндекс.Карты
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##._mobile .interstitial-view
 !   Яндекс.Спорт:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class$="_sport"] [class$="_type_media-v"]:has(> [class^="turbo-"]), .mg-page-layout-item > div > [class*="_type_media-h"] > [class^="turbo-"], br.turbo-br, .mg-page-layout-item:has(> .mg-page-layout-item__card > [class^="turbo-"]), .mg-page-layout-item:has(> span > .mg-page-layout-item__card > [class^="turbo-"])
 !yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^="sport-"]:has(> [class^="turbo-"]), .mg-page-layout-item:has(> :not([style]) > [class^="sport-"] > [class^="turbo-"]), br.turbo-br, .mg-page-layout-item:has(> [class^="sport-"] > [class^="turbo-"])
