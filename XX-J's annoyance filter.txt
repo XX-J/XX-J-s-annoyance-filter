@@ -178,7 +178,8 @@ rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!importa
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
 online.sberbank.ru##a:has(> #smart-banner-app), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
-online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { margin: auto!important; min-height: unset!important; }
+online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto!important; }
+online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset!important; }
 !   Новый дизайн:
 ||online.sberbank.ru/*GreetingScreen.js
 ||online.sberbank.ru/PL/webpage.provider.bootstrap/*/background.js
