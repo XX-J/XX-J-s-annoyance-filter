@@ -178,7 +178,7 @@ rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!importa
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
 online.sberbank.ru##a:has(> #smart-banner-app), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
-online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { margin: auto!important; }
+online.sberbank.ru#$#div:has(form#homeAuth):matches-css(max-width: 320px) { margin: auto!important; min-height: unset!important; }
 !   Новый дизайн:
 ||online.sberbank.ru/*GreetingScreen.js
 ||online.sberbank.ru/PL/webpage.provider.bootstrap/*/background.js
@@ -209,12 +209,12 @@ yandex.*,~disk.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~z
 !   "Сделать поиском по умолчанию":
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header
 !   Яндекс.Новости:
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 > [data-log-id], .news-feed > div > .mg-grid__col:has(> [data-log-id]), .news-navigation-menu__wrapper + div > div > div:last-child
-!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div + div
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_12 + div, .news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 + div + div:remove()
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 > [data-log-id], .news-feed > div > .mg-grid__col:has(> [data-log-id])
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-carousel__scrollable { overflow: auto!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_0 { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 + div { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
 !   Яндекс.Картинки:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page__advanced-search { position: unset!important; width: unset!important; display: inline-block!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
@@ -229,9 +229,9 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
 yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
-market.yandex.*##.main > noindex,[data-apiary-widget-name="@MarketNode/VendorProductLinePromo"], [data-apiary-widget-name="@MarketNode/JournalEntrypointsMboScrollBox"], [data-zone-name="promoSection"],[data-apiary-widget-name="@MarketNode/FooterSubsriptions"], body > div:last-child:not(:has([data-auto="gallery-modal"]))
+market.yandex.*##.main > noindex, [data-zone-name="searchIncut"]
+!market.yandex.*##.main > noindex,[data-apiary-widget-name="@MarketNode/VendorProductLinePromo"], [data-apiary-widget-name="@MarketNode/JournalEntrypointsMboScrollBox"],[data-zone-name="searchIncut"], [data-zone-name="promoSection"], body > div:last-child:not(:has([data-auto="gallery-modal"]))
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
-translate.yandex.ru###collectionsPromo
 zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
 !
 ||yoomoney.ru/offerwall/
