@@ -105,6 +105,7 @@ liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|o
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0!important; }
 !
+account.mail.ru##.mail-app-promo
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
 e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; }
