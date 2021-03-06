@@ -66,7 +66,9 @@ backit.me##.top-line-promo, .header:has(> .promotion)
 backit.me#$#.top-padding { padding-top: 80px!important; }
 bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
 !
-citilink.ru##.banner_tr, tbody.between-card-banners_gtm-js
+citilink.ru#$#.SiteVersionSwitcher { position: absolute!important; }
+citilink.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
+citilink.ru##.BannersSlider
 complaneta.com#%#//scriptlet("abort-on-property-write", "snow_active")
 ||complaneta.com/*/newyear.js
 complaneta.com##.b-page_newyear
@@ -233,14 +235,14 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
 yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
-market.yandex.*##.main > noindex, [data-zone-name="searchIncut"]
-!market.yandex.*##.main > noindex,[data-apiary-widget-name="@MarketNode/VendorProductLinePromo"], [data-apiary-widget-name="@MarketNode/JournalEntrypointsMboScrollBox"],[data-zone-name="searchIncut"], [data-zone-name="promoSection"], body > div:last-child:not(:has([data-auto="gallery-modal"]))
+market.yandex.*##.main > noindex, [data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"]:remove()
+market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset!important; }
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
 zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
 !
 ||yoomoney.ru/offerwall/
 yoomoney.ru#$#[class*="StyledMenuContainer"] { overflow: auto!important; }
-yoomoney.ru##.balance-widget, .carousel_type_widgets, .money-app-promo2
+yoomoney.ru##.balance-widget, .carousel_type_widgets
 youtube.com##.ytp-cards-button
 youtube.com#$##masthead-container, app-header { position: absolute!important; margin: 0!important; left: 0!important; transform: none!important; }
 !
