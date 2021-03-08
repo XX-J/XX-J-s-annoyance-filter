@@ -194,8 +194,7 @@ online.sberbank.ru##[type="cards"] + hr,[href$="/cards/credit"]:upward(li)
 online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
-tele2.ru##[data-cartridge-type="PersonalizedTizer"], #downloadMobileAppOfferDialog:remove()
-tele2.ru#%#//scriptlet('remove-attr', 'class|data-react-helmet', 'html')
+||tele2.ru/static/js/DownloadMobileAppOfferDialog.*.js
 !
 !   Реклама на главной:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
