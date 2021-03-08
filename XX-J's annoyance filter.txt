@@ -115,10 +115,9 @@ e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!importa
 e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset!important; }
 e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
 e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset!important; }
-!   Убираем лишние припуски и полосы прокрутки:
-e.mail.ru#$#.letter__body { overflow: unset!important; padding: 0!important; }
-e.mail.ru#$#.letter-body__body { overflow: unset!important; }
+e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset!important; }
 !   Поменять расположение панелей:
+e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width)); }
@@ -140,6 +139,7 @@ naked-science.ru#$#.section-comments { margin-top: 0px!important; }
 ||nnmclub.*/new_year/
 nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px!important; }
 !
+obi.ru##.banner-transparent
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset!important; }
@@ -235,7 +235,7 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
 yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
-market.yandex.*##.main > noindex, [data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"]:remove()
+market.yandex.*##.main > noindex, [data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"],#analogues-products:remove()
 market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset!important; }
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
 zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
