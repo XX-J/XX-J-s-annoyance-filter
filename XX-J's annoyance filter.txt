@@ -197,6 +197,7 @@ online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offe
 ||tele2.ru/static/js/VideoTizerBlock.*.js
 tele2.ru#$##downloadMobileAppOfferDialog { display: none!important; }
 tele2.ru#$#body { overflow: auto!important; }
+||tele2.ru/static/js/PersonalizedBanner.*.js
 !
 !   Реклама на главной:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
