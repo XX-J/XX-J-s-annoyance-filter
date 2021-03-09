@@ -194,6 +194,7 @@ online.sberbank.ru##[type="cards"] + hr,[href$="/cards/credit"]:upward(li)
 online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
+||tele2.ru/static/js/VideoTizerBlock.*.js
 tele2.ru#$##downloadMobileAppOfferDialog { display: none!important; }
 tele2.ru#$#body { overflow: auto!important; }
 !
