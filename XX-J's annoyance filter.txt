@@ -2,7 +2,7 @@
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 ! dostfilms.*,kimovil.com#$#:matches-css(user-select: none) { user-select: text!important; }
-habr.com,kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top { position: initial!important; }
+habr.com,kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header { position: initial!important; }
 bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-default,.k-values, .navbar-page,  .page-main-column { cursor: auto!important; }
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
 !
@@ -107,7 +107,6 @@ liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|o
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0!important; }
 !
-account.mail.ru##.mail-app-promo
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
 e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; }
@@ -236,7 +235,7 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
 yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
-market.yandex.*##.main > noindex, [data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"],#analogues-products:remove()
+market.yandex.*##.main > noindex, [data-apiary-widget-id="/content/premiumOffersGallery"],[data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"],#analogues-products:remove()
 market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset!important; }
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
 zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
