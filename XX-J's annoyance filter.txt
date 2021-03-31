@@ -216,12 +216,10 @@ yandex.*,~disk.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~z
 !   "Сделать поиском по умолчанию":
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header
 !   Яндекс.Новости:
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_12 + div, .news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 + div + div:remove()
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_12 + div, .news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 + div + div > div > div > div > div:has(> [data-log-id]):remove()
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 > [data-log-id], .news-feed > div > .mg-grid__col:has(> [data-log-id])
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div { width: 90%!important; margin: auto!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-carousel__scrollable { overflow: auto!important; }
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-navigation-menu__wrapper + div > div > .mg-grid__col_xs_8 + div { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
 !   Яндекс.Новости (yandex.*/turbo/):
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.page__content_infinity > .header2 + .layout__row
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.page__content_infinity > .header2 ~ .container > div > .layout__right
