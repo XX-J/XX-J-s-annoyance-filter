@@ -197,16 +197,9 @@ online.sberbank.ru##[type="cards"] + hr,[href$="/cards/credit"]:upward(li)
 online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
-tele2.ru#$##downloadMobileAppOfferDialog { display: none!important; }
-tele2.ru#$#body { overflow: auto!important; }
 !
 !   Реклама на главной:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
-!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has(iframe)
-!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has([href^="https://yastatic.net/www/"])
-!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has([class*="direct-close"])
-!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div):has(div:matches-css(height: 90px))
-!yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#div:has(> .home-arrow) { background-image: none!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*##[id^="zen-row-"]:has([data-blockname="T3_D2"]), [id^="zen-row-"] > .feed__item-wrap:has(> div > .card-wrapper_anny)
 !   Открепить шапку:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-header__wrapper, .navigation, .news-navigation-menu__wrapper, .news-navigation-menu, .header__container, .ui-lib-header-container2__wrapper { position: initial!important; }
