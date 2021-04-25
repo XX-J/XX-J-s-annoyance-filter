@@ -31,7 +31,7 @@ adguard.com###navigation
 !
 !   На Главной.
 ||alicdn.com/ae-*-ui/??hashmap*.js
-||alicdn.com/g/alilog/
+||alicdn.com/*alilog/
 ||alicdn.com/retcode/cloud-sdk/bl.js
 ||acs.aliexpress.*/mtop.aliexpress.lighthouse.config.get/
 !   В поиске.
@@ -69,7 +69,7 @@ bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
 citilink.ru#$#.SiteVersionSwitcher { position: absolute!important; }
 citilink.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
 citilink.ru##.BannersSlider
-complaneta.com#%#//scriptlet("abort-on-property-write", "snow_active")
+complaneta.com#%#//scriptlet('abort-on-property-write', 'snow_active')
 ||complaneta.com/*/newyear.js
 complaneta.com##.b-page_newyear
 complaneta.com#$#.calc-animation { animation: none!important; }
@@ -92,18 +92,18 @@ mail.google.com##div:has(> div > div > a:contains(Освободите мест�
 ||translate.google.com/translate_a/element.js$third-party
 @@||gosuslugi.ru^$elemhide
 !
-ixbt.com#%#//scriptlet("prevent-addEventListener", "mouseout", "undefined")
+ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
 !
 kimovil.com#$#[id^="header-"] { position: absolute!important; }
 kimovil.com#$#.item-options { white-space: unset!important; margin: auto!important; }
-kino-serialy.net#%#//scriptlet("abort-current-inline-script", "document.ondragstart")
+kino-serialy.net#%#//scriptlet('abort-current-inline-script', 'document.ondragstart')
 kino-serialy.net#$#.wrap { padding-top: 0px!important; }
 kino-serialy.net##.fsubtitle, .ffour + table
 kinopoisk.ru##[class^="styles_branding__"]
 kinopoisk.ru#$#[class*="styles_navigation__"] { margin: unset!important; }
 kotofoto.ru##.bl-friday-banner
 !
-liangchanba.com#%#//scriptlet("remove-attr", "onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu")
+liangchanba.com#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu')
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0!important; }
 !
@@ -186,15 +186,11 @@ rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!importa
 online.sberbank.ru##a:has(> #smart-banner-app), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
 online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto!important; }
 online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset!important; }
-!   Новый дизайн:
+!   Личный кабинет:
 ||online.sberbank.ru/*GreetingScreen.js
 ||online.sberbank.ru/PL/webpage.provider.bootstrap/*/background.js
 ||counter.sberbank.ru/static/tag/tag.js
 online.sberbank.ru##[type="cards"] + hr,[href$="/cards/credit"]:upward(li)
-!   Старый дизайн:
-||online.sberbank.ru/PhizIC-res/*/Thermometer.js
-||online.sberbank.ru/PhizIC-res/*/credit.detail.scroller.js
-online.sberbank.ru###design30Banner, div:has(> .bunnerArea),.ghostWrapper, #offerBlock:remove()
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
 !
@@ -233,7 +229,7 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-page-layout-heading:upward(2) { width: 90%!important; }
 !
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto!important; }
-yadi.sk#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
+disk.yandex.*#$#.public__main, .content { flex-direction: column!important; margin: auto!important; }
 market.yandex.*##.main > noindex, [data-apiary-widget-id="/content/premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"],#analogues-products:remove()
 market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset!important; }
 market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
