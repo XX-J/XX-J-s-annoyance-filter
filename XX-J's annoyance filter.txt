@@ -137,7 +137,7 @@ moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
 ||addons-amo.cdn.mozilla.net/amo-*.js
 msn.com#$#.head { position: unset!important; }
-msn.com#$##precontent { margin: 0!important; }
+msn.com#$##precontent, #maincontent { margin-top: 0!important; }
 !
 ||bust.narod.ru/98if/98if.gif
 naked-science.ru#$#.section-comments { margin-top: 0px!important; }
