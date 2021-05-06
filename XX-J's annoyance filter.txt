@@ -50,7 +50,7 @@ aliexpress.*##.ui-banner-slider-wrap, .list-item:has(.item-ad-tag),.ams-region, 
 !   Не даёт убирать прокрутку.
 !aliexpress.*#$#body { overflow-y: auto!important; padding-right: unset!important; }
 aliexpress.*#%#//scriptlet('prevent-addEventListener', 'scroll', '_headerScrollHandler')
-aliexpress.*#$##search-key { padding: 0!important; font-size: initial!important; }
+aliexpress.*#$##search-key { padding: 0 0 0 6px!important; }
 aliexpress.*#$#.left-affix { top: 0!important; min-height: unset!important; max-height: 100vh!important; }
 aliexpress.*#$#.left-menu-container { max-height: unset!important; }
 aliexpress.*#$#.gps-recommend-dialog-wrap, .p-info { width: auto!important; height: auto!important; }
@@ -69,12 +69,6 @@ bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
 citilink.ru#$#.SiteVersionSwitcher { position: absolute!important; }
 citilink.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
 citilink.ru##.BannersSlider
-complaneta.com#%#//scriptlet('abort-on-property-write', 'snow_active')
-||complaneta.com/*/newyear.js
-complaneta.com##.b-page_newyear
-complaneta.com#$#.calc-animation { animation: none!important; }
-complaneta.com#$#.pc_hd_slog2 { background-color: #f8f8ff!important; }
-||complaneta.com/data/planetacomp/img/new_year.png
 !
 dialogdv.ru##.bxsliderleft_bl
 club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
@@ -154,6 +148,12 @@ onlinetrade.ru#$#.header__cover { padding: unset!important; }
 ozon.ru##[brandshelfplacement], [data-widget="webStickyProducts"],[title="Спонсорские товары"]
 !
 pikabu.ru#$#.header { position: absolute!important; }
+||planetacomp.com/*/newyear.js
+||planetacomp.com/*/new_year.png
+planetacomp.com#%#//scriptlet('abort-on-property-write', 'snow_active')
+planetacomp.com##.b-page_newyear
+planetacomp.com#$#.calc-animation { animation: none!important; }
+planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff!important; }
 pravdu.ru##aside > .widget:first-child
 price.ru###kontainer-top
 !
