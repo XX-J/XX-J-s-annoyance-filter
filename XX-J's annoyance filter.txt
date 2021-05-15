@@ -73,7 +73,7 @@ citilink.ru##.BannersSlider
 dialogdv.ru##.bxsliderleft_bl
 club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
 dostfilms.*#$#body, header, .carousel { background-image: none!important; margin: auto!important; }
-dostfilms.*##.zagolovokdp, .block-vazhno-pod-playerom
+dostfilms.*##.zagolovokdp, .opovesh-gosty
 !
 e-katalog.ru##.fix-preset, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
@@ -90,9 +90,9 @@ ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
 !
 kimovil.com#$#[id^="header-"] { position: absolute!important; }
 kimovil.com#$#.item-options { white-space: unset!important; margin: auto!important; }
-kino-serialy.net#%#//scriptlet('abort-current-inline-script', 'document.ondragstart')
-kino-serialy.net#$#.wrap { padding-top: 0px!important; }
-kino-serialy.net##.fsubtitle, .ffour + table
+kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
+kino-serialy.net#$#.wrap { padding: 0!important; }
+kino-serialy.net##.ftwo + table, br + .fsubtitle
 kinopoisk.ru##[class^="styles_branding__"]
 kinopoisk.ru#$#[class*="styles_navigation__"] { margin: unset!important; }
 kotofoto.ru##.bl-friday-banner
