@@ -1,7 +1,7 @@
 !   https://raw.githubusercontent.com/XX-J/XX-J-s-annoyance-filter/master/XX-J's%20annoyance%20filter.txt
 !
+!
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
-! dostfilms.*,kimovil.com#$#:matches-css(user-select: none) { user-select: text!important; }
 habr.com,kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header { position: initial!important; }
 bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-default,.k-values, .navbar-page,  .page-main-column { cursor: auto!important; }
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
@@ -20,34 +20,29 @@ bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-defaul
 4pda.ru#%#//scriptlet('prevent-addEventListener', '/mouse/')
 4pda.ru#%#//scriptlet('prevent-addEventListener', 'load', 'initLytebox')
 !
+!
 adguard.com###navigation
 !
-! ||i.alicdn.*/ae-wholesale-ui/??loader.*.js
-!! ||i.alicdn.*/ae-channel-ui/*/material/customized-sku/glasses-wedding.js$domain=aliexpress.com
-||aeu.alicdn.com/js/cj/112.js
-! ||aeis.alicdn.*/AWSC/WebUMID/*/um.js
-!! ||promotion.aliexpress.*/ajax_show_product_display.do
-||alicdn.*/alime/dialog/alicare-dialog.js
-!
-!   На Главной.
+!   На Главной:
 ||alicdn.com/ae-*-ui/??hashmap*.js
 ||alicdn.com/*alilog/
 ||alicdn.com/retcode/cloud-sdk/bl.js
 ||acs.aliexpress.*/mtop.aliexpress.lighthouse.config.get/
-!   В поиске.
+!   В поиске:
 ||cobra.aliexpress.*/p4pforlist.html
 ||alicdn.com/ae-search-ui/standalone/index.*.js
-!   На странице товара.
+!   На странице товара:
 ||cobra.aliexpress.*/b2bad.html
 ||cdp.aliexpress.*/60.htm
 ||cdp.aliexpress.*/74.htm
 ||moduleanalysis.aliexpress.com/calc.htm
 ||aliexpress.*/check.gif
-!   В списке заказов.
+!   В списке заказов:
+||alicdn.*/alime/dialog/alicare-dialog.js
 !
 alibaba.com##[data-tag="gateway-wrapper"]:contains(Please update your Firefox)
 aliexpress.*##.ui-banner-slider-wrap, .list-item:has(.item-ad-tag),.ams-region, .store-header-bg,.overview-rating-balloon,.gps-recommend-dialog-wrap > :nth-child(n+2), .im-contact-tips
-!   Не даёт убирать прокрутку.
+!   Не даёт убирать прокрутку:
 !aliexpress.*#$#body { overflow-y: auto!important; padding-right: unset!important; }
 aliexpress.*#%#//scriptlet('prevent-addEventListener', 'scroll', '_headerScrollHandler')
 aliexpress.*#$##search-key { padding: 0 0 0 6px!important; }
@@ -62,21 +57,26 @@ allcables.ru##w-div
 avito.ru##.item-view-shop-header, .js-shop-showcase
 avito.ru#$#body, .b-shop { background-image: none!important; margin: 0!important; }
 !
+!
 backit.me##.top-line-promo, .header:has(> .promotion)
 backit.me#$#.top-padding { padding-top: 80px!important; }
 bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
+!
 !
 citilink.ru#$#.SiteVersionSwitcher { position: absolute!important; }
 citilink.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
 citilink.ru##.BannersSlider
 !
+!
 dialogdv.ru##.bxsliderleft_bl
 club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
 dostfilms.*#$#body, header, .carousel { background-image: none!important; margin: auto!important; }
-dostfilms.*##.zagolovokdp, .opovesh-gosty
+dostfilms.*##[class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
+!
 !
 e-katalog.ru##.fix-preset, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
+!
 !
 gearbest.com##.js_dropBullet:has(.icon-iphone)
 github.com##.gh-header-sticky, .gh-header-shadow
@@ -86,25 +86,29 @@ mail.google.com##div:has(> div > div > a:contains(Освободите мест�
 ||translate.google.com/translate_a/element.js$third-party
 @@||gosuslugi.ru^$elemhide
 !
+!
 ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
+!
 !
 kimovil.com#$#[id^="header-"] { position: absolute!important; }
 kimovil.com#$#.item-options { white-space: unset!important; margin: auto!important; }
 kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
 kino-serialy.net#$#.wrap { padding: 0!important; }
 kino-serialy.net##.ftwo + table, br + .fsubtitle
-kinopoisk.ru##[class^="styles_branding__"]
-kinopoisk.ru#$#[class*="styles_navigation__"] { margin: unset!important; }
+kinopoisk.ru##[class^="styles_abbreviated__"]
 kotofoto.ru##.bl-friday-banner
+!
 !
 liangchanba.com#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu')
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0!important; }
 !
+!
 cloud.mail.ru#$#.public_shove .b-layout__col_1_2 { max-width: unset!important; margin: 0!important; }
 cloud.mail.ru#$#[class^="BreadcrumbsContainer__root"] { margin: 0!important; }
 cloud.mail.ru#$##datalist, #shoved-public-file { height: unset!important; }
 cloud.mail.ru#$#.shoved-public-file { display: block!important; margin: auto!important; }
+!
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
 e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; }
@@ -133,10 +137,12 @@ body_background_dark.png|$domain=monkrus.ws
 msn.com#$#.head { position: unset!important; }
 msn.com#$##precontent, #maincontent { margin-top: 0!important; }
 !
+!
 ||bust.narod.ru/98if/98if.gif
 naked-science.ru#$#.section-comments { margin-top: 0px!important; }
 ||nnmclub.*/new_year/
 nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px!important; }
+!
 !
 obi.ru##.banner-transparent
 oldi.ru##.mainbanner
@@ -146,6 +152,7 @@ onlinetrade.ru#$#.header__cover { padding: unset!important; }
 ||ozone.ru/_nuxt/uw-desktop-sku-brand-shelf.*.js
 ||ozone.ru/_nuxt/shelf-all-adv-search.*.js
 ozon.ru##[brandshelfplacement], [data-widget="webStickyProducts"],[title="Спонсорские товары"]
+!
 !
 pikabu.ru#$#.header { position: absolute!important; }
 ||planetacomp.com/*/newyear.js
@@ -157,9 +164,13 @@ planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff!important; }
 pravdu.ru##aside > .widget:first-child
 price.ru###kontainer-top
 !
-repack.me#$#.cnt { margin-top: 0px!important; }
-ria.ru##.header__position, .article__quote-bg
+!
+repack.me#$#.cnt { margin-top: 0!important; }
+ria.ru##.header__brand-menu + .header__position, .article__quote-bg
+ria.ru#$#.header__position { position: unset!important; }
+ria.ru#$#.section__content { padding: 0!important; }
 ||rmbt.ru/style_images/*/sn.gif
+!
 !   Компактный интерфейс:
 forum.ru-board.com#%#//scriptlet('remove-attr', 'width|align', 'body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(-n+2)')
 forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(1) { float: left!important; }
@@ -182,6 +193,7 @@ rutracker.org#$#.maintitle ~ [style] { margin: 0 6px 4px!important; float: right
 rutracker.org#$##tr-submit-btn:upward(1) { padding: 0!important; }
 rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!important; }
 !
+!
 !   Страница авторизации:
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
@@ -194,7 +206,9 @@ online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset!important; }
 ||counter.sberbank.ru/static/tag/tag.js
 online.sberbank.ru##[type="cards"] + hr,[href$="/cards/credit"]:upward(li)
 !
+!
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
+!
 !
 !   Реклама на главной:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
@@ -222,7 +236,7 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !   Яндекс.Картинки:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page__advanced-search { position: unset!important; width: unset!important; display: inline-block!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
-!   Яндекс.Карты
+!   Яндекс.Карты:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##._mobile .interstitial-view
 !   Яндекс.Спорт:
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class$="_sport"] [class$="_type_media-v"]:has(> [class^="turbo-"]), .mg-page-layout-item > div > [class*="_type_media-h"] > [class^="turbo-"], br.turbo-br, .mg-page-layout-item:has(> .mg-page-layout-item__card > [class^="turbo-"]), .mg-page-layout-item:has(> span > .mg-page-layout-item__card > [class^="turbo-"])
@@ -249,7 +263,7 @@ yoomoney.ru##.balance-widget, .carousel_type_widgets
 youtube.com##.ytp-cards-button
 youtube.com#$##masthead-container, app-header { position: absolute!important; margin: 0!important; left: 0!important; transform: none!important; }
 !
-! Экспериментальные:
 !
+!   Экспериментальные:
 stun:stun.$domain=streamguard.cc,third-party
 wss://backend.irsdn.net/$domain=streamguard.cc,third-party
