@@ -96,11 +96,12 @@ dostfilms.*##[class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 e-katalog.ru##.fix-preset, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
+facebook.com#$#.fixed_elem { position: unset !important; }
 !
 !
 gearbest.com##.js_dropBullet:has(.icon-iphone)
-github.com##.gh-header-sticky, .gh-header-shadow
-github.com#$##readme > .is-stuck { position: unset !important; }
+github.com#$#.position-sticky, .js-sticky { position: unset !important; margin-top: unset !important; }
+github.com#$#.user-profile-sticky-bar { background-color: var(--color-bg-primary) !important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
@@ -237,6 +238,7 @@ online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset!important; }
 !
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
+xcom-shop.ru##.card-path__wrapper + div
 !
 !
 !   Реклама на главной:
@@ -286,7 +288,7 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 !
 !   Оптимизированный интерфейс:
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto !important; }
-disk.yandex.*#$#.public__main { width: 80% !important; margin: auto !important; }
+disk.yandex.*#$#.public__main { width: 80% !important; margin: 1em auto 0 !important; }
 disk.yandex.*#$#.folder-content__header, .folder-content__header-shadow { position: unset!important; padding: 0 0 10px!important; }
 disk.yandex.*#$#.folder-content__header-name { flex-grow: unset !important; margin-right: 2em !important; }
 disk.yandex.*#$#.content_dir .action-buttons { justify-content: flex-end !important; }
@@ -294,10 +296,8 @@ disk.yandex.*#$#.folder-content__header-name > h1:first-child { margin-left: 2em
 disk.yandex.*#$#.folder-content__back-button { margin-top: .8em !important; }
 disk.yandex.*#$#.folder-content__header-name h1 { font-size: 2em !important; line-height: 1.1em !important; }
 !
-disk.yandex.*##.direct-public__right-direct-wrapper, .mobile-badges
-!
 docviewer.yandex.*#$#header { position: absolute !important; }
-docviewer.yandex.*##.fullscreen-container [style="width: 100%;"]
+docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 !
 market.yandex.*##.main > noindex, [data-apiary-widget-id="/content/premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"],#analogues-products:remove()
