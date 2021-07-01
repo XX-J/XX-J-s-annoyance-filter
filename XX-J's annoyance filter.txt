@@ -122,15 +122,18 @@ kinopoisk.ru##[class^="styles_abbreviated__"]
 kotofoto.ru##.bl-friday-banner
 !
 !
+lenta.com##.message-text-block--header, .catalog-banners-position
+lenta.com#$#.header__bar-wrap { position: unset !important; }
 liangchanba.com#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu')
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0!important; }
 !
 !
-cloud.mail.ru#$#.public_shove .b-layout__col_1_2 { max-width: unset!important; margin: 0!important; }
-cloud.mail.ru#$#[class^="BreadcrumbsContainer__root"] { margin: 0!important; }
-cloud.mail.ru#$##datalist, #shoved-public-file { height: unset!important; }
-cloud.mail.ru#$#.shoved-public-file { display: block!important; margin: auto!important; }
+cloud.mail.ru###portal-menu, [data-qa-tooltip='promotip'], [href^='/subscriptions/']:upward(.public__content__row), #public .b-layout__col_2_2
+cloud.mail.ru#$##public .b-layout__col_1_2 { max-width: unset !important; margin: 0 !important; }
+cloud.mail.ru#$#[class^="BreadcrumbsContainer__root"] { margin: 0 !important; }
+cloud.mail.ru#$##datalist, #shoved-public-file { height: unset !important; }
+cloud.mail.ru#$#.shoved-public-file { display: block !important; margin: auto !important; }
 !
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
 !
@@ -325,5 +328,5 @@ yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора про�
 !
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
 !
-youtube.com##.ytp-cards-button
-youtube.com#$##masthead-container, app-header { position: absolute!important; margin: 0!important; left: 0!important; transform: none!important; }
+youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container)
+youtube.com#$##masthead-container, #chips-wrapper, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
