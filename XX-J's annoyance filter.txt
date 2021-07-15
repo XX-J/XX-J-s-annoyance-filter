@@ -6,7 +6,7 @@ archive.org,mail.ru,wikipedia.org#$#html { scrollbar-width: unset !important; sc
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 habr.com,kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header { position: initial!important; }
-bash.im,kimovil.com,msi.com,onlinetrade.ru,playground.ru#$#body, .filters-default,.k-values, .navbar-page,  .page-main-column { cursor: auto!important; }
+bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,softreview.ucoz.ru#$#body, .filters-default,.k-values, .navbar-page, .unselectable,  .page-main-column { cursor: auto!important; }
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
 !
 !
@@ -90,17 +90,20 @@ dns-shop.ru##.homepage-top-grid__banners, .products-list__banner
 club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
 club.dns-shop.ru#$#.header { height: unset !important; }
 !
-dostfilms.*#$#body, header, .carousel { background-image: none!important; margin: auto!important; }
-dostfilms.*##[class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
+dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
+dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
 e-katalog.ru##.fix-preset, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
+!
+!
 facebook.com#$#.fixed_elem { position: unset !important; }
 !
 !
 gearbest.com##.js_dropBullet:has(.icon-iphone)
-github.com#$#.position-sticky, .js-sticky { position: unset !important; margin-top: unset !important; }
+github.com###readme > .is-placeholder, .gh-header-meta ~ div
+github.com#$#[class*='position-sticky'] { position: unset !important; margin-top: unset !important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-bg-primary) !important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
@@ -118,6 +121,7 @@ kimovil.com#$#.item-options { white-space: unset!important; margin: auto!importa
 kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
 kino-serialy.net#$#.wrap { padding: 0!important; }
 kino-serialy.net##.ftwo + table, br + .fsubtitle
+||kinopoisk.ru/1Bc7N0081/9d5692KiCg/D3LNIJsHPl1hll1Jc_Jsxs4FgMrejmjvqV5c6qPOPyBquP-_FNynhSt8YBHsMpMP13tswTmCg_ud8o7zhiw7pBBohGSaDCpxStdnQ1K6ZdffWJrc-qtFppFSY8aPohA5R5bvpAj5opZJcX0o5imxN_pfdcMdiIrphcPqwZUJJq4TTI9Y4xktY1yneHFGs1Dy6FuT-9mib4idbHPgopA9C0mt0awa8ZqDcmdnFtUxsC_lemvJF4eX7r7u7t2XBy6HN22uTPMxEWV8mFl2R6tt5dJeoOTVgm-nmFFP07SlCR1tvfi6HviAqXxAVw3JEp0A8GRt2Aaeh_a_1ND_mikakAd5u2fwBxNkfJVzQV-ZR-ztfLnl4L1sqptzTMOcijsFXaTZuhvZoL1jQEQb4B6TGuRWa-sQmJ3DqPTx1bY2M7wOaaNm2hs0XU-BfGtUlk_O12C56vK9bKm7WVjnuaI7HGOr07gb_oKiQ0N_L-Menzric0z8JL2c1JLQ9tG4BzqZNkKNYsEyDGlYgm1JXJ5XxeBgp-LnoFy6u2NQ0LqbHjppq921OPWtjUh_dxbrFZ8kymdv0Qenv-ia_NPonhQlgR1WjUHYPwd9QaJiU1a7a_L2QaDN3I5KmbJKTfywljI5Z43Powj7oo5vYVEU2SG5HPpwavEJoojJvPfvwoYqAIIPWZRG5y0wb1eeWmZUiHPK9mSB7eayS6-EUV3TvbYcCXu79aEJ2qmBUWV9JMk4lSHYRX3qGaWpwq_m68u4OyC7BkiUS-YcM392vVhZf4tx4NFDne7YklWFrXNN94-iEA5InuyGLPOlgml4cTnJPpgU31Jc_DanpuCn4s_ToAERoAhjuHv3EBhZfaR5YlyxceXqTKbdxaFPtYRbct28qiECQbbVpQfPu5FEe1UK0CqgHPl1ef00koD4juPD_4stLq0QTb1szDQUSWWOYkdUqWrb1mih-faGaKG9Y0DjraMdPUGZ1L4z2IeSd0VYOPcVhAbkbFXOKKKf6brCxNepFAS9D3C1YNobOUVFm0p2eYZK-elcvPzinXiFpFtiyZOoPQ1Ise-uE_uThGh1Qjz-AIU58ndI2DuhrMmPyM_ZnzU9uixTo1__KDh8X7BHVEq0U-HwSJva15BLh5hrdsyarDoVQZnAvj38pYRNXWMp8RKEBOlCct8usp_gp_zQyqcWLq4oao1r4g0RTWWYWG5kl1vH7m6K_cKbZYe6V3bXrbQHIGSIzIMyzYyOYkJcHdQlpCn8XmTDPYiI_r_Iy_qLMyaAGFu8Y84GHkd4tkdBX5RM8dB6ifDbjWKHmHBWzpKMMhpijfKsB--IvU5MXR75Frgn5WBdyQ2Cpf6wzMLMjBM_gAhlnUrxNhlWV41rTFOoUtvqe6LY6LN5haVUa862uwc6bbvXrgL3hqBhfFI52CaDA-5nXNsqgprjs_XH9oIrGpMvarB92Bo-SFiHYVN9rGj3z2W-xMewZbibQm_Hmqw5GGio6aAY_oCmVlhgAvcwny_FekTbLJqK6pP398ieGBi1EXiia_k3EmJlr0NIR5Jq8N14mPrbq0uSpV5P14mZISxKk9eXLeeVvWh5XhncMKU732Bu0B-Zj-C_z-T3micWohxFunb3MzRBQ5JLeUq-bcHwfqrFwL5kkop4XtKtkDQHSZLoqg_zpKNERVwL3hycP9hCSPItjZvLpsrvzZ4sJL8zcZBK4DwyWkamWVZgn0Xg8k-6yP-rWq6OVHLhkow8KUmLzYQpype-RH1GKd01kQbNbmz8H6yl35jx6N2kJjeMNnWTZtUNEkJ6nllOfotQ6vB4ief0mk6xsF1I85qJHxlPqvy5AtiCq098UAv2GL8B6VNk0g6oqeGd0sTunSwEpix4sFv2Kx5lfbVFWmqVT8f-XJ_d-KNPtal5VMiWrycLSK35pDLlpalieF46yz2_BsxgTckdnpXihd327ocDN64zSZlm-D8laHixe3p6n0_O22a20-m4R7CSbWzPuo0wDm6V3ogu34-yb3JGOPs-oynkcU_cDbG14Yzg8tuVMDGEEW6DdeUwOWFUkEVscaVu1dF5se_BvlmnnG5I9ayVGz54qs2jJt6KgGJFQCvqKZUuwkxP8iaym_yw8uvTvwQkgB1jun_xNRRNd6N9d1GXRtbfeIHcyL5Fsq1AY8SDuzcZb4XAqSraqaZpeVIv5RCVK95nW_06softmuHw6KcVBIYxe49V3RM5RXy0Q3J2i1fb_3628dSfbo2pf33Al5UGHESzzp8NyZuJR1NAP-orvwzwcm_CHIe04ZLuxM2mJhy6KXOhdtsWMktdrUZBY5FQ-vx4qtPZv1yUjl1C1LypFAJGqNS8DNawn1ZTZD_EAL8H-nZq3iipp-esxMfMgQ8zhilGukj5GQxgYKFNSF-6cc_-X5Xd2YxMiad7duuwlBkXZJTKgibOpqVVc0AK3DCQLONbXMAtnZfumtfH0ogAAJc9VJxLzjgzd36AW2VemXrL7Uya8PucZZWgcU_PkLcnCkW776UOx7ODdUxLL9AZvR34f3nOEKq_5p_J4_2sEBCSKXa5TuUWDW1RtmBwYpZWy-xJluLhpmuBjW1X6qyyGwhguOyAAemHo21XXCHeJJs6zH53xBWig8aB9PXWhicWgA5PhEbYCxxBVoBzUFqUbdvxXLvEwb96rKxoVP2epT4LYZPzvyb7spdjf0U9-RGQJMBaZP81rJ_OvM_P774QJoMzeKFKxygnb2GEY3d2qUrb4H6X5_2_VaKBY1_quacVJmymzbsJ0aKMQ1liH-sDvwTkd3zLOaeIyYPP582mKh2DFUqDfdI1MGtmoGRpW6ZQ6tljivv7mHWRvG9X7pSmKjZHkM2pGfSgkVd_Zi3CMpErwVdr3zKgof2N1dj5hTEkkRZ2nm7tEi1Ue6dGQ0O6cNLNT57u_4tLs6FTS_WDqxArZLLovRPbloBQf2MrxAKeJthTZs4Rqor-nc4
 kinopoisk.ru##[class^="styles_abbreviated__"]
 kotofoto.ru##.bl-friday-banner
 !
@@ -152,6 +156,18 @@ e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width)); }
 !
+my.mail.ru##.b-column-right__block-sale, .b-fourth-pseudo-column, .b-column-right__block-news-cloud
+!   Оптимизированный интерфейс:
+my.mail.ru#$#.sp-video__head { position: absolute !important; }
+my.mail.ru#$#.sp-video__body__main > .l-common__block { width: 95vw !important; margin: 0 0 0 4% !important; }
+my.mail.ru#$#.l-common__left-menu { display: initial !important; margin-left: -4% !important; }
+!
+my.mail.ru##[class^='b-video__'][class*='-rb-banner'], .sp-video__body__right-banner
+!
+my.mail.ru#$#.b-video__section__item-page-player { width: 75% !important; }
+my.mail.ru#$#.sp-video__item-page-new__video-wrapper { width: unset !important; height: calc(120vh * 9 / 16) !important; }
+my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!important; right: 0!important; width: 24%!important; }
+!
 otvet.mail.ru##.fixedsticky-dummy, .nt--position
 pulse.mail.ru#$#.header { position: unset!important; }
 !
@@ -167,6 +183,8 @@ body_background_dark.png|$domain=monkrus.ws
 ||addons-amo.cdn.mozilla.net/amo-*.js
 msn.com#$#.head { position: unset!important; }
 msn.com#$##precontent, #maincontent { margin-top: 0!important; }
+!
+||my-expert.ru/wp-content/uploads/HcuSIEnOcmRf/JsBlQZlWmnfR.js
 !
 !
 ||bust.narod.ru/98if/98if.gif
@@ -200,10 +218,10 @@ price.ru###kontainer-top
 !
 !
 repack.me##.br1
-repack.me#$#.cnt { margin-top: 0!important; }
-ria.ru##.header__brand-menu + .header__position, .article__quote-bg
-ria.ru#$#.header__position { position: unset!important; }
-ria.ru#$#.section__content { padding: 0!important; }
+repack.me#$#.cnt { margin-top: 0 !important; }
+ria.ru##.header__brand-menu + .header__position, .article__quote-bg,.m-text_quote::before,.m-text_quote::after
+ria.ru#$#.header__position { position: unset !important; }
+ria.ru#$#.section__content, .m-text_quote { margin: 0 !important; padding: 0 !important; }
 ||rmbt.ru/style_images/*/sn.gif
 !
 !   Компактный интерфейс:
@@ -233,14 +251,22 @@ rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!importa
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
 online.sberbank.ru##a:has(> #smart-banner-app), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
-online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto!important; }
-online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset!important; }
+online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto !important; }
+online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset !important; }
 !   Личный кабинет:
-||online.sberbank.ru/region.fast.actions/*/cloud-boy-*.png
 ||online.sberbank.ru/region.offers/
+online.sberbank.ru##img[class^="region-fast-actions-"]
+online.sberbank.ru#$#.full-width__outer { margin-right: unset !important; }
+online.sberbank.ru#$#.header { width: unset !important; }
 !
 !
 ||technopark.ru/source/custom_images/newsite/oldbrowser/ua-parser.min.js
+!
+!
+softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu', 'body')
+softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
+!
+!
 xcom-shop.ru##.card-path__wrapper + div
 !
 !
@@ -289,6 +315,8 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-page-layout-item > .mg-page-layout__item-wrapper > .sport-event-layout-left-column > .sport-event-layout-left-column__item > .news-story, .mg-page-layout-item > .mg-page-layout__item-wrapper > .sport-event-layout-middle-column > .sport-event-layout-middle-column__item > .card-vertical-list { max-width: unset!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.news-page-layout-heading:upward(2) { width: 90%!important; }
 !
+||browser-updater.yandex.net^
+!
 !   Оптимизированный интерфейс:
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto !important; }
 disk.yandex.*#$#.public__main { width: 80% !important; margin: 1em auto 0 !important; }
@@ -303,9 +331,9 @@ docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 !
-market.yandex.*##.main > noindex, [data-apiary-widget-id="/content/premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-zone-name="searchIncut"], [data-apiary-widget-id="/content/reactProductSummary/alsoViewedProducts"],#analogues-products:remove()
-market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset!important; }
-market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%)!important; }
+market.yandex.*##.main > noindex, [data-apiary-widget-id$="premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-zone-name="searchIncut"],[data-apiary-widget-id$="PromoBanner"],[data-zone-name="welcomeCashbackPromo"], [data-apiary-widget-id$="alsoViewedProducts"],#analogues-products
+market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset !important; }
+!market.yandex.*#$#use:not([fill-rule="nonzero"]) { transform: translate(50%,50%) !important; }
 !
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset!important; }
