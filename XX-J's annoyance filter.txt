@@ -156,11 +156,9 @@ e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(
 !
 my.mail.ru#$#.b-head__menu, .b-head { position: unset !important; margin: unset !important; }
 my.mail.ru#$#.b-left-menu-wrapper { top: 0 !important; }
-my.mail.ru##.b-column-right__block-sale, .b-fourth-pseudo-column, .b-column-right__block-news-cloud
+my.mail.ru##.b-fourth-pseudo-column, .b-column-right__block-news-cloud
 !
-||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/libs/plugins/jquery.mousewheel_rev*.js
 ||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/right-banners/
-||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/social-buttons/tmpl/main_rev*.js
 ||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/video-html5/commerce/custom-overlay_rev*.js
 !   Оптимизированный интерфейс:
 my.mail.ru#$#.sp-video__head { position: absolute !important; }
@@ -255,9 +253,9 @@ online.sberbank.ru##img[class^="region-fast-actions-"]
 online.sberbank.ru#$#.full-width__outer { margin-right: unset !important; }
 online.sberbank.ru#$#.header { width: unset !important; }
 !
-!
 softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu', 'body')
 softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
+starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 !
 !
 xcom-shop.ru##.card-path__wrapper + div
@@ -283,7 +281,7 @@ yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~transl
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 ~ div:has(aside) { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
-yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 > [data-log-id], .news-feed > div > .mg-grid__col:has(> [data-log-id])
+yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 > [data-log-id],[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 > [class*='__banger'],  .news-feed > div > .mg-grid__col:has(> [data-log-id]),.news-feed > div > .mg-grid__col:has([style="width: 100%;"])
 yandex.*,~disk.yandex.*,~mail.yandex.*,~market.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-carousel__scrollable { overflow: auto!important; }
 !
 !   Яндекс.Новости (yandex.*/turbo/):
@@ -325,7 +323,7 @@ docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fulls
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 !
 market.yandex.*##.main > noindex, [data-apiary-widget-id$="premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-zone-name="searchIncut"],[data-apiary-widget-id$="PromoBanner"],[data-zone-name="welcomeCashbackPromo"], [data-apiary-widget-id$="alsoViewedProducts"],#analogues-products
-market.yandex.*#$#[data-apiary-widget-id="/content/productTabs"] > div > div { position: unset !important; }
+market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div, [data-apiary-widget-id$="/productCardTitle"]:upward(1) { position: unset !important; }
 !
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset!important; }
