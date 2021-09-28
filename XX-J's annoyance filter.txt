@@ -1,8 +1,8 @@
 !   https://raw.githubusercontent.com/XX-J/XX-J-s-annoyance-filter/master/XX-J's%20annoyance%20filter.txt
 !
 !
-#$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4; }
-archive.org,google.*,mail.ru,wikipedia.org,wiktionary.org#$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4; }
+#$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4 !important; }
+archive.org,github.com,google.*,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org#$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4!important; }
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru,zvonili.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header, nav { position: initial!important; }
@@ -25,6 +25,7 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,softreview
 !
 !
 adguard.com###navigation
+adguard.com#$#.sticky-bar { position: absolute !important; top: 100% !important; }
 !
 !   На Главной:
 ||alicdn.com/ae-*-ui/??hashmap*.js
@@ -99,7 +100,7 @@ dostfilms.*#$#body, header, .carousel { background-image: none !important; margi
 dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
-e-katalog.ru##.fix-preset, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
+e-katalog.ru##.fix-preset, form > .model-short-div, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
 facebook.com#$#.fixed_elem { position: unset !important; }
 !
@@ -112,7 +113,8 @@ google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
-@@||gosuslugi.ru^$elemhide
+gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !important; box-shadow: none !important; }
+gosuslugi.ru#$##header .main-navigation { height: 50px !important; }
 !
 !
 habr.com#$#.tm-base-layout__header_is-sticky, .tm-article__icons-wrapper { position: unset !important; }
@@ -126,6 +128,7 @@ kimovil.com##.h-top + div
 kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
 kino-serialy.net#$#.wrap { padding: 0 !important; }
 kino-serialy.net##.ftwo + table, br + .fsubtitle
+kinopoisk.ru#$#[class*='styles_headerContainer__'] { position: unset !important; }
 kinopoisk.ru##[class^='styles_abbreviated__']
 kotofoto.ru##.bl-friday-banner
 !
@@ -135,6 +138,18 @@ lenta.com#$#.header__bar-wrap { position: unset !important; }
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0 !important; }
 !
+!
+!||bs.yandex.ru/count/
+!||an.mail.ru/count/
+!||img.imgsmail.ru/*/logger/
+!||limg.imgsmail.ru/re/*/toolbar-*.js
+!||fmdata.imgsmail.ru/showpxt?pxn=ads_show
+!mail.ru##.toolbar, .new-tgb-wrap, .grid__rcol
+!mail.ru#$#.grid_newscol { height: unset !important; }
+!hi-tech.mail.ru#$#.cols__column_right, .viewbox__side, .js-subscription__button:upward(.box) { remove: true; }
+!hi-tech.mail.ru#$#.block .cols__column, .comments { display: block!important; margin: auto!important; width: 60%!important; }
+!hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'undefined')
+!hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'k')
 !
 cloud.mail.ru###portal-menu, [data-qa-tooltip='promotip'], [href^='/subscriptions/']:upward(.public__content__row), #public .b-layout__col_2_2
 cloud.mail.ru#$##public .b-layout__col_1_2 { max-width: unset !important; margin: 0 !important; }
@@ -197,6 +212,7 @@ nplus1.ru/js/lib/jquery.mobile-events.min.js
 !
 obi.ru#$##Header .nav-meta { position: unset!important; }
 obi.ru##.banner-transparent
+||ok.ru/res/js/app/AuthLoginPopup
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset!important; }
@@ -214,6 +230,8 @@ planetacomp.com#%#//scriptlet('abort-on-property-write', 'snow_active')
 planetacomp.com##.b-page_newyear
 planetacomp.com#$#.calc-animation { animation: none !important; }
 planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff !important; }
+playground.ru#$#.navbar-header, .page-header-bottom { position: absolute !important; }
+playground.ru#$#.user-profile-sidebar { position: unset !important; margin: -40px 0 0 !important; }
 popmech.ru#$#nav { position: unset !important; }
 price.ru###kontainer-top
 !
@@ -263,6 +281,7 @@ softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 !
 !
+vc.ru#$#.site-header { position: unset !important; }
 xcom-shop.ru##.card-path__wrapper + div
 !
 !
@@ -271,8 +290,8 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-navigation { position: relative!important; top: unset!important; }
 !   Курсор в поиске и в почте:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
-!   "Сделать поиском по умолчанию":
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header
+!   "Сделать поиском по умолчанию" и "Установить Яндекс.Браузер":
+yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header, body > .distr-popup
 !
 !   Яндекс:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
