@@ -204,18 +204,23 @@ msn.com#$##precontent, #maincontent { margin-top: 0 !important; }
 !
 !
 ||bust.narod.ru/files/back0.gif
-naked-science.ru#$#.section-comments { margin-top: 0px!important; }
+naked-science.ru#$#.section-comments { margin-top: 0 !important; }
 ||nnmclub.*/new_year/
-nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px!important; }
+nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px !important; }
 nplus1.ru/js/lib/jquery.mobile-events.min.js
 !
 !
-obi.ru#$##Header .nav-meta { position: unset!important; }
+obi.ru#$##Header .nav-meta { position: unset !important; }
 obi.ru##.banner-transparent
+ok.ru#$#.topPanel { position: unset !important; }
+ok.ru#$#.mainContent_w { padding: 0 !important; }
+ok.ru###hook_Block_AnonymMainRightColumnAd, #hook_Block_VideoBannerBlock
 ||ok.ru/res/js/app/AuthLoginPopup
+ok.ru#$#.media-layer, .media-layer_c { cursor: auto !important; }
+ok.ru#$##footer { position: relative !important; margin-top: -105px !important; }
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
-onlinetrade.ru#$#.header__cover { padding: unset!important; }
+onlinetrade.ru#$#.header__cover { padding: unset !important; }
 ||ozone.ru/graphics/js/initPerfMetrics*.js
 ||ozone.ru/_nuxt/uw-desktop-sku-brand-shelf.*.js
 ||ozone.ru/_nuxt/shelf-all-adv-search.*.js
@@ -278,6 +283,7 @@ online.sberbank.ru#$#.header { width: unset !important; }
 !
 softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu', 'body')
 softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
+sourceforge.net#$#.l-header-nav { position: unset !important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 !
 !
