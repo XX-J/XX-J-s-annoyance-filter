@@ -2,7 +2,7 @@
 !
 !
 #$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4 !important; }
-archive.org,github.com,google.*,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org#$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4!important; }
+archive.org,github.com,google.*,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org,yandex.*#$#html { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru,zvonili.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header, nav { position: initial!important; }
@@ -102,15 +102,21 @@ dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok
 !
 e-katalog.ru##.fix-preset, form > .model-short-div, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
+facebook.com#$#div[role='banner'] > div[class] { position: absolute !important; }
+facebook.com#$#.fixed_elem { position: unset !important; }
+facebook.com##div[class][role='main']:upward(2) + [data-nosnippet]
 facebook.com#$#.fixed_elem { position: unset !important; }
 !
 !
 github.com###readme > .is-placeholder, .gh-header-sticky
 github.com#$#[class*='position-sticky'] { position: unset !important; margin-top: unset !important; }
-github.com#$#.user-profile-sticky-bar { background-color: var(--color-bg-primary) !important; }
+github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default) !important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
 google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
+chrome.google.com#$#div[class][role='banner']:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
+chrome.google.com##[role='dialog'][aria-labelledby='promo-header']
+chrome.google.com#$#div[class][style^='display: block; background-color:'] { top: 0 !important; }
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
 gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !important; box-shadow: none !important; }
@@ -157,22 +163,25 @@ cloud.mail.ru#$#[class^="BreadcrumbsContainer__root"] { margin: 0 !important; }
 cloud.mail.ru#$##datalist, #shoved-public-file { height: unset !important; }
 cloud.mail.ru#$#.shoved-public-file { display: block !important; margin: auto !important; }
 !
-e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
+imgsmail*/renovator/
+imgsmail*/2promo/
+e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.),[class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
+e.mail.ru#$#:root { --vkui--octavius_size_headline_height: 36px!important; --vkui--octavius_size_headline_height--regular: 36px!important; }
 !
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
-e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; }
+e.mail.ru#$#.portal-menu td { width: unset !important; white-space: unset !important; }
 !
 !   Убрать 'сужатель' письма:
-e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset!important; }
+e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
 e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
-e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset!important; }
-e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset!important; }
+e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !important; }
+e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 !
 !   Поменять расположение панелей:
-e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse!important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right!important; }
+e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right !important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width)); }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
 !
 my.mail.ru#$#.b-head__menu, .b-head { position: unset !important; margin: unset !important; }
 my.mail.ru#$#.b-left-menu-wrapper { top: 0 !important; }
@@ -194,13 +203,17 @@ otvet.mail.ru##.fixedsticky-dummy, .nt--position
 pulse.mail.ru#$#.header { position: unset !important; }
 !
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
-maxidom.ru#$#.catalog, .filter-catalog, .items-list { margin-top: unset!important; padding: unset!important; }
+maxidom.ru#$#.catalog, .filter-catalog, .items-list { margin-top: unset !important; padding: unset !important; }
 ||support.microsoft.com/scripts/signin/signinhandler.js
 moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
 ||addons-amo.cdn.mozilla.net/amo-*.js
 msn.com#$#.head { position: unset !important; }
 msn.com#$##precontent, #maincontent { margin-top: 0 !important; }
+mvideo.ru#$#header, .header_fixed { position: absolute !important; box-shadow: none !important; }
+mvideo.ru#$#.location-icon_animated { animation: none !important; }
+mvideo.ru#$#.app-header-columns { display: grid !important; }
+mvideo.ru##mvid-mobile-navbar-wrapper, .pdp-header__sticky-bar
 !
 !
 ||bust.narod.ru/files/back0.gif
@@ -214,7 +227,6 @@ obi.ru#$##Header .nav-meta { position: unset !important; }
 obi.ru##.banner-transparent
 ok.ru#$#.topPanel { position: unset !important; }
 ok.ru#$#.mainContent_w { padding: 0 !important; }
-ok.ru###hook_Block_AnonymMainRightColumnAd, #hook_Block_VideoBannerBlock
 ||ok.ru/res/js/app/AuthLoginPopup
 ok.ru#$#.media-layer, .media-layer_c { cursor: auto !important; }
 ok.ru#$##footer { position: relative !important; margin-top: -105px !important; }
@@ -288,6 +300,7 @@ starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important;
 !
 !
 vc.ru#$#.site-header { position: unset !important; }
+vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
 xcom-shop.ru##.card-path__wrapper + div
 !
 !
@@ -363,7 +376,7 @@ docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 !
-market.yandex.*##.main > noindex, [data-apiary-widget-id$='/premiumOffersGallery'],[data-zone-name='premium-offers-gallery'],[data-zone-name='vendorProductLinePromo'],[data-zone-name='searchIncut'],[data-apiary-widget-id$='/PromoBanner'],[data-zone-name='welcomeCashbackPromo'], [data-apiary-widget-id$='/alsoViewedProducts'],#analogues-products, [data-apiary-widget-id$='/creditInfo']
+market.yandex.*##.main > noindex, [data-apiary-widget-id$='/productCardTitle/productStickyCard'], [data-apiary-widget-id$='/premiumOffersGallery'],[data-zone-name='premium-offers-gallery'],[data-zone-name='vendorProductLinePromo'],[data-zone-name='searchIncut'],[data-apiary-widget-id$='/PromoBanner'],[data-zone-name='welcomeCashbackPromo'], [data-apiary-widget-id$='/alsoViewedProducts'],#analogues-products, [data-apiary-widget-id$='/creditInfo']
 market.yandex.*#$#[data-apiary-widget-id$='/productTabs'] > div > div, [data-apiary-widget-id$='/productCardTitle']:upward(1) { position: unset !important; }
 !
 ||music.yandex.*/blocks/player-progress/
