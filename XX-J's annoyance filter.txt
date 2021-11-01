@@ -63,8 +63,8 @@ allcables.ru##w-div
 ||web.archive.org/web/*/adriver.
 ||web.archive.org/web/*mc.yandex.ru^
 ||web.archive.org/web/*google-analytics.com^
-avito.ru##.item-view-shop-header, .js-shop-showcase
-avito.ru#$#body, .b-shop { background-image: none!important; margin: 0!important; }
+avito.ru##.item-view-shop-header, .b-shop-logo, .js-shop-showcase
+avito.ru#$#[class^='index-sticky-'], [class^='index-header-'] { position: unset !important; box-shadow: none !important; }
 !
 !
 backit.me##.top-line-promo, .header:has(> .promotion)
@@ -89,10 +89,10 @@ dialogdv.ru##.bxsliderleft_bl
 ||as.dns-shop.ru/*/outdated-browsers-notification.js
 !||as.dns-shop.ru/*/kbt-analitycs.js  --  проверить!
 dns-shop.ru#$#header { padding-bottom: unset !important; }
-dns-shop.ru#$#nav, .headroom { position: unset !important; }
+dns-shop.ru#$#nav, .headroom { position: unset !important; box-shadow: none !important; }
 ||as.dns-shop.ru/*/homepage-banners.js
 ||as.dns-shop.ru/*/single-banner.js
-dns-shop.ru##.homepage-top-grid__banners, .products-list__banner
+dns-shop.ru##.single-banner-container, .homepage-top-grid__banners, .products-list__banner
 club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
 club.dns-shop.ru#$#.header { height: unset !important; }
 !
@@ -100,12 +100,11 @@ dostfilms.*#$#body, header, .carousel { background-image: none !important; margi
 dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
-e-katalog.ru##.fix-preset, form > .model-short-div, form > .rb-div, form > div:has(.model-hot-prices-not-avail)
+e-katalog.ru##.fix-preset,#item_bookmarks_fix, form > .model-short-div[style], form > .rb-div[style], form > div:has(.model-hot-prices-not-avail)
 epn.bz##.main__warning
 facebook.com#$#div[role='banner'] > div[class] { position: absolute !important; }
-facebook.com#$#.fixed_elem { position: unset !important; }
-facebook.com##div[class][role='main']:upward(2) + [data-nosnippet]
-facebook.com#$#.fixed_elem { position: unset !important; }
+facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { position: unset !important; }
+facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
 !
 !
 github.com###readme > .is-placeholder, .gh-header-sticky
@@ -115,7 +114,6 @@ github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap
 google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
 chrome.google.com#$#div[class][role='banner']:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
-chrome.google.com##[role='dialog'][aria-labelledby='promo-header']
 chrome.google.com#$#div[class][style^='display: block; background-color:'] { top: 0 !important; }
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
@@ -230,6 +228,7 @@ ok.ru#$#.mainContent_w { padding: 0 !important; }
 ||ok.ru/res/js/app/AuthLoginPopup
 ok.ru#$#.media-layer, .media-layer_c { cursor: auto !important; }
 ok.ru#$##footer { position: relative !important; margin-top: -105px !important; }
+old-games.ru###adb, li[data-author='Ads Master']
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset !important; }
@@ -247,7 +246,7 @@ planetacomp.com#%#//scriptlet('abort-on-property-write', 'snow_active')
 planetacomp.com##.b-page_newyear
 planetacomp.com#$#.calc-animation { animation: none !important; }
 planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff !important; }
-playground.ru#$#.navbar-header, .page-header-bottom { position: absolute !important; }
+playground.ru#$#.navbar-header, .navbar-footer, .page-header-bottom { position: absolute !important; }
 playground.ru#$#.user-profile-sidebar { position: unset !important; margin: -40px 0 0 !important; }
 popmech.ru#$#nav { position: unset !important; }
 price.ru###kontainer-top
@@ -266,19 +265,21 @@ forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-typ
 !
 rutracker.org#%#//scriptlet('remove-class', 'p-ext-link')
 !   Компактный интерфейс:
-rutracker.org#$##main-nav { min-width: unset!important; float: right!important; }
-rutracker.org#$##logo { min-height: unset!important; float: left!important; }
-rutracker.org#$##logo > table { height: unset!important; }
-rutracker.org#$#.site-logo { width: unset!important; height: 30px!important; }
-rutracker.org#$#.topmenu { float: right!important; }
+rutracker.org#$##main-nav { min-width: unset !important; float: right !important; }
+rutracker.org#$##logo { min-height: unset !important; float: left !important; }
+rutracker.org#$##logo > table { height: unset !important; }
+rutracker.org#$##logo-td { padding: 0 !important; }
+rutracker.org###logo-td + td
+rutracker.org#$#.site-logo { width: unset !important; height: 35px !important; }
+rutracker.org#$#.topmenu { float: right !important; }
 !
-rutracker.org#$##page_content { padding-top: unset!important; }
+rutracker.org#$##page_content { padding-top: 0 !important; }
 rutracker.org##.maintitle:contains(Трекер), #tr-form .thHead, .catTitle, tbody.hide-for-print
-rutracker.org#$#.maintitle { text-align: center!important; }
-rutracker.org#$#.maintitle ~ [style] { margin: 0 6px 4px!important; float: right!important; }
+rutracker.org#$#.maintitle { text-align: center !important; }
+rutracker.org#$#.maintitle ~ [style] { margin: 0 6px 4px !important; float: right !important; }
 !
-rutracker.org#$##tr-submit-btn:upward(1) { padding: 0!important; }
-rutracker.org#$##tr-submit-btn { height: 30px!important; font-size: 100%!important; }
+rutracker.org#$##tr-submit-btn:upward(1) { padding: 0 !important; }
+rutracker.org#$##tr-submit-btn { height: 30px !important; font-size: 100% !important; }
 !
 !
 !   Страница авторизации:
@@ -378,6 +379,7 @@ docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: ca
 !
 market.yandex.*##.main > noindex, [data-apiary-widget-id$='/productCardTitle/productStickyCard'], [data-apiary-widget-id$='/premiumOffersGallery'],[data-zone-name='premium-offers-gallery'],[data-zone-name='vendorProductLinePromo'],[data-zone-name='searchIncut'],[data-apiary-widget-id$='/PromoBanner'],[data-zone-name='welcomeCashbackPromo'], [data-apiary-widget-id$='/alsoViewedProducts'],#analogues-products, [data-apiary-widget-id$='/creditInfo']
 market.yandex.*#$#[data-apiary-widget-id$='/productTabs'] > div > div, [data-apiary-widget-id$='/productCardTitle']:upward(1) { position: unset !important; }
+market.yandex.*#$##ProductImageGallery [data-zone-name='image'] [style^='background-image:'] { position: fixed!important; bottom: 1%!important; }
 !
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset !important; }
@@ -396,7 +398,7 @@ yoomoney.ru#$#[class*='StyledNotifierAndUserWrapper'] { margin: 0 !important; }
 yoomoney.ru#$#[class*='StyledTplSectionArea'] { padding-top: 0 !important; }
 yoomoney.ru#$#span.qa-title { padding: 2px !important; }
 yoomoney.ru#$#.qa-category { height: var(--space-l) !important; }
-yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные)
+yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные), .qa-timeline > [class*='StyledDecorator']:has(.qa-offer-events)
 !
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
 !
