@@ -65,10 +65,10 @@ allcables.ru##w-div
 ||web.archive.org/web/*google-analytics.com^
 avito.ru##.item-view-shop-header, .b-shop-logo, .js-shop-showcase
 avito.ru#$#[class^='index-sticky-'], [class^='index-header-'] { position: unset !important; box-shadow: none !important; }
+avito.ru#$#[class^='items-items-'] > [class*='items-item-'] { width: calc(100% - 10px) !important; }
 !
 !
-backit.me##.top-line-promo, .header:has(> .promotion)
-backit.me#$#.top-padding { padding-top: 80px!important; }
+backit.me#$#header { position: absolute !important; }
 bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
 !
 !
@@ -87,20 +87,18 @@ dialogdv.ru##.bxsliderleft_bl
 !
 ||as.dns-shop.ru/*/homepage-analitycs.js
 ||as.dns-shop.ru/*/outdated-browsers-notification.js
-!||as.dns-shop.ru/*/kbt-analitycs.js  --  проверить!
-dns-shop.ru#$#header { padding-bottom: unset !important; }
-dns-shop.ru#$#nav, .headroom { position: unset !important; box-shadow: none !important; }
+dns-shop.ru#$#header { padding-bottom: unset !important; box-shadow: none !important; }
+dns-shop.ru#$#nav { position: unset !important; box-shadow: none !important; }
 ||as.dns-shop.ru/*/homepage-banners.js
 ||as.dns-shop.ru/*/single-banner.js
-dns-shop.ru##.single-banner-container, .homepage-top-grid__banners, .products-list__banner
-club.dns-shop.ru#%#//scriptlet('prevent-setInterval', 'c')
-club.dns-shop.ru#$#.header { height: unset !important; }
+dns-shop.ru##.single-banner-container, .homepage-top-grid__banners, .category-stories, .products-list__banner
+club.dns-shop.ru#$#.club-header { position: absolute !important; }
 !
 dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
 dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
-e-katalog.ru##.fix-preset,#item_bookmarks_fix, form > .model-short-div[style], form > .rb-div[style], form > div:has(.model-hot-prices-not-avail)
+e-katalog.ru##.fix-preset,#item_bookmarks_fix, form#list_form1 > .model-short-div[style],form#list_form1 > .rb-div[style], form#list_form1 > div:has(.model-hot-prices-not-avail),form#list_form1 > .list-item--goods-group:not(:has(.conf-price-link-close))
 epn.bz##.main__warning
 facebook.com#$#div[role='banner'] > div[class] { position: absolute !important; }
 facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { position: unset !important; }
@@ -181,6 +179,8 @@ e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
 !
+help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
+!
 my.mail.ru#$#.b-head__menu, .b-head { position: unset !important; margin: unset !important; }
 my.mail.ru#$#.b-left-menu-wrapper { top: 0 !important; }
 my.mail.ru##.b-fourth-pseudo-column, .b-column-right__block-news-cloud
@@ -228,7 +228,6 @@ ok.ru#$#.mainContent_w { padding: 0 !important; }
 ||ok.ru/res/js/app/AuthLoginPopup
 ok.ru#$#.media-layer, .media-layer_c { cursor: auto !important; }
 ok.ru#$##footer { position: relative !important; margin-top: -105px !important; }
-old-games.ru###adb, li[data-author='Ads Master']
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset !important; }
@@ -247,7 +246,11 @@ planetacomp.com##.b-page_newyear
 planetacomp.com#$#.calc-animation { animation: none !important; }
 planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff !important; }
 playground.ru#$#.navbar-header, .navbar-footer, .page-header-bottom { position: absolute !important; }
-playground.ru#$#.user-profile-sidebar { position: unset !important; margin: -40px 0 0 !important; }
+playground.ru#$#.user-profile-sidebar { position: unset !important; }
+polus.su#$#.wrapper-inner { padding-top: 0 !important; }
+polus.su#$#.menu-top { position: unset !important; }
+polus.su#$#footer { position: absolute !important; bottom: unset !important; }
+polus.su#$#.footer-compare::after, .footer-fav::after { content: '' !important; }
 popmech.ru#$#nav { position: unset !important; }
 price.ru###kontainer-top
 !
