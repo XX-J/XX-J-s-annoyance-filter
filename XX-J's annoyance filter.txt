@@ -99,6 +99,8 @@ dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok
 !
 !
 e-katalog.ru##.fix-preset,#item_bookmarks_fix, form#list_form1 > .model-short-div[style],form#list_form1 > .rb-div[style], form#list_form1 > div:has(.model-hot-prices-not-avail),form#list_form1 > .list-item--goods-group:not(:has(.conf-price-link-close))
+eldorado.ru##.dy-top-banners
+eldorado.ru#$#header { margin-top: 0 !important; }
 epn.bz##.main__warning
 facebook.com#$#div[role='banner'] > div[class] { position: absolute !important; }
 facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { position: unset !important; }
@@ -119,7 +121,7 @@ gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !importa
 gosuslugi.ru#$##header .main-navigation { height: 50px !important; }
 !
 !
-habr.com#$#.tm-base-layout__header_is-sticky, .tm-article__icons-wrapper { position: unset !important; }
+habr.com#$#.tm-base-layout__header_is-sticky, .tm-article-sticky-panel { position: unset !important; }
 hightech.fm#$#header { position: absolute !important; }
 ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
 !
@@ -231,10 +233,11 @@ ok.ru#$##footer { position: relative !important; margin-top: -105px !important; 
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset !important; }
-||ozone.ru/graphics/js/initPerfMetrics*.js
-||ozone.ru/_nuxt/uw-desktop-sku-brand-shelf.*.js
-||ozone.ru/_nuxt/shelf-all-adv-search.*.js
-ozon.ru##header > div:first-child::before, [brandshelfplacement],[data-widget="skuAdvSearchShelf"], [data-widget="webStickyProducts"],[title="Спонсорские товары"]
+||ozone.ru/graphics/client-metrics/
+||ozone.ru/assets/uw-desktop-atom-sku-shelf-goods
+||ozone.ru/assets/pdp-desktop-compare-shelf
+||ozone.ru/assets/marketing-all-adv_banner
+ozon.ru##header > div:first-child::before, [data-widget='webStickyProducts']
 ozon.ru#$#header > div:first-child { position: unset!important; height: unset!important; padding: unset!important; margin: unset!important; }
 !
 !
