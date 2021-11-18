@@ -126,9 +126,27 @@ hightech.fm#$#header { position: absolute !important; }
 ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
 !
 !
+!   Оптимизированный интерфейс. Поиск:
 kimovil.com#$#[id^='header-'] { position: absolute !important; }
-kimovil.com#$#.heading, .h-top { padding-bottom: unset !important; margin-bottom: unset !important; }
+kimovil.com#$#div > .heading, .h-top { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 kimovil.com##.h-top + div
+kimovil.com#$#.device-results-list { margin-top: 0 !important; }
+!
+!   На странице товара:
+kimovil.com#$#.wrapper { padding: 0 10px 0 30px !important; }
+!
+kimovil.com#%#//scriptlet('remove-class', 'k-collapsed', '.kiui-readmore')
+kimovil.com#$#.kiui-readmore > .k-readmore-content { margin: 0!important; max-height: unset!important; min-height: unset!important; }
+kimovil.com##.kiui-readmore > .k-more-button
+kimovil.com#$#.kiui-readmore > .k-readmore-content > * { margin-bottom: 10px !important; }
+!
+kimovil.com##g.highcharts-tooltip
+kimovil.com#$#div.highcharts-tooltip { left: 0 !important; text-align: center !important; }
+kimovil.com#$#div.highcharts-tooltip > span { left: 0!important; top: 0!important; background: #fff!important; border-radius: 4px!important; }
+!
+kimovil.com#$#.table-of-contents { position: relative !important; top: 0 !important; }
+kimovil.com#$#.table-of-contents > div > * { box-shadow: none !important; }
+!
 kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
 kino-serialy.net#$#.wrap { padding: 0 !important; }
 kino-serialy.net##.ftwo + table, br + .fsubtitle
@@ -253,7 +271,7 @@ playground.ru#$#.user-profile-sidebar { position: unset !important; }
 polus.su#$#.wrapper-inner { padding-top: 0 !important; }
 polus.su#$#.menu-top { position: unset !important; }
 polus.su#$#footer { position: absolute !important; bottom: unset !important; }
-polus.su#$#.footer-compare::after, .footer-fav::after { content: '' !important; }
+polus.su##.footer-compare::after, .footer-fav::after
 popmech.ru#$#nav { position: unset !important; }
 price.ru###kontainer-top
 !
@@ -261,6 +279,7 @@ price.ru###kontainer-top
 ria.ru##.header__brand-menu + .header__position, .article__quote-bg,.m-text_quote::before,.m-text_quote::after
 ria.ru#$#.header__position { position: unset !important; }
 ria.ru#$#.section__content, .m-text_quote { margin: 0 !important; padding: 0 !important; }
+ria.ru#%#//scriptlet('remove-class', 'm-collapsed')
 ||rmbt.ru/style_images/*/sn.gif
 !
 !   Компактный интерфейс:
@@ -408,6 +427,9 @@ yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора про�
 !
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
 !
+youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
+youla.ru#$#header > div + div > div { padding: 16px 0px !important; }
+youla.ru##[data-test-component='ProductOrAdCard']:has([data-test-component='AdvertisementCard'])
 youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container)
 youtube.com#$##masthead-container, #chips-wrapper, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
 !
