@@ -98,7 +98,8 @@ dostfilms.*#$#body, header, .carousel { background-image: none !important; margi
 dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
-e-katalog.ru##.fix-preset,#item_bookmarks_fix, form#list_form1 > .model-short-div[style],form#list_form1 > .rb-div[style], form#list_form1 > div:has(.model-hot-prices-not-avail),form#list_form1 > .list-item--goods-group:not(:has(.conf-price-link-close))
+||e-katalog.ru/js/events/
+e-katalog.ru##.fix-preset,#item_bookmarks_fix, form#list_form1 > .model-short-div[style],.rb-div, form#list_form1 > div:has(.model-hot-prices-not-avail),form#list_form1 > .list-item--goods-group:not(:has(.conf-price-link-close))
 eldorado.ru##.dy-top-banners
 eldorado.ru#$#header { margin-top: 0 !important; }
 epn.bz##.main__warning
@@ -182,7 +183,6 @@ cloud.mail.ru#$#.shoved-public-file { display: block !important; margin: auto !i
 imgsmail*/renovator/
 imgsmail*/2promo/
 e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.),[class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru#$#:root { --vkui--octavius_size_headline_height: 36px!important; --vkui--octavius_size_headline_height--regular: 36px!important; }
 !
 !   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
 e.mail.ru#$#.portal-menu td { width: unset !important; white-space: unset !important; }
@@ -194,10 +194,10 @@ e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !importa
 e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 !
 !   Поменять расположение панелей:
-e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right !important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
+!e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
+!e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right !important; }
+!e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
+!e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
 !
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
 !
@@ -256,6 +256,7 @@ onlinetrade.ru#$#.header__cover { padding: unset !important; }
 ||ozone.ru/assets/pdp-desktop-compare-shelf
 ||ozone.ru/assets/marketing-all-adv_banner
 ozon.ru##header > div:first-child::before, [data-widget='webStickyProducts']
+ozon.ru##div:has(.widget-search-result-container) ~ div:contains(/(Рекомендации для вас|Популярные бренды)/i)
 ozon.ru#$#header > div:first-child { position: unset!important; height: unset!important; padding: unset!important; margin: unset!important; }
 !
 !
@@ -426,6 +427,9 @@ yoomoney.ru#$#.qa-category { height: var(--space-l) !important; }
 yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные), .qa-timeline > [class*='StyledDecorator']:has(.qa-offer-events)
 !
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
+!
+!   На странице оплаты:
+yoomoney.ru##[class^='Paranja__StyledParanja']
 !
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
 youla.ru#$#header > div + div > div { padding: 16px 0px !important; }
