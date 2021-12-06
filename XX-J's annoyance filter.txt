@@ -108,10 +108,13 @@ facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { positi
 facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
 !
 !
-github.com###readme > .is-placeholder, .gh-header-sticky
-github.com#$#[class*='position-sticky'] { position: unset !important; margin-top: unset !important; }
-github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default) !important; }
+github.com##.Progress, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow
+github.com#$#[class*='position-sticky'] { position: unset !important; }
+github.com#$##readme > .is-placeholder + div, .file-header { width: unset !important; }
+github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
+github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
+!
 google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
 chrome.google.com#$#div[class][role='banner']:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
@@ -289,23 +292,22 @@ forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-typ
 forum.ru-board.com##body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(1) + br
 forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(2) { float: right!important; }
 !
-rutracker.org#%#//scriptlet('remove-class', 'p-ext-link')
 !   Компактный интерфейс:
-rutracker.org#$##main-nav { min-width: unset !important; float: right !important; }
-rutracker.org#$##logo { min-height: unset !important; float: left !important; }
-rutracker.org#$##logo > table { height: unset !important; }
-rutracker.org#$##logo-td { padding: 0 !important; }
-rutracker.org###logo-td + td
-rutracker.org#$#.site-logo { width: unset !important; height: 35px !important; }
-rutracker.org#$#.topmenu { float: right !important; }
+rutracker.*#$##main-nav { min-width: unset !important; float: right !important; }
+rutracker.*#$##logo { min-height: unset !important; float: left !important; }
+rutracker.*#$##logo > table { height: unset !important; }
+rutracker.*#$##logo-td { padding: 0 !important; }
+rutracker.*###logo-td + td
+rutracker.*#$#.site-logo { width: unset !important; height: 35px !important; }
+rutracker.*#$#.topmenu { float: right !important; }
 !
-rutracker.org#$##page_content { padding-top: 0 !important; }
-rutracker.org##.maintitle:contains(Трекер), #tr-form .thHead, .catTitle, tbody.hide-for-print
-rutracker.org#$#.maintitle { text-align: center !important; }
-rutracker.org#$#.maintitle ~ [style] { margin: 0 6px 4px !important; float: right !important; }
+rutracker.*#$##page_content { padding-top: 0 !important; }
+rutracker.*##.maintitle:contains(Трекер), #tr-form .thHead, .catTitle, tbody.hide-for-print
+rutracker.*#$#.maintitle { text-align: center !important; }
+rutracker.*#$#.maintitle ~ [style] { margin: 0 6px 4px !important; float: right !important; }
 !
-rutracker.org#$##tr-submit-btn:upward(1) { padding: 0 !important; }
-rutracker.org#$##tr-submit-btn { height: 30px !important; font-size: 100% !important; }
+rutracker.*#$##tr-submit-btn:upward(1) { padding: 0 !important; }
+rutracker.*#$##tr-submit-btn { height: 30px !important; font-size: 100% !important; }
 !
 !
 !   Страница авторизации:
