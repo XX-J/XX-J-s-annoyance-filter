@@ -2,7 +2,7 @@
 !
 !
 #$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4 !important; }
-archive.org,github.com,google.*,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org,yandex.*#$#html { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
+archive.org,github.com,gitlab.com,google.*,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org,yandex.*#$#html { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru,zvonili.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header, nav { position: initial!important; }
@@ -221,6 +221,8 @@ my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!imp
 my.mail.ru#%#//scriptlet('prevent-addEventListener', 'ended')
 !
 otvet.mail.ru##.fixedsticky-dummy, .nt--position
+otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) div:contains(ответ) + div > div + div > div > div:matches-css(padding-top: 20px):matches-css(padding-right: 20px):matches-css(padding-bottom: 20px):matches-css(padding-left: 20px)
+otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) + div
 pulse.mail.ru#$#.header { position: unset !important; }
 !
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
@@ -263,6 +265,33 @@ ozon.ru##div:has(.widget-search-result-container) ~ div:contains(/(Рекоме�
 ozon.ru#$#header > div:first-child { position: unset!important; height: unset!important; padding: unset!important; margin: unset!important; }
 !
 !
+patreon.com#$#a[href='#renderPageContentWrapper'] + div, header { position: absolute !important; }
+patreon.com###renderPageContentWrapper > div > div[aria-hidden]
+!
+||paypalobjects.com/*/fn-sync-telemetry-min.js
+||paypalobjects.com/*/summary-analytics.js
+||paypalobjects.com/*/gtag/
+||paypal-mktg.com^
+!   Компактный интерфейс:
+paypal.com#$##login .contentContainerBordered { margin: 10px !important; }
+!
+paypal.com#$#.cw_navbar, .cw_navbar__mainnav { position: unset !important; height: 4rem !important; }
+paypal.com#$#.foreground-container { min-height: unset !important; }
+paypal.com#$##contents, .vx_globalFooter-content, #transfer, .vx_mainContent[role='main'] { padding: 0 !important; }
+paypal.com##[data-name='download_app'], .cw_tile-promo-widget
+paypal.com#$#.vx_globalFooter { position: unset!important; min-height: unset!important; margin: 1rem 0 0!important; }
+!
+paypal.com#$##transfer > div > div > div > div > div:first-child { position: unset!important; text-align: unset!important; }
+paypal.com#$##transfer > div > div > div > div > div > a { width: unset!important; padding: 10px 30px!important; }
+paypal.com#$##transfer > div > div > div > div > div + div { top: unset!important; margin: 0!important; }
+paypal.com#$##transfer .transferPage, #transfer > div > div > div > div > div > div { margin: 0!important; padding: 0!important; }
+paypal.com#$##transfer input[id$='Recipient']:upward(1) { height: 60px !important; }
+!
+paypal.com#$#.fiDetailArea-container { box-shadow: none !important; }
+!   Справка (помощь):
+paypal.com#$#.home-hero-selection-hcr, .contact-container-footer { width: calc(100vw - 1%)!important; margin-top: 0!important; margin-bottom: 0!important; }
+paypal.com#$#.vx_globalNav-toggleTrigger_overlay { display: inline !important; }
+!
 pikabu.ru#$#.header { position: absolute !important; }
 ||planetacomp.com/*/newyear.js
 ||planetacomp.com/*/new_year.png
@@ -280,6 +309,9 @@ popmech.ru#$#nav { position: unset !important; }
 price.ru###kontainer-top
 !
 !
+rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-backgroung-suggest-lenta
+||repack.me/templates/Great/*newyear
+repack.me##.b-page_newyear
 ria.ru##.header__brand-menu + .header__position, .article__quote-bg,.m-text_quote::before,.m-text_quote::after
 ria.ru#$#.header__position { position: unset !important; }
 ria.ru#$#.section__content, .m-text_quote { margin: 0 !important; padding: 0 !important; }
@@ -313,14 +345,17 @@ rutracker.*#$##tr-submit-btn { height: 30px !important; font-size: 100% !importa
 !   Страница авторизации:
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
-online.sberbank.ru##a:has(> #smart-banner-app), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
+online.sberbank.ru###smart-banner-app:upward(1), div:has(form#homeAuth) + div:has([style^='background-image']):remove()
 online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto !important; }
 online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset !important; }
 !   Личный кабинет:
 ||online.sberbank.ru/region.offers/
-online.sberbank.ru##img[class^="region-fast-actions-"]
+||online.sberbank.ru/region.fast.actions/*/img/
+||online.sberbank.ru/common.contents/*/img/statuses/
 online.sberbank.ru#$#.full-width__outer { margin-right: unset !important; }
 online.sberbank.ru#$#.header { width: unset !important; }
+!   Автовыход:
+||online.sberbank.ru/plsbol/img/errors/disabled
 !
 softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu', 'body')
 softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
