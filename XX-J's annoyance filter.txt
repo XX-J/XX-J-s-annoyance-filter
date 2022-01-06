@@ -185,10 +185,11 @@ cloud.mail.ru#$#.shoved-public-file { display: block !important; margin: auto !i
 !
 imgsmail*/renovator/
 imgsmail*/2promo/
-e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.),[class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), div:has(> .js-letter-list-item) > div:not(.list-letter-tip):not(.list-letter-preview-action),.renovator, .letter__footer, .application-mail__layout > span > :nth-child(n+3), input[tabindex] + div:contains(Письмо отправлено)
+e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.), [class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), input[tabindex] + div:contains(Письмо отправлено)
+e.mail.ru##.letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.letter__footer, .application-mail__layout > span > :nth-child(n+3)
 !
-!   Убираем динамическую ширину между кнопками и ставим на место съехавшую кнопку 'Вид':
-e.mail.ru#$#.portal-menu td { width: unset !important; white-space: unset !important; }
+!   Центруем, убираем вариабельную ширину между кнопками и ставим на место съехавшую кнопку 'Фильтр':
+e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; text-align: center!important; }
 !
 !   Убрать 'сужатель' письма:
 e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
@@ -197,10 +198,11 @@ e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !importa
 e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 !
 !   Поменять расположение панелей:
-!e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
-!e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right !important; }
-!e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
-!e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
+e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
+e.mail.ru#$#.application-mail__layout [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
+e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
 !
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
 !
@@ -269,8 +271,9 @@ patreon.com#$#a[href='#renderPageContentWrapper'] + div, header { position: abso
 patreon.com###renderPageContentWrapper > div > div[aria-hidden]
 !
 ||paypalobjects.com/*/fn-sync-telemetry-min.js
-||paypalobjects.com/*/summary-analytics.js
 ||paypalobjects.com/*/gtag/
+!||paypalobjects.com/*/patleaf.js	- проверить!
+!||paypalobjects.com/*/qualtrics/	- проверить!
 ||paypal-mktg.com^
 !   Компактный интерфейс:
 paypal.com#$##login .contentContainerBordered { margin: 10px !important; }
@@ -389,7 +392,7 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 ~ div:has(aside) { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 > [data-log-id],[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 > [class*='__banger'],  .news-feed > div > .mg-grid__col:has(> [data-log-id]),.news-feed > div > .mg-grid__col:has([style="width: 100%;"])
+yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##[class^='news-'][class$='__wrapper'] + div > div > .mg-grid__col_xs_8 > [class*='__banger'],  .news-feed > div > :has([style='width: 100%;'])
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.mg-carousel__scrollable { overflow: auto!important; }
 !
 !   Яндекс.Новости (yandex.*/turbo/):
