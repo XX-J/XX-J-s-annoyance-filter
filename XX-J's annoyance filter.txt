@@ -177,11 +177,15 @@ lrepacks.*#$#.logo { padding: 0 !important; }
 !hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'undefined')
 !hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'k')
 !
-cloud.mail.ru###portal-menu, [data-qa-tooltip='promotip'], [href^='/subscriptions/']:upward(.public__content__row), #public .b-layout__col_2_2
+cloud.mail.ru###portal-menu, [data-qa-tooltip='promotip'], #react-top-worm,div + [class^='Datalistinfo__root--'], #public .b-layout__col_2_2
+cloud.mail.ru#$##public_toolbars { position: unset !important; }
 cloud.mail.ru#$##public .b-layout__col_1_2 { max-width: unset !important; margin: 0 !important; }
-cloud.mail.ru#$#[class^="BreadcrumbsContainer__root"] { margin: 0 !important; }
-cloud.mail.ru#$##datalist, #shoved-public-file { height: unset !important; }
-cloud.mail.ru#$#.shoved-public-file { display: block !important; margin: auto !important; }
+cloud.mail.ru#$#[class^='BreadcrumbsContainer__root'] { margin: 0 !important; }
+cloud.mail.ru#$##datalist { height: unset !important; }
+!
+cloud.mail.ru#$##REACT_VIEWER_ID { --top-toolbar-height: 60px!important; --navbar-width: 100px!important; --bottom-toolbar-height: 0!important; }
+cloud.mail.ru#$#[class^='ViewerHeader__root--'] { height: unset !important; padding: 12px !important; }
+!
 !
 imgsmail*/renovator/
 imgsmail*/2promo/
@@ -199,7 +203,7 @@ e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 !
 !   Поменять расположение панелей:
 e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
+e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
 e.mail.ru#$#.application-mail__layout [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
@@ -232,6 +236,7 @@ maxidom.ru#$#.catalog, .filter-catalog, .items-list { margin-top: unset !importa
 ||support.microsoft.com/scripts/signin/signinhandler.js
 moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
+^snow.js|$domain=monkrus.ws
 ||addons-amo.cdn.mozilla.net/amo-*.js
 msn.com#$#.head { position: unset !important; }
 msn.com#$##precontent, #maincontent { margin-top: 0 !important; }
@@ -314,6 +319,7 @@ price.ru###kontainer-top
 !
 rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-backgroung-suggest-lenta
 ||repack.me/templates/Great/*newyear
+||repack.me/templates/Great/images/bg6.jpg
 repack.me##.b-page_newyear
 ria.ru##.header__brand-menu + .header__position, .article__quote-bg,.m-text_quote::before,.m-text_quote::after
 ria.ru#$#.header__position { position: unset !important; }
