@@ -232,7 +232,10 @@ otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Отве
 pulse.mail.ru#$#.header { position: unset !important; }
 !
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
-maxidom.ru#$#.catalog, .filter-catalog, .items-list { margin-top: unset !important; padding: unset !important; }
+maxidom.ru#$#.catalog, .filter-catalog { margin-top: 0 !important; padding: 0 !important; }
+maxidom.ru#$#.bx_sidebar { padding: 0 15px 0 6px !important; }
+maxidom.ru#$#.items-list { margin: 0 !important; width: 75% !important; }
+docs.microsoft.com#$#.columns.has-large-gaps { margin-right: -1rem !important; }
 ||support.microsoft.com/scripts/signin/signinhandler.js
 moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
@@ -459,23 +462,26 @@ music.yandex.*#$#.progress__left, .progress__right { display: block !important; 
 !
 zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
 !
+!
 ||yoomoney.ru/offerwall/
 yoomoney.ru#$#[class*='StyledMenuContainer'] { overflow: auto !important; }
+!
 !   Компактный интерфейс:
 yoomoney.ru#$#html { --space-s: 4px!important; --space-m: 6px!important; --space-l: 8px!important; --space-xl: 10px!important; --space-xxl: 12px!important; --space-xxxl: 14px!important; --space-xxxxl: 16px!important; }
-yoomoney.ru#$#[class*='StyledHeaderWrapper'], .qa-account-widget > div { min-height: unset !important; height: unset !important; }
+yoomoney.ru#$#[class*='StyledHeaderWrapper'], .qa-account-widget { min-height: unset !important; height: unset !important; }
 yoomoney.ru#$#[class*='StyledServiceLogoWrapper'] { padding-top: 5px !important; }
 yoomoney.ru#$#[class*='StyledNotifierAndUserWrapper'] { margin: 0 !important; }
 !
 yoomoney.ru#$#[class*='StyledTplSectionArea'] { padding-top: 0 !important; }
 yoomoney.ru#$#span.qa-title { padding: 2px !important; }
 yoomoney.ru#$#.qa-category { height: var(--space-l) !important; }
-yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные), .qa-timeline > [class*='StyledDecorator']:has(.qa-offer-events)
+yoomoney.ru##.qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные), .qa-timeline > [class*='StyledDecorator']:has(.qa-offer-events), [class*='StyledDesktopMarketingOffersWrapper']
 !
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
 !
 !   На странице оплаты:
 yoomoney.ru##[class^='Paranja__StyledParanja']
+!
 !
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
 youla.ru#$#header > div + div > div { padding: 16px 0px !important; }
