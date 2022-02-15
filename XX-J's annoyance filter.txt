@@ -2,7 +2,7 @@
 !
 !
 #$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4 !important; }
-archive.org,github.com,gitlab.com,google.*,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org,yandex.*#$#html { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
+archive.org,github.com,gitlab.com,google.*,googleusercontent.com,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org,yandex.*#$#html { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
 !
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru,zvonili.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header, nav { position: initial!important; }
@@ -10,18 +10,33 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,softreview
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
 !
 !
-4pda.ru##[class]:has(> [class] > .holder-no-hidden) > div + [id][class][style]
-4pda.ru#$#[class]:has(> [class] > .holder-no-hidden) > [id][class][style] { background-image: none!important; }
-4pda.ru##article.post:matches-css(height: 125px):upward(3)
-4pda.ru##[class]:has(> article) + [class] > :has(lspw)
-4pda.ru##[class]:has(> article) + [class] > :has([id^="pa_"])
-4pda.ru##[class]:has(> article) + [class] > div:last-child
-4pda.ru##.count-visitor
-4pda.ru#%#//scriptlet('prevent-addEventListener', '/DOM/')
-4pda.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
-4pda.ru#%#//scriptlet('prevent-addEventListener', '/touch/')
-4pda.ru#%#//scriptlet('prevent-addEventListener', '/mouse/')
-4pda.ru#%#//scriptlet('prevent-addEventListener', 'load', 'initLytebox')
+4pda.*##[class]:has(> [class] > .holder-no-hidden) > div + [id][class][style], .menu-main-item:has(> a > svg)
+4pda.*#$#[class]:has(> [class] > .holder-no-hidden) > [id][class][style] { background-image: none !important; }
+4pda.*##[class]:has(> [class] > .holder-no-hidden) > [id][class][style] > [class]:has(> [id] > [id][class]):not(:has(article:nth-of-type(6)))
+4pda.*##[class]:has(> [class] > .holder-no-hidden) > [id][class][style] > [class] > [id] > [id][class] article[itemscope]:not([id]):not([itemtype]):not([itemid])
+!4pda.ru##[class]:has(> article) + [class] > :has(lspw)
+!4pda.ru##[class]:has(> article) + [class] > :has([id^="pa_"])
+!4pda.ru##[class]:has(> article) + [class] > div:last-child
+4pda.*#$#.footer-area { padding-bottom: 0 !important; }
+4pda.*##.count-visitor
+!   Шоб не тормозилло:
+4pda.*#%#//scriptlet('prevent-addEventListener', '/DOM/')
+4pda.*#%#//scriptlet('prevent-addEventListener', 'scroll')
+4pda.*#%#//scriptlet('prevent-addEventListener', '/touch/')
+4pda.*#%#//scriptlet('prevent-addEventListener', '/mouse/')
+4pda.*#%#//scriptlet('prevent-addEventListener', 'load', 'initLytebox')
+!
+!   Компактный интерфейс:
+4pda.*#$#body > div:nth-of-type(1) { margin: auto !important; }
+4pda.*#$##logostrip, #logostrip img { height: 62px !important; }
+4pda.*#$##logostrip:upward(table), #userlinks { width: auto!important; float: left!important; top: 0!important; }
+4pda.*#$#table + #submenu, #userlinksguest { float: right !important; }
+4pda.*#$#.user_home { float: right!important; top: 0!important; margin-right: 30px!important; }
+!
+4pda.*#$##userlinks > p { padding: 10px 0 10px 5px !important; }
+4pda.*###userlinks > p:not(:has(a))
+4pda.*#$##navstrip { float: left !important; width: 100% !important; }
+4pda.*#$##navstrip + .borderwrap, #navstrip + form, #navstrip ~ noindex { display: inline-block!important; width: 100%!important; }
 !
 !
 adguard.com###navigation
@@ -95,7 +110,7 @@ dns-shop.ru##.single-banner-container, .homepage-top-grid__banners, .category-st
 club.dns-shop.ru#$#.club-header { position: absolute !important; }
 !
 dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
-dostfilms.*##.fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
+dostfilms.*##.banner4revshare3, [class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
 ||e-katalog.ru/js/events/
@@ -108,7 +123,7 @@ facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { positi
 facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
 !
 !
-github.com##.Progress, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow
+github.com##.progress-pjax-loader, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow
 github.com#$#[class*='position-sticky'] { position: unset !important; }
 github.com#$##readme > .is-placeholder + div, .file-header { width: unset !important; }
 github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
@@ -187,8 +202,6 @@ cloud.mail.ru#$##REACT_VIEWER_ID { --top-toolbar-height: 60px!important; --navba
 cloud.mail.ru#$#[class^='ViewerHeader__root--'] { height: unset !important; padding: 12px !important; }
 !
 !
-imgsmail*/renovator/
-imgsmail*/2promo/
 e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.), [class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru##.letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.letter__footer, .application-mail__layout > span > :nth-child(n+3)
 !
@@ -484,8 +497,10 @@ yoomoney.ru##[class^='Paranja__StyledParanja']
 !
 !
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
-youla.ru#$#header > div + div > div { padding: 16px 0px !important; }
-youla.ru##[data-test-component='ProductOrAdCard']:has([data-test-component='AdvertisementCard'])
+youla.ru#$#header > div + div > div { padding: 16px 0 !important; height: 64px !important; }
+youla.ru##main section > div:not(:has(*))
+youla.ru#@#div[data-test-component="ProductOrAdCard"] > span[class*=" "]
+youla.ru#@?#div[data-test-component="ProductOrAdCard"]:has(> span):not(:has(div))
 youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container)
 youtube.com#$##masthead-container, #chips-wrapper, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
 !
