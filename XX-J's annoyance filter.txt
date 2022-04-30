@@ -502,7 +502,7 @@ zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible
 !
 !   Мобильное приложение на странице входа:
 yoomoney.ru#$#[class*='StyledTplLayout-'] { display: block !important; }
-yoomoney.ru##[class*='StyledTplLayoutContent']:first-child
+yoomoney.ru##[class*='StyledTplLayoutContent']:has([class*='StyledAppInfo'])
 !
 ||yoomoney.ru/offerwall/
 yoomoney.ru###header [class*='StyledWrapper-']:has(.qa-header-smart-banner)
