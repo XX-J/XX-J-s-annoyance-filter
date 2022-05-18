@@ -33,7 +33,6 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,softreview
 4pda.*#$#table + #submenu, #userlinksguest { float: right !important; }
 4pda.*#$#.user_home { float: right!important; top: 0!important; margin-right: 30px!important; }
 !
-!4pda.*#$##userlinks > p { padding: 10px 0 10px 5px !important; }
 4pda.*#$##userlinks > p { padding: 10px 0 !important; }
 4pda.*###userlinks > p:not(:has(a)), body > div:nth-of-type(1) > noindex ~ br + br
 4pda.*#$##navstrip { display: table !important; width: 100% !important; }
@@ -109,7 +108,7 @@ bash.im#%#//scriptlet('prevent-addEventListener', 'scroll')
 !
 !
 car.ru#%#//scriptlet('prevent-setTimeout', 'car__idle')
-car.ru#$#header { position: absolute !important; }
+car.ru#$#.header { position: absolute !important; }
 car.ru#$#.page-top-sell__button { margin-left: 20px !important; }
 car.ru##.close-button, .main-page__content-middle-dzen
 car.ru#$#.form-group-checkbox__form-control { width: 1em !important; height: 1em !important; }
@@ -131,7 +130,7 @@ dns-shop.ru##.single-banner-container, .homepage-top-grid__banners, .category-st
 club.dns-shop.ru#$#.club-header { position: absolute !important; }
 !
 dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
-dostfilms.*##.net-voine,.banner4revshare3, [class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
+dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 !
 !
 ||e-katalog.ru/js/events/
@@ -276,6 +275,7 @@ moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
 ^snow.js|$domain=monkrus.ws
 ||addons-amo.cdn.mozilla.net/amo-*.js
+mozilla.org#$#.c-navigation, .main-document-header-container { position: unset!important; box-shadow: none!important; border: none!important; }
 msn.com#$#.head { position: unset !important; }
 msn.com#$##precontent, #maincontent { margin-top: 0 !important; }
 mvideo.ru#$#header, .header_fixed { position: absolute !important; box-shadow: none !important; }
@@ -412,6 +412,8 @@ starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important;
 !
 vc.ru#$#.site-header { position: unset !important; }
 vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
+vtb.ru#$#.header, [class^='HeaderRedesigned__HeaderComponent'] { position: absolute!important; border: none!important; }
+vtb.ru#$#[class*='NativeSection-section-header'] { position: unset !important; }
 wifire.tv#$#.header { min-height: unset !important; margin: 0 !important; }
 wifire.tv#$#.header__logo { padding: 15px !important; }
 xcom-shop.ru##.card-path__wrapper + div
