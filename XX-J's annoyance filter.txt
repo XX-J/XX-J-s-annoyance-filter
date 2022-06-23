@@ -20,10 +20,8 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,rambler.ru
 4pda.*#$#.footer-area { padding-bottom: 0 !important; }
 4pda.*##.count-visitor
 !   Шоб не тормозилло:
-4pda.*#%#//scriptlet('prevent-addEventListener', '/DOM/')
-4pda.*#%#//scriptlet('prevent-addEventListener', 'scroll')
-4pda.*#%#//scriptlet('prevent-addEventListener', '/touch/')
-4pda.*#%#//scriptlet('prevent-addEventListener', '/mouse/')
+4pda.*#%#//scriptlet('prevent-addEventListener', '/DOM|scroll|touch|mouse/')
+!4pda.*#%#//scriptlet('prevent-addEventListener', 'scroll')
 4pda.*#%#//scriptlet('prevent-addEventListener', 'load', 'initLytebox')
 !
 !   Компактный интерфейс:
@@ -36,6 +34,7 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,rambler.ru
 4pda.*#$##userlinks > p { padding: 10px 0 !important; }
 4pda.*###userlinks > p:not(:has(a)), body > div:nth-of-type(1) > noindex ~ br + br
 4pda.*#$##navstrip { display: table !important; width: 100% !important; }
+4pda.*##.user-avatar > img[src$=".gif"]
 !
 !
 adguard.com###navigation
@@ -201,6 +200,11 @@ kotofoto.ru##.bl-friday-banner
 !
 lenta.com##.message-text-block--header, .catalog-banners-position
 lenta.com#$#.header__bar-wrap { position: unset !important; }
+lenta.ru#$#.layout__header-ghost { height: 60px !important; }
+lenta.ru#$#.layout__header._sticked { margin-bottom: 20px !important; }
+lenta.ru#$#.header:not(._sticked) { height: unset!important; padding-top: 10px!important; padding-bottom: 10px!important; }
+lenta.ru#$#.header__my { width: unset !important; }
+lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) for (let Node of Mutation.addedNodes) if (Node instanceof SVGElement && Node.previousSibling instanceof HTMLElement && Node.previousSibling.matches('iframe[src*="vp.rambler.ru"]')) setTimeout( () => { Node.onclick() }, 90) }).observe( document, { childList: true, subtree: true })
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0 !important; }
 !
@@ -381,26 +385,33 @@ price.ru###kontainer-top
 !
 ||rambler.ru/browser/check-support.js
 ||rambler.ru/static/recommender.js
-~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/(pagehide|pageshow|rnews-update-event|visibilitychange)/')
-~vp.rambler.ru,rambler.ru#$#div[class][itemscope][itemtype] { position: absolute !important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/pagehide|pageshow|rnews-update-event|visibilitychange/')
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$#div[class][itemscope][itemtype] { position: absolute !important; }
 !
-~vp.rambler.ru,rambler.ru##main > div:has(> div > [style="min-height:0"] > div > [id^="xmrij-"])
-~vp.rambler.ru,rambler.ru##main div:has(> [style^="min-height:"] > div > [id^="xmrij-"])
-~vp.rambler.ru,rambler.ru##main div:has(> div > [style="min-height:600px"] > div > [id^="xmrij-"])
-~vp.rambler.ru,rambler.ru#$#main .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1), main .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div, main .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div, main .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div { width: unset!important; }
-~vp.rambler.ru,rambler.ru#$#main .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { width: 25%!important; margin: 0!important; }
-~vp.rambler.ru,rambler.ru#$#main .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) { width: 72%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###app > div:has(> div > div > div > [id^="xmrij-"])
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> [style^="min-height:"] > div > [id^="xmrij-"])
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> div > [style="min-height:600px"] > div > [id^="xmrij-"])
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1), #app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div, #app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div, #app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div { width: unset!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { width: 25%!important; margin: 0!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) { width: 72%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) { width: 75%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; height: unset!important; }
 !
 !  Не закреплять видеоплеер и Автораскрытие текста новостей:
-~vp.rambler.ru,rambler.ru#%#if (document.querySelector('button[data-blocks^="mini_video_player"]')) { document.querySelector('button[data-blocks^="mini_video_player"]').click() }; new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) { if (Node instanceof HTMLElement) { if (Node.matches('button[data-blocks^="mini_video_player"]') || Node.matches('button[data-blocks^="readmore"]')) { Node.click() } else { for (let SelectedElement of Node.querySelectorAll('button[data-blocks^="mini_video_player"], button[data-blocks^="readmore"]')) SelectedElement.click() }}}}}).observe( document.body, {childList: true, subtree: true})
-~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', 'copy')
-~vp.rambler.ru,rambler.ru##[data-blocks="main_now"] article + div, [data-blocks="rec_block"]
-~vp.rambler.ru,rambler.ru##div:has(> div > div > div > [id^="adfox-"]):not(:has([id^="cluster-video"]))
-~vp.rambler.ru,rambler.ru###bigColumn + div > div + div
-~vp.rambler.ru,rambler.ru##div:has(> #bigColumn) ~ div:has(> div + div), [data-rnet^="rnet_"]:upward(2)
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#if (document.querySelector('button[data-blocks^="mini_video_player"]')) { document.querySelector('button[data-blocks^="mini_video_player"]').click() }; new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) if (Node.matches('button[data-blocks^="mini_video_player"]') || Node.matches('button[data-blocks^="readmore"]')) { Node.click() } else { for (let SelectedElement of Node.querySelectorAll('button[data-blocks^="mini_video_player"], button[data-blocks^="readmore"]')) SelectedElement.click() }}}).observe( document, {childList: true, subtree: true})
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', 'copy')
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###root [data-blocks="main_now"] article + div, #root [data-blocks="rec_block"]
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> div > div > div > [id^="adfox-"]):not(:has([id^="cluster-video"]))
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###root #bigColumn + div > div + div
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> #bigColumn) ~ div:has(> div + div), #root [data-rnet^="rnet_"]:upward(2)
 !
-vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/(contextmenu|ended)/')
-vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-backgroung-suggest-lenta
+vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/contextmenu|pause|ended/')
+vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-skin--gradient, .eplayer-skin-seek-handler
+vp.rambler.ru#$#.eplayer-skin-title:not(:has(> div:empty)), .eplayer-skin-controls { background: #000d !important; }
+vp.rambler.ru#$#.eplayer-skin-contols-div { background: #000d!important; bottom: 0!important; height: 38px!important; }
+vp.rambler.ru#$#.eplayer-skin-seek { height: 4px !important; z-index: 1 !important; }
+vp.rambler.ru#$#.eplayer-skin-seek-pane { top: 0 !important; height: 9px !important; }
+vp.rambler.ru#$#.eplayer-skin-seek-loaded, .eplayer-skin-seek-bar { height: 100% !important; }
 !
 !
 ||repack.me/templates/Great/*newyear
@@ -456,6 +467,7 @@ online.sberbank.ru##[class^="settings-"] + div .common__grid-cell:has([href="/cy
 softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu', 'body')
 softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
 sourceforge.net#$#.l-header-nav { position: unset !important; }
+stackoverflow.com#$#header { position: absolute !important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 !
 !
