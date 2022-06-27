@@ -1,15 +1,15 @@
 !   https://raw.githubusercontent.com/XX-J/XX-J-s-annoyance-filter/master/XX-J's%20annoyance%20filter.txt
-!
-!
+
+
 #$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4 !important; }
 archive.org,github.com,gitlab.com,google.*,googleusercontent.com,mail.ru,pikabu.ru,wikipedia.org,wiktionary.org,yandex.*#$#html { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
-!
+
 bash.im,dostfilms.*,downloadcenter.intel.com,kimovil.com,msi.com,uglifyjs.net,prettifyjs.net#$#.dialog__close,[class^="quote__"],.header,[class^="nav"], .centralniy,.opisanie-podborok,[class^="zashitatekstov"],.detaly-novostey, table,.btn, .noselect,.filters-default, .navbar *, .file,label,.live,button { -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 kotofoto.ru,lrepacks.*,otvet.mail.ru,msi.com,zenden.ru,zvonili.com#$#.layout__row_navbar, .stickylid, .header-bottom, .portal-menu, .navbar-fixed-top, header, nav { position: initial!important; }
 bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,rambler.ru,softreview.ucoz.ru#$#body, .filters-default,.k-values, .navbar-page, .unselectable,  .page-main-column { cursor: auto!important; }
 ||google.com/recaptcha/$domain=dostfilms.*|usbdev.ru,important
-!
-!
+
+
 4pda.*##[class]:has(> [class] > .holder-no-hidden) > div + [id][class][style], .menu-main-item:has(> a > svg)
 4pda.*#$#[class]:has(> [class] > .holder-no-hidden) > [id][class][style] { background-image: none !important; }
 4pda.*##[class]:has(> [class] > .holder-no-hidden) > [id][class][style] > [class]:has(> [id] > [id][class]):not(:has(article:nth-of-type(6)))
@@ -23,23 +23,23 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,rambler.ru
 4pda.*#%#//scriptlet('prevent-addEventListener', '/DOM|scroll|touch|mouse/')
 !4pda.*#%#//scriptlet('prevent-addEventListener', 'scroll')
 4pda.*#%#//scriptlet('prevent-addEventListener', 'load', 'initLytebox')
-!
+
 !   Компактный интерфейс:
 4pda.*#$#body > div:nth-of-type(1) { margin: auto !important; }
 4pda.*#$##logostrip, #logostrip img { height: 62px !important; }
 4pda.*#$##logostrip:upward(table), #userlinks { width: auto!important; float: left!important; top: 0!important; }
 4pda.*#$#table + #submenu, #userlinksguest { float: right !important; }
 4pda.*#$#.user_home { float: right!important; top: 0!important; margin-right: 30px!important; }
-!
+
 4pda.*#$##userlinks > p { padding: 10px 0 !important; }
 4pda.*###userlinks > p:not(:has(a)), body > div:nth-of-type(1) > noindex ~ br + br
 4pda.*#$##navstrip { display: table !important; width: 100% !important; }
 4pda.*##.user-avatar > img[src$=".gif"]
-!
-!
+
+
 adguard.com###navigation
 adguard.com#$#.sticky-bar { position: absolute !important; top: 100% !important; }
-!
+
 !   На Главной:
 ||alicdn.com/ae-*-ui/??hashmap*.js
 ||alicdn.com/*alilog/
@@ -56,7 +56,7 @@ adguard.com#$#.sticky-bar { position: absolute !important; top: 100% !important;
 ||aliexpress.*/check.gif
 !   В списке заказов:
 ||alicdn.*/alime/dialog/alicare-dialog.js
-!
+
 alibaba.com##[data-tag="gateway-wrapper"]:contains(Please update your Firefox)
 aliexpress.*##.ui-banner-slider-wrap, .list-item:has(.item-ad-tag),.ams-region, .store-header-bg,.overview-rating-balloon,.gps-recommend-dialog-wrap > :nth-child(n+2), .im-contact-tips
 !   Не даёт убирать прокрутку:
@@ -68,28 +68,28 @@ aliexpress.*#$#.left-menu-container { max-height: unset!important; }
 aliexpress.*#$#.gps-recommend-dialog-wrap, .p-info { width: auto!important; height: auto!important; }
 feedback.aliexpress.com#$#.simple-pager { display: block!important; }
 aliexpress.*#$#.ui-window-content { max-height: none!important; }
-!
-!
+
+
 !   Страница Заказов:
 aliexpress.*#$##nav-crumb { width: unset !important; padding: 6px !important; }
 aliexpress.*#$##page-menu { width: unset !important; margin: 30px 16px 0 0 !important; }
-!
+
 aliexpress.*#$##page-content { margin: 0 !important; }
 aliexpress.*#$#.order-notice-main { text-align: end !important; }
 aliexpress.*#$#.order-notice { display: inline-flex!important; margin: 0!important; }
 aliexpress.*#$#.order-search { width: 75% !important; }
-!
+
 aliexpress.*#$#.order-item-content-info-name a { white-space: unset !important; }
 aliexpress.*#$#.order-item-content-info-sku { float: right!important; position: sticky!important; top: 100%!important; margin: 0!important; }
 aliexpress.*#$#.order-item-content-info-number { float: left!important; position: sticky!important; top: 100%!important; margin: 0!important; }
 aliexpress.*#$#.order-item-content-info-tag { position: sticky!important; top: 100%!important; }
 aliexpress.*#$#.order-item-content-info-tag span { margin: auto !important; }
-!
+
 !   Страница "Центра сообщений":
 aliexpress.*##.me-body-container .me-ui-main-title, .me-body-container .im-app .scrollbar-track
 aliexpress.*#$#.me-body-container .im-app { box-shadow: none !important; height: calc(100vh - 20px) !important; }
-!
-!
+
+
 allcables.ru##.wrapper:has(> .gallery-holder)
 allcables.ru##w-div
 ||archive.org/includes/analytics.js
@@ -102,29 +102,29 @@ mag.auto.ru##.ArticleHeader + .PageArticle__indexLink
 avito.ru##.item-view-shop-header, .b-shop-logo, .js-shop-showcase
 avito.ru#$#[class^='index-sticky-'], [class^='index-header-'] { position: unset !important; box-shadow: none !important; }
 avito.ru#$#[class^='items-items-'] > [class*='items-item-'] { width: calc(100% - 10px) !important; }
-!
-!
+
+
 backit.me#$#header { position: absolute !important; }
-!
-!
+
+
 ||car.ru/*_hb_lazy_load.js
 ||car.ru/*_news_auto_add_blocks_v*.js
 car.ru#%#//scriptlet('prevent-setTimeout', 'location')
 car.ru#$#.header { position: absolute !important; }
 car.ru#$#.page-top-sell__button { margin-left: 20px !important; }
-car.ru##.close-button, .main-page__content-middle-dzen
+car.ru##.close-button, .yandex-news-promo, .main-page__content-middle-dzen
 car.ru#$#.form-group-checkbox__form-control { width: 1em !important; height: 1em !important; }
 car.ru#%#//scriptlet('remove-class', 'lg-with-ads')
 car.ru#$#.slide-news-stub-wrapper { max-width: unset!important; width: unset!important; height: 75vh!important; }
-!
+
 citilink.ru#$#.SiteVersionSwitcher { position: absolute!important; }
 citilink.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
 citilink.ru##.BannersSlider
 codepen.io,cdpn.io##.referer-warning
-!
-!
+
+
 dialogdv.ru##.bxsliderleft_bl
-!
+
 ||as.dns-shop.ru/*/homepage-analitycs.js
 ||as.dns-shop.ru/*/outdated-browsers-notification.js
 dns-shop.ru#$#header { padding-bottom: unset !important; box-shadow: none !important; }
@@ -133,26 +133,26 @@ dns-shop.ru#$#nav { position: unset !important; box-shadow: none !important; }
 ||as.dns-shop.ru/*/single-banner.js
 dns-shop.ru##.single-banner-container, .homepage-top-grid__banners, .category-stories, .products-list__banner
 club.dns-shop.ru#$#.club-header { position: absolute !important; }
-!
+
 dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
 dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
-!
-!
+
+
 eldorado.ru##.dy-top-banners
 eldorado.ru#$#header { margin-top: 0 !important; }
 epn.bz##.main__warning
 facebook.com#$#div[role='banner'] > div[class] { position: absolute !important; }
 facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { position: unset !important; }
 facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
-!
-!
+
+
 github.com##.progress-pjax-loader, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
 github.com#$#[class*='position-sticky'] { position: unset !important; }
 github.com#$##readme > .is-placeholder + div, .file-header { width: unset !important; }
 github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
-!
+
 google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
 chrome.google.com#$#div[class][role='banner']:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
@@ -162,42 +162,42 @@ mail.google.com##div:has(> div > div > a:contains(Освободите мест�
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
 gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !important; box-shadow: none !important; }
 gosuslugi.ru#$##header .main-navigation { height: 50px !important; }
-!
-!
+
+
 habr.com#$#.tm-base-layout__header_is-sticky, .tm-article-sticky-panel { position: unset !important; }
 hightech.fm#$#header { position: absolute !important; }
 ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
-!
-!
+
+
 !   Оптимизированный интерфейс. Поиск:
 kimovil.com#$#[id^='header-'] { position: absolute !important; }
 kimovil.com#$#div > .heading, .h-top { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 kimovil.com##.h-top + div
 kimovil.com#$#.device-results-list { margin-top: 0 !important; }
-!
+
 !   На странице товара:
 kimovil.com#$#.wrapper { padding: 0 10px 0 30px !important; }
-!
+
 kimovil.com#%#//scriptlet('remove-class', 'k-collapsed', '.kiui-readmore')
 kimovil.com#$#.kiui-readmore > .k-readmore-content { margin: 0!important; max-height: unset!important; min-height: unset!important; }
 kimovil.com##.kiui-readmore > .k-more-button
 kimovil.com#$#.kiui-readmore > .k-readmore-content > * { margin-bottom: 10px !important; }
-!
+
 kimovil.com##g.highcharts-tooltip
 kimovil.com#$#div.highcharts-tooltip { left: 0 !important; text-align: center !important; }
 kimovil.com#$#div.highcharts-tooltip > span { left: 0!important; top: 0!important; background: #fff!important; border-radius: 4px!important; }
-!
+
 kimovil.com#$#.table-of-contents { position: relative !important; top: 0 !important; }
 kimovil.com#$#.table-of-contents > div > * { box-shadow: none !important; }
-!
+
 kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
 kino-serialy.net#$#.wrap { padding: 0 !important; }
 kino-serialy.net##.ftwo + table, br + .fsubtitle
 kinopoisk.ru#$#[class*='styles_headerContainer__'] { position: unset !important; }
 kinopoisk.ru##[class^='styles_abbreviated__']
 kotofoto.ru##.bl-friday-banner
-!
-!
+
+
 lenta.com##.message-text-block--header, .catalog-banners-position
 lenta.com#$#.header__bar-wrap { position: unset !important; }
 lenta.ru#$#.layout__header-ghost { height: 60px !important; }
@@ -207,8 +207,8 @@ lenta.ru#$#.header__my { width: unset !important; }
 lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) for (let Node of Mutation.addedNodes) if (Node instanceof SVGElement && Node.previousSibling instanceof HTMLElement && Node.previousSibling.matches('iframe[src*="vp.rambler.ru"]')) setTimeout( () => { Node.onclick() }, 90) }).observe( document, { childList: true, subtree: true })
 lrepacks.*##.b-page_newyear
 lrepacks.*#$#.logo { padding: 0 !important; }
-!
-!
+
+
 !||bs.yandex.ru/count/
 !||an.mail.ru/count/
 !||img.imgsmail.ru/*/logger/
@@ -220,8 +220,8 @@ lrepacks.*#$#.logo { padding: 0 !important; }
 !hi-tech.mail.ru#$#.block .cols__column, .comments { display: block!important; margin: auto!important; width: 60%!important; }
 !hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'undefined')
 !hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'k')
-!
-!
+
+
 cloud.mail.ru###react-modals:has([data-qa-modal="update-license-dialog"])
 cloud.mail.ru#$#body:has(#react-modals [data-qa-modal="update-license-dialog"]) { overflow: auto !important; padding: 0 !important; }
 cloud.mail.ru##[data-qa-tooltip="promotip"], #topBanner
@@ -232,7 +232,7 @@ cloud.mail.ru###react-top-worm,[class^="Worm__root--"], [class^="Datalistinfo__r
 cloud.mail.ru#$#[class^="AttachesPage__title--"], [class^="DataList__root--"] { padding: 0 !important; }
 cloud.mail.ru#$#[class^="BreadcrumbsContainer__root--"] { margin: 0 !important; }
 cloud.mail.ru#$#[class^="AttachesPage__informer--"] { position: absolute !important; right: 0 !important; }
-!
+
 cloud.mail.ru#$##REACT_VIEWER_ID { --top-toolbar-height: 60px!important; --navbar-width: 100px!important; --bottom-toolbar-height: 10px!important; --bottom-banner-height: 0px!important; }
 cloud.mail.ru#$#[class^="ReactViewer__headerWrapper--"] { background: var(--paradigm--color_true_black--normal) !important; }
 cloud.mail.ru#$#[class^="ViewerHeader__root--"] { height: unset !important; }
@@ -240,34 +240,34 @@ cloud.mail.ru#$#[class^="ViewerHeader__controlsWrapper--"] { padding-bottom: 0 !
 cloud.mail.ru#$#[class^="ViewerPdf__root--"] { position: relative!important; width: 100%!important; height: 100%!important; left: 0!important; border-radius: 0!important; }
 cloud.mail.ru#$#[class^="ReactViewer__arrow--"]::before { left: 0 !important; width: 70px !important; }
 cloud.mail.ru##[class^="ReactViewer__attachesinfo--"]
-!
-!
+
+
 e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.), [class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), [id^='octavius-notify-quota-'], input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru##.letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.letter__footer, .application-mail__layout > span > :nth-child(n+3)
-!
+
 !   Центруем, убираем вариабельную ширину между кнопками и ставим на место съехавшую кнопку 'Фильтр':
 e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; text-align: center!important; }
-!
+
 !   Убрать 'сужатель' письма:
 e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
 e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
 e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !important; }
 e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
-!
+
 !   Поменять расположение панелей:
 e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
 e.mail.ru#$#.application-mail__layout [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
-!
-!
+
+
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
-!
+
 my.mail.ru#$#.b-head__menu, .b-head { position: unset !important; margin: unset !important; }
 my.mail.ru#$#.b-left-menu-wrapper { top: 0 !important; }
 my.mail.ru##.b-fourth-pseudo-column, .b-column-right__block-news-cloud
-!
+
 ||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/right-banners/
 ||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/video-html5/commerce/custom-overlay_rev*.js
 !   Оптимизированный интерфейс:
@@ -279,7 +279,7 @@ my.mail.ru#$#.b-video__section__item-page-player { width: 75% !important; }
 my.mail.ru#$#.sp-video__item-page-new__video-wrapper { width: unset !important; height: calc(120vh * 9 / 16) !important; }
 my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!important; right: 0!important; width: 24%!important; }
 my.mail.ru#%#//scriptlet('prevent-addEventListener', 'ended')
-!
+
 otvet.mail.ru##.fixedsticky-dummy, .nt--position
 otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) div:contains(ответ) + div > div + div > div > div:matches-css(padding-top: 20px):matches-css(padding-right: 20px):matches-css(padding-bottom: 20px):matches-css(padding-left: 20px)
 otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) + div
@@ -287,8 +287,8 @@ otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Отве
 player-smotri.mail.ru#$#[class^="WrapperElements-sc-"] { padding-bottom: 0 !important; }
 player-smotri.mail.ru#$#[class^="ControlsBar-sc-"] [class^="FadingWrapper-sc-"] { background: #000d !important; }
 pulse.mail.ru#$#.header { position: unset !important; }
-!
-!
+
+
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
 maxidom.ru#$#.catalog, .filter-catalog { margin-top: 0 !important; padding: 0 !important; }
 maxidom.ru#$#.bx_sidebar { padding: 0 15px 0 6px !important; }
@@ -307,15 +307,15 @@ mvideo.ru#$#header, .header_fixed { position: absolute !important; box-shadow: n
 mvideo.ru#$#.location-icon_animated { animation: none !important; }
 mvideo.ru#$#.app-header-columns { display: grid !important; }
 mvideo.ru##mvid-mobile-navbar-wrapper, .pdp-header__sticky-bar
-!
-!
+
+
 ||bust.narod.ru/files/back0.gif
 naked-science.ru#$#.section-comments { margin-top: 0 !important; }
 ||nnmclub.*/new_year/
 nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px !important; }
 nplus1.ru/js/lib/jquery.mobile-events.min.js
-!
-!
+
+
 obi.ru#$##Header .nav-meta { position: unset !important; }
 obi.ru##.banner-transparent
 ok.ru#$#.topPanel { position: unset !important; }
@@ -333,12 +333,12 @@ onlinetrade.ru#$#.header__cover { padding: unset !important; }
 ozon.ru##header > div:first-child::before,[triggering-object-selector='#short-product-info-trigger-new'], [data-widget='webStickyProducts']
 ozon.ru#$#header > div:first-child { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
 ozon.ru##div:has(.widget-search-result-container) ~ div:contains(/(Рекомендации для вас|Популярные бренды)/i)
-!
-!
+
+
 patreon.com#$#a[href='#renderPageContentWrapper'] + div, header { position: absolute !important; }
 patreon.com###renderPageContentWrapper > div > div[aria-hidden]
-!
-!
+
+
 ||paypalobjects.com/*/fn-sync-telemetry-min.js
 ||paypalobjects.com/*/gtag/
 !||paypalobjects.com/*/patleaf.js	- проверить!
@@ -346,25 +346,25 @@ patreon.com###renderPageContentWrapper > div > div[aria-hidden]
 ||paypal-mktg.com^
 !   Компактный интерфейс:
 paypal.com#$##login .contentContainerBordered { margin: 10px !important; }
-!
+
 paypal.com#$#.cw_navbar, .cw_navbar__mainnav { position: unset !important; height: 4rem !important; }
 paypal.com#$#.foreground-container { min-height: unset !important; }
 paypal.com#$##contents, .vx_globalFooter-content, #transfer, .vx_mainContent[role='main'] { padding: 0 !important; }
 paypal.com##[data-name='download_app'], .cw_tile-promo-widget
 paypal.com#$#.vx_globalFooter { position: unset!important; min-height: unset!important; margin: 1rem 0 0!important; }
-!
+
 paypal.com#$##transfer > div > div > div > div > div:first-child { position: unset!important; text-align: unset!important; }
 paypal.com#$##transfer > div > div > div > div > div > a { width: unset!important; padding: 10px 30px!important; }
 paypal.com#$##transfer > div > div > div > div > div + div { top: unset!important; margin: 0!important; }
 paypal.com#$##transfer .transferPage, #transfer > div > div > div > div > div > div { margin: 0!important; padding: 0!important; }
 paypal.com#$##transfer input[id$='Recipient']:upward(1) { height: 60px !important; }
-!
+
 paypal.com#$#.fiDetailArea-container { box-shadow: none !important; }
 !   Справка (помощь):
 paypal.com#$#.home-hero-selection-hcr, .contact-container-footer { width: calc(100vw - 1%)!important; margin-top: 0!important; margin-bottom: 0!important; }
 paypal.com#$#.vx_globalNav-toggleTrigger_overlay { display: inline !important; }
-!
-!
+
+
 pikabu.ru#$#.header { position: absolute !important; }
 ||planetacomp.com/*/newyear.js
 ||planetacomp.com/*/new_year.png
@@ -372,7 +372,7 @@ planetacomp.com#%#//scriptlet('abort-on-property-write', 'snow_active')
 planetacomp.com##.b-page_newyear
 planetacomp.com#$#.calc-animation { animation: none !important; }
 planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff !important; }
-!
+
 playground.ru#$#.navbar-header, .navbar-footer, .page-header-bottom { position: absolute !important; }
 playground.ru#$#.user-profile-sidebar { position: unset !important; }
 polus.su#$#.wrapper-inner { padding-top: 0 !important; }
@@ -381,13 +381,13 @@ polus.su#$#footer { position: absolute !important; bottom: unset !important; }
 polus.su##.footer-compare::after, .footer-fav::after
 popmech.ru#$#nav { position: unset !important; }
 price.ru###kontainer-top
-!
-!
+
+
 ||rambler.ru/browser/check-support.js
 ||rambler.ru/static/recommender.js
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/pagehide|pageshow|rnews-update-event|visibilitychange/')
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$#div[class][itemscope][itemtype] { position: absolute !important; }
-!
+
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###app > div:has(> div > div > div > [id^="xmrij-"])
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> [style^="min-height:"] > div > [id^="xmrij-"])
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> div > [style="min-height:600px"] > div > [id^="xmrij-"])
@@ -396,7 +396,7 @@ price.ru###kontainer-top
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) { width: 72%!important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) { width: 75%!important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; height: unset!important; }
-!
+
 !  Не закреплять видеоплеер и Автораскрытие текста новостей:
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#if (document.querySelector('button[data-blocks^="mini_video_player"]')) { document.querySelector('button[data-blocks^="mini_video_player"]').click() }; new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) if (Node.matches('button[data-blocks^="mini_video_player"]') || Node.matches('button[data-blocks^="readmore"]')) { Node.click() } else { for (let SelectedElement of Node.querySelectorAll('button[data-blocks^="mini_video_player"], button[data-blocks^="readmore"]')) SelectedElement.click() }}}).observe( document, {childList: true, subtree: true})
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', 'copy')
@@ -404,7 +404,7 @@ price.ru###kontainer-top
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> div > div > div > [id^="adfox-"]):not(:has([id^="cluster-video"]))
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root #bigColumn + div > div + div
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> #bigColumn) ~ div:has(> div + div), #root [data-rnet^="rnet_"]:upward(2)
-!
+
 vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/contextmenu|pause|ended/')
 vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-skin--gradient, .eplayer-skin-seek-handler
 vp.rambler.ru#$#.eplayer-skin-title:not(:has(> div:empty)), .eplayer-skin-controls { background: #000d !important; }
@@ -412,8 +412,8 @@ vp.rambler.ru#$#.eplayer-skin-contols-div { background: #000d!important; bottom:
 vp.rambler.ru#$#.eplayer-skin-seek { height: 4px !important; z-index: 1 !important; }
 vp.rambler.ru#$#.eplayer-skin-seek-pane { top: 0 !important; height: 9px !important; }
 vp.rambler.ru#$#.eplayer-skin-seek-loaded, .eplayer-skin-seek-bar { height: 100% !important; }
-!
-!
+
+
 ||repack.me/templates/Great/*newyear
 ||repack.me/templates/Great/images/bg6.jpg
 repack.me##.b-page_newyear
@@ -422,13 +422,13 @@ ria.ru#$#.header__position { position: unset !important; }
 ria.ru#$#.section__content, .m-text_quote { margin: 0 !important; padding: 0 !important; }
 ria.ru#%#//scriptlet('remove-class', 'm-collapsed')
 ||rmbt.ru/style_images/*/sn.gif
-!
+
 !   Компактный интерфейс:
 forum.ru-board.com#%#//scriptlet('remove-attr', 'width|align', 'body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(-n+2)')
 forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(1) { float: left!important; }
 forum.ru-board.com##body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(1) + br
 forum.ru-board.com#$#body > table[cellspacing="0"][bgcolor="#FFFFFF"]:nth-of-type(2) { float: right!important; }
-!
+
 !   Компактный интерфейс:
 rutracker.*#$##main-nav { min-width: unset !important; float: right !important; }
 rutracker.*#$##logo { min-height: unset !important; float: left !important; }
@@ -437,18 +437,18 @@ rutracker.*#$##logo-td { padding: 0 !important; }
 rutracker.*###logo-td + td
 rutracker.*#$#.site-logo { width: unset !important; height: 35px !important; }
 rutracker.*#$#.topmenu { float: right !important; }
-!
+
 rutracker.*#$##page_content { padding-top: 0 !important; }
 rutracker.*##.maintitle:contains(Трекер), #tr-form .thHead, .catTitle, tbody.hide-for-print
 rutracker.*#$#.maintitle { text-align: center !important; }
 rutracker.*#$#.maintitle ~ [style] { margin: 0 6px 4px !important; float: right !important; }
-!
+
 rutracker.*#$##tr-submit-btn:upward(1) { padding: 0 !important; }
 rutracker.*#$##tr-submit-btn { height: 30px !important; font-size: 100% !important; }
-!
+
 rutube.ru#$#.header-module__mainHeader { position: absolute !important; width: 100% !important; }
-!
-!
+
+
 !   Страница авторизации:
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
@@ -463,14 +463,16 @@ online.sberbank.ru#$##main, #workspace { width: unset !important; max-width: uns
 online.sberbank.ru##[class^="settings-"] + div .common__grid-cell:has([href="/cybersecurity"])
 !   Автовыход:
 ||online.sberbank.ru/plsbol/img/errors/disabled
-!
+
 softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecopy|oncopy|onselect|onselectstart|ondragstart|oncontextmenu', 'body')
 softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
 sourceforge.net#$#.l-header-nav { position: unset !important; }
 stackoverflow.com#$#header { position: absolute !important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
-!
-!
+
+
+tele2.ru#$#.mia-injir-container { padding: 0 !important; }
+||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
 tass.*#$#.header { position: unset !important; }
 ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
@@ -480,8 +482,8 @@ vtb.ru#$#[class*='NativeSection-section-header'] { position: unset !important; }
 wifire.tv#$#.header { min-height: unset !important; margin: 0 !important; }
 wifire.tv#$#.header__logo { padding: 15px !important; }
 xcom-shop.ru##.card-path__wrapper + div
-!
-!
+
+
 !   Открепить шапку:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-header__wrapper, .navigation, [class^='news-'][class$='__wrapper'], [class^='news-'][class$='__wrapper'] > [class*='news-'], .header__container, .ui-lib-header-container2__wrapper { position: initial!important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-navigation { position: relative!important; top: unset!important; }
@@ -489,45 +491,49 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
 !   "Сделать поиском по умолчанию" и "Установить Яндекс.Браузер":
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header, body > .distr-popup
-!
+
 !   Яндекс:
-[$domain=yandex.*,path=/^(\/\[^\/\]*)?$/]##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
-[$domain=yandex.*,path=/^(\/\[^\/\]*)?$/]##[id^="zen-row-"]:has(article > div + div), [id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо))
-!
+[$domain=yandex.*,path=/^(\/\[^/\]*)?$/]##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
+[$domain=yandex.*,path=/^(\/\[^/\]*)?$/]##[id^="zen-row-"]:has(article > div + div), [id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо))
+
+!   Яндекс.Погода:
+[$domain=yandex.*,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration
+[$domain=yandex.*,path=|/pogoda^]#$#[role="main"] > div { margin-top: 0 !important; margin-right: 0 !important; }
+
 !   Яндекс.Поиск:
 [$domain=yandex.*,path=|/search^]##ul#search-result > li:has(a[data-event-required="true"])
-!
+
 !   Яндекс.Новости:
 [$domain=yandex.*,path=|/news^]##.mg-grid__col_xs_12 + div, .mg-grid__col_xs_8 + div:has(aside) + div, .mg-grid__col_xs_8 + div + div > div > div > div > div:has(> [data-log-id]):remove()
 [$domain=yandex.*,path=|/news^]#$#.mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
 [$domain=yandex.*,path=|/news^]#$#.mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
 [$domain=yandex.*,path=|/news^]#$#.mg-grid__col_xs_8 ~ div:has(aside) { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
 [$domain=yandex.*,path=|/news^]##.mg-grid__col_xs_8 > [class*="__banger"],  .news-feed > div > :has([style="width: 100%;"])
-!
+
 !   Яндекс.Турбо:
 [$domain=yandex.*,path=|/turbo^]##.layout__right
 [$domain=yandex.*,path=|/turbo^]#$#.layout__main { width: 100% !important; }
-!
+
 !   Яндекс.Кью:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.page_qQuestionRoute header { position: unset !important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.page_qQuestionRoute #page section > div > div > div[class]:not([data-id]):has(> div > div:not([class]):not([data-id]))
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.page_qQuestionRoute #page > div > div + div + div > div > div > div > div + div
-!
+
 !   Яндекс.Видео:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#header.VideoHeader { position: unset!important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page_type_preview.b-page_viewer-header > .page-layout { margin-top: 0!important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.VideoViewer-Info + [class*='_placement_']
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.VideoViewer .Viewer-ScrollContainer > [class*='_platform_']
-!
+
 !   Яндекс.Картинки:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page__advanced-search { position: unset!important; width: unset!important; display: inline-block!important; }
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
-!
+
 !   Яндекс.Карты:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##._mobile .interstitial-view
-!
+
 ||browser-updater.yandex.net^
-!
+
 !   Оптимизированный интерфейс:
 disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto !important; }
 disk.yandex.*#$#.public__main { width: 80% !important; margin: 1em auto 0 !important; }
@@ -537,51 +543,51 @@ disk.yandex.*#$#.content_dir .action-buttons { justify-content: flex-end !import
 disk.yandex.*#$#.folder-content__header-name > h1:first-child { margin-left: 2em !important; }
 disk.yandex.*#$#.folder-content__back-button { margin-top: .8em !important; }
 disk.yandex.*#$#.folder-content__header-name h1 { font-size: 2em !important; line-height: 1.1em !important; }
-!
+
 docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
-!
+
 market.yandex.*##.main > noindex, [data-apiary-widget-id$='/productCardTitle/productStickyCard'], [data-apiary-widget-id$='/premiumOffersGallery'],[data-zone-name='premium-offers-gallery'],[data-zone-name='vendorProductLinePromo'],[data-apiary-widget-id$='/headerIncut'],[data-zone-name='searchIncut'],[data-apiary-widget-id$='/PromoBanner'],[data-zone-name='welcomeCashbackPromo'], [data-apiary-widget-id$='/alsoViewedProducts'],#analogues-products, [data-apiary-widget-id$='/creditInfo']
 market.yandex.*#$#[data-apiary-widget-id$='/productTabs'] > div > div, [data-apiary-widget-id$='/productCardTitle']:upward(1) { position: unset !important; }
 market.yandex.*#$##ProductImageGallery [data-zone-name='image'] [style^='background-image:'] { position: fixed!important; bottom: 1%!important; }
-!
+
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset !important; }
 music.yandex.*#$#.progress__left, .progress__right { display: block !important; }
-!
+
 zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
-!
-!
+
+
 !   Мобильное приложение на странице входа:
 yoomoney.ru#$#[class*='StyledTplLayout-'] { display: block !important; }
 yoomoney.ru##[class*='StyledTplLayoutContent']:has([class*='StyledAppInfo'])
-!
+
 ||yoomoney.ru/offerwall/
 yoomoney.ru###header [class*='StyledWrapper-']:has(.qa-header-smart-banner)
 yoomoney.ru#$#[class*='StyledMenuContainer'] { overflow: auto !important; }
-!
+
 !   Компактный интерфейс:
 yoomoney.ru#$#html { --space-s: 4px!important; --space-m: 6px!important; --space-l: 8px!important; --space-xl: 10px!important; --space-xxl: 12px!important; --space-xxxl: 14px!important; --space-xxxxl: 16px!important; }
 yoomoney.ru#$#[class*='StyledHeaderWrapper'], .qa-account-widget { min-height: unset !important; height: unset !important; }
 yoomoney.ru#$#[class*='StyledServiceLogoWrapper'] { padding-top: 5px !important; }
 yoomoney.ru#$#[class*='StyledNotifierAndUserWrapper'] { margin: 0 !important; }
-!
+
 yoomoney.ru#$#[class*='StyledTplSectionArea'] { padding-top: 0 !important; }
 yoomoney.ru#$#span.qa-title { padding: 2px !important; }
 yoomoney.ru#$#.qa-category { height: var(--space-l) !important; }
 yoomoney.ru##.qa-timeline > .qa-onboarding-progress, .qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные), .qa-timeline > [class*='StyledDecorator']:has(.qa-offer-events), [class*='StyledDesktopMarketingOffersWrapper']
-!
+
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
-!
+
 !   На странице оплаты:
 yoomoney.ru##[class^='Paranja__StyledParanja']
-!
-!
+
+
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
 youla.ru#$#header > div + div > div { padding: 16px 0 !important; height: 64px !important; }
 youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container)
 youtube.com#$##masthead-container, #chips-wrapper, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
-!
+
 zvonili.com#$#html { padding: unset !important; }
 zvonili.com#$#.jumbotron { padding: 1em 0 .5em !important; margin: unset !important; }
