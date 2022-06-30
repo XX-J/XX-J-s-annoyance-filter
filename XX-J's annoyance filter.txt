@@ -105,6 +105,8 @@ avito.ru#$#[class^='items-items-'] > [class*='items-item-'] { width: calc(100% -
 
 
 backit.me#$#header { position: absolute !important; }
+bspb.ru#$##app-wrapper > hr + div { position: unset !important; }
+bspb.ru##main > div > div:contains(Встречайте наш новый сайт)
 
 
 ||car.ru/*_hb_lazy_load.js
@@ -112,7 +114,7 @@ backit.me#$#header { position: absolute !important; }
 car.ru#%#//scriptlet('prevent-setTimeout', 'location')
 car.ru#$#.header { position: absolute !important; }
 car.ru#$#.page-top-sell__button { margin-left: 20px !important; }
-car.ru##.close-button, .yandex-news-promo, .main-page__content-middle-dzen
+car.ru##.close-button
 car.ru#$#.form-group-checkbox__form-control { width: 1em !important; height: 1em !important; }
 car.ru#%#//scriptlet('remove-class', 'lg-with-ads')
 car.ru#$#.slide-news-stub-wrapper { max-width: unset!important; width: unset!important; height: 75vh!important; }
@@ -146,9 +148,9 @@ facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { positi
 facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
 
 
-github.com##.progress-pjax-loader, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
-github.com#$#[class*='position-sticky'] { position: unset !important; }
-github.com#$##readme > .is-placeholder + div, .file-header { width: unset !important; }
+github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
+github.com#$#[class*="position-sticky"], .site-subnav-sticky { position: unset !important; }
+github.com#$#.site-subnav-sticky, #readme > .is-placeholder + div, .file-header { width: unset !important; }
 github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
@@ -548,9 +550,9 @@ docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 
-market.yandex.*##.main > noindex, [data-apiary-widget-id$='/productCardTitle/productStickyCard'], [data-apiary-widget-id$='/premiumOffersGallery'],[data-zone-name='premium-offers-gallery'],[data-zone-name='vendorProductLinePromo'],[data-apiary-widget-id$='/headerIncut'],[data-zone-name='searchIncut'],[data-apiary-widget-id$='/PromoBanner'],[data-zone-name='welcomeCashbackPromo'], [data-apiary-widget-id$='/alsoViewedProducts'],#analogues-products, [data-apiary-widget-id$='/creditInfo']
-market.yandex.*#$#[data-apiary-widget-id$='/productTabs'] > div > div, [data-apiary-widget-id$='/productCardTitle']:upward(1) { position: unset !important; }
-market.yandex.*#$##ProductImageGallery [data-zone-name='image'] [style^='background-image:'] { position: fixed!important; bottom: 1%!important; }
+market.yandex.*##.main > noindex, [data-apiary-widget-id$="/productCardTitle/productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id$="/premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-apiary-widget-id*="HeaderIncut"],[data-zone-name="searchIncut"],[data-apiary-widget-id$="/PromoBanner"],[data-zone-name="welcomeCashbackPromo"], [data-apiary-widget-id$="/alsoViewedProducts"],#analogues-products, [data-apiary-widget-id$="/creditInfo"]
+market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div, [data-apiary-widget-id$="/productCardTitle"]:upward(1) { position: unset!important; }
+market.yandex.*#$##ProductImageGallery [data-zone-name="image"] [style^="background-image:"] { position: fixed!important; bottom: 1%!important; }
 
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset !important; }
