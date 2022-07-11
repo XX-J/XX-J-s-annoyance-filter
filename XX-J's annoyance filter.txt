@@ -119,9 +119,12 @@ car.ru#$#.form-group-checkbox__form-control { width: 1em !important; height: 1em
 car.ru#%#//scriptlet('remove-class', 'lg-with-ads')
 car.ru#$#.slide-news-stub-wrapper { max-width: unset!important; width: unset!important; height: 75vh!important; }
 
-citilink.ru#$#.SiteVersionSwitcher { position: absolute!important; }
-citilink.ru#%#//scriptlet('prevent-addEventListener', 'scroll')
-citilink.ru##.BannersSlider
+citilink.ru#$#header, .MainHeader__inner { position: unset !important; box-shadow: none !important; }
+citilink.ru##.MainHeader__logo-small,.CatalogMenu__banner, .Main__slider-wrapper,  .ProductCardCategoryList__slider
+citilink.ru#$#.PopupCatalogMenu__container { width: unset !important; }
+citilink.ru#$#.CatalogMenu__container { grid-template-areas: "left search" "left right"!important; grid-template-columns: max-content!important; }
+||dynamicyield.com^$script,domain=citilink.ru
+citilink.ru#$#main, main > .Main { margin: 0 !important; padding: 0 !important; }
 codepen.io,cdpn.io##.referer-warning
 
 
@@ -207,7 +210,7 @@ lenta.ru#$#.layout__header._sticked { margin-bottom: 20px !important; }
 lenta.ru#$#.header:not(._sticked) { height: unset!important; padding-top: 10px!important; padding-bottom: 10px!important; }
 lenta.ru#$#.header__my { width: unset !important; }
 lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) for (let Node of Mutation.addedNodes) if (Node instanceof SVGElement && Node.previousSibling instanceof HTMLElement && Node.previousSibling.matches('iframe[src*="vp.rambler.ru"]')) setTimeout( () => { Node.onclick() }, 90) }).observe( document, { childList: true, subtree: true })
-lrepacks.*##.b-page_newyear
+lrepacks.*##.b-page_newyear, .fixedbut
 lrepacks.*#$#.logo { padding: 0 !important; }
 
 
@@ -259,6 +262,7 @@ e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 !   Поменять расположение панелей:
 e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
+e.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !important; }
 e.mail.ru#$#.application-mail__layout [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
@@ -382,7 +386,8 @@ polus.su#$#.menu-top { position: unset !important; }
 polus.su#$#footer { position: absolute !important; bottom: unset !important; }
 polus.su##.footer-compare::after, .footer-fav::after
 popmech.ru#$#nav { position: unset !important; }
-price.ru###kontainer-top
+price.ru##.slider.section > .swiper-wrapper
+price.ru#$#.tabs-anchor + .container { position: unset !important; }
 
 
 ||rambler.ru/browser/check-support.js
@@ -473,11 +478,13 @@ stackoverflow.com#$#header { position: absolute !important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 
 
-tele2.ru#$#.mia-injir-container { padding: 0 !important; }
+tele2.ru#$#[data-cartridge-type="PersonalizedBanner"] section { margin-bottom: 10px !important; }
+tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
 tass.*#$#.header { position: unset !important; }
 ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
+virustotal.com#$##omnibarWrapper { position: absolute !important; box-shadow: none !important; }
 vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
 vtb.ru#$#.header, [class^='HeaderRedesigned__HeaderComponent'] { position: absolute!important; border: none!important; }
 vtb.ru#$#[class*='NativeSection-section-header'] { position: unset !important; }
@@ -495,8 +502,8 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~to
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header, body > .distr-popup
 
 !   Яндекс:
-[$domain=yandex.*,path=/^(\/\[^/\]*)?$/]##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
-[$domain=yandex.*,path=/^(\/\[^/\]*)?$/]##[id^="zen-row-"]:has(article > div + div), [id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо))
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[id^="zen-row-"]:has(article > div + div), [id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо))
 
 !   Яндекс.Погода:
 [$domain=yandex.*,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration
@@ -532,7 +539,7 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.ImagesViewerApp-FooterContent > [class^="ImagesViewerApp-"]
 
 !   Яндекс.Карты:
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##._mobile .interstitial-view
+[$domain=yandex.*,path=|/maps^]##._mobile .interstitial-view
 
 ||browser-updater.yandex.net^
 
@@ -550,15 +557,21 @@ docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 
-market.yandex.*##.main > noindex, [data-apiary-widget-id$="/productCardTitle/productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id$="/premiumOffersGallery"],[data-zone-name="premium-offers-gallery"],[data-zone-name="vendorProductLinePromo"],[data-apiary-widget-id*="HeaderIncut"],[data-zone-name="searchIncut"],[data-apiary-widget-id$="/PromoBanner"],[data-zone-name="welcomeCashbackPromo"], [data-apiary-widget-id$="/alsoViewedProducts"],#analogues-products, [data-apiary-widget-id$="/creditInfo"]
-market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div, [data-apiary-widget-id$="/productCardTitle"]:upward(1) { position: unset!important; }
-market.yandex.*#$##ProductImageGallery [data-zone-name="image"] [style^="background-image:"] { position: fixed!important; bottom: 1%!important; }
+market.yandex.*##[data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
+market.yandex.*#$##ProductImageGallery [data-zone-name="image"] [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
 
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset !important; }
 music.yandex.*#$#.progress__left, .progress__right { display: block !important; }
 
-zen.yandex.*###article__right, .article__content:has(> .article__middle_flexible > #article__bottom-embed), .feed__item-wrap:not(:has(> div > .card-wrapper))
+zen.yandex.*#$#[class*="-header-container2"] { position: unset !important; border: none !important; }
+zen.yandex.*#$#.article { padding-top: 10px !important; }
+zen.yandex.*##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div, [id^="zen-row-"]:has(article.card-wrapersome), .floating-links
+zen.yandex.*#$#.comments-content, .article-recommender { margin: 0 auto !important; padding: 0 !important; }
+zen.yandex.*#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50% !important; }
+
+zen.yandex.*#$#.video-site-app__header { position: absolute !important; }
+zen.yandex.*##[class*="video-viewer-"][class*="__ad"], .video-viewer-recommended__subscribe-carousel, .panel-loadable-view__feed > :not(.video-viewer-video-card):has(> [style="width: 100%;"])
 
 
 !   Мобильное приложение на странице входа:
