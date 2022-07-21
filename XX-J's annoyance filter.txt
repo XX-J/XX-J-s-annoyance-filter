@@ -127,6 +127,14 @@ citilink.ru#$#.CatalogMenu__container { grid-template-areas: "left search" "left
 citilink.ru#$#main, main > .Main { margin: 0 !important; padding: 0 !important; }
 codepen.io,cdpn.io##.referer-warning
 
+||browser.sentry-cdn.com/*/bundle.min.js
+||cloudfront.net/*/js/src/logger.js
+||cloudfront.net/*/js/lib/analytics/*.js
+||cloudfront.net/*/js/lib/jquery.sticky.js
+crowdin.com#$#.fixed-top { position: absolute !important; }
+crowdin.com#$#.application__header__navbar { box-shadow: none !important; }
+crowdin.com#$#.project-scrolled-header__content { position: absolute !important; top: unset !important; }
+
 
 dialogdv.ru##.bxsliderleft_bl
 
@@ -151,9 +159,8 @@ facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { positi
 facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
 
 
-github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, #readme > .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
-github.com#$#[class*="position-sticky"], .site-subnav-sticky { position: unset !important; }
-github.com#$#.site-subnav-sticky, #readme > .is-placeholder + div, .file-header { width: unset !important; }
+github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
+github.com#$#[class*="position-sticky"], .site-subnav-sticky { position: unset !important; width: unset !important; }
 github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
@@ -500,10 +507,12 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
 !   "Сделать поиском по умолчанию" и "Установить Яндекс.Браузер":
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header, body > .distr-popup
+yandex.*#%#//scriptlet('abort-on-property-read', 'scrollTo')
 
 !   Яндекс:
 [$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
 [$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[id^="zen-row-"]:has(article > div + div), [id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо))
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50%!important; }
 
 !   Яндекс.Погода:
 [$domain=yandex.*,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration
@@ -523,10 +532,8 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 [$domain=yandex.*,path=|/turbo^]##.layout__right
 [$domain=yandex.*,path=|/turbo^]#$#.layout__main { width: 100% !important; }
 
-!   Яндекс.Кью:
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.page_qQuestionRoute header { position: unset !important; }
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.page_qQuestionRoute #page section > div > div > div[class]:not([data-id]):has(> div > div:not([class]):not([data-id]))
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.page_qQuestionRoute #page > div > div + div + div > div > div > div > div + div
+!   Яндекс Кью:
+[$domain=yandex.*,path=|/q^]#$#header { position: unset !important; }
 
 !   Яндекс.Видео:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#header.VideoHeader { position: unset!important; }
