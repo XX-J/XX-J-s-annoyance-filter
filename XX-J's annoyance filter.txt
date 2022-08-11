@@ -106,7 +106,7 @@ avito.ru#$#[class^='items-items-'] > [class*='items-item-'] { width: calc(100% -
 
 backit.me#$#header { position: absolute !important; }
 bspb.ru#$##app-wrapper > hr + div { position: unset !important; }
-bspb.ru##main > div > div:contains(Встречайте наш новый сайт)
+bspb.ru##main > div > div:has(> div > h4[style="margin-left:0px;"])
 
 
 ||car.ru/*_hb_lazy_load.js
@@ -485,10 +485,13 @@ stackoverflow.com#$#header { position: absolute !important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 
 
-tele2.ru#$#[data-cartridge-type="PersonalizedBanner"] section { margin-bottom: 10px !important; }
+tass.*#$#.header { position: unset !important; }
+tele2.ru#$#.main-content { margin: 10px 0 0 !important; }
+tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardMiaOffers"],[data-cartridge-type="DashboardBonusContainer"]
+tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !important; }
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
-tass.*#$#.header { position: unset !important; }
+twitter.com###layers > div:first-child
 ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
 virustotal.com#$##omnibarWrapper { position: absolute !important; box-shadow: none !important; }
@@ -505,14 +508,14 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-navigation { position: relative!important; top: unset!important; }
 !   Курсор в поиске и в почте:
 yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
-!   "Сделать поиском по умолчанию" и "Установить Яндекс.Браузер":
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.distr-default-search-header, body > .distr-popup
 yandex.*#%#//scriptlet('abort-on-property-read', 'scrollTo')
 
 !   Яндекс:
-[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
-[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[id^="zen-row-"]:has(article > div + div), [id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо))
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##.dist-stripe, :not(div):has(.home-arrow) + :not(div), .desk-notif-card_animated_yes:remove()
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]###zen-row-0:not(:has([id^="typed-placeholder"])),[id^="zen-row-"]:has(article > div + div),[id^="zen-row-"]:has(.zen-ui-channel-info__subtitle-text:contains(промо)), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset!important; -webkit-line-clamp: unset!important; }
 [$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50%!important; }
+[$domain=yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#[class^="card-rtb-label-view"], .zen-ui-channel-info__title { white-space: unset!important; overflow: unset!important; }
 
 !   Яндекс.Погода:
 [$domain=yandex.*,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration
@@ -571,14 +574,18 @@ market.yandex.*#$##ProductImageGallery [data-zone-name="image"] [style^="backgro
 music.yandex.*#$#.progress__line { transition: unset !important; }
 music.yandex.*#$#.progress__left, .progress__right { display: block !important; }
 
-zen.yandex.*#$#[class*="-header-container2"] { position: unset !important; border: none !important; }
+zen.yandex.*#$#[class*="-header-container2"], [class^="app-redesign-view__header"] { position: unset!important; border: none!important; }
 zen.yandex.*#$#.article { padding-top: 10px !important; }
-zen.yandex.*##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div, [id^="zen-row-"]:has(article.card-wrapersome), .floating-links
+zen.yandex.*##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div, [id^="zen-row-"]:has(article.card-wrapersome), .zen-ui-card-block-subscribe-button, .floating-links,[class^="dzen-footer-link-view__link"][href$="x.ru/adv"]
 zen.yandex.*#$#.comments-content, .article-recommender { margin: 0 auto !important; padding: 0 !important; }
-zen.yandex.*#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50% !important; }
+zen.yandex.*#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset!important; -webkit-line-clamp: unset!important; }
+zen.yandex.*#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50%!important; }
+zen.yandex.*#$#.zen-ui-channel-info__title { white-space: unset!important; overflow: unset!important; }
 
 zen.yandex.*#$#.video-site-app__header { position: absolute !important; }
 zen.yandex.*##[class*="video-viewer-"][class*="__ad"], .video-viewer-recommended__subscribe-carousel, .panel-loadable-view__feed > :not(.video-viewer-video-card):has(> [style="width: 100%;"])
+zen.yandex.*#$#[class^="video-card-view__publisher-title"] { white-space: unset!important; overflow: unset!important; height: unset!important; }
+zen.yandex.*#$#.video-card-view__title > .cut { -webkit-line-clamp: unset !important; max-height: unset !important; }
 
 
 !   Мобильное приложение на странице входа:
