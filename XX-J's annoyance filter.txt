@@ -164,6 +164,7 @@ github.com#$#[class*="position-sticky"], .site-subnav-sticky { position: unset !
 github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
+github.com#$#markdown-toolbar tool-tip { right: 0; }
 
 google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
@@ -580,7 +581,7 @@ yandex.*#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__c
 yandex.*#$#[class^="card-rtb-label-view"], .zen-ui-channel-info__title { white-space: unset!important; overflow: unset!important; }
 
 zen.yandex.*#$#.video-site-app__header { position: absolute !important; }
-zen.yandex.*##[class*="video-viewer-"][class*="__ad"], .video-viewer-recommended__subscribe-carousel, .panel-loadable-view__feed > :not(.video-viewer-video-card):has(> [style="width: 100%;"])
+zen.yandex.*##.video-viewer-content__description + :has(> [style="width: 100%;"]), .video-viewer-sidebar__item > :first-child:has(> [style="width: 100%;"]),.video-viewer-recommended__subscribe-carousel,.panel-loadable-view__feed > :has(> [style="width: 100%;"])
 zen.yandex.*#$#[class^="video-card-view__publisher-title"] { white-space: unset!important; overflow: unset!important; height: unset!important; }
 zen.yandex.*#$#.video-card-view__title > .cut { -webkit-line-clamp: unset !important; max-height: unset !important; }
 
