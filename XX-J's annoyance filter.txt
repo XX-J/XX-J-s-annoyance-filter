@@ -154,9 +154,10 @@ dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zag
 eldorado.ru##.dy-top-banners
 eldorado.ru#$#header { margin-top: 0 !important; }
 epn.bz##.main__warning
-facebook.com#$#div[role='banner'] > div[class] { position: absolute !important; }
-facebook.com#$#div[class][role='main'] > div[class][style], .fixed_elem { position: unset !important; }
-facebook.com##div:has(> div > div[class][role='main']) + [data-nosnippet]
+facebook.com#$#div[role="banner"] > div[class], [role="tablist"] + [role="tablist"]:upward(8) { position: absolute!important; }
+facebook.com#$#div[class][role="main"] > div[class][style], .fixed_elem { position: unset !important; }
+facebook.com##div:has(> div > div[class][role="main"]) + [data-nosnippet], body > div:contains(Пожалуйста, выполните вход, чтобы увидеть эту страницу.)
+facebook.com#%#//scriptlet('remove-attr', 'id|class|aria-hidden|style', 'div[role="banner"] ~ div[class]')
 
 
 github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
@@ -486,6 +487,9 @@ stackoverflow.com#$#header { position: absolute !important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 
 
+t.me#$#.tgme_head_wrap { position: absolute !important; }
+t.me#$##widget_actions_wrap { position: unset !important; }
+t.me#%#//scriptlet('remove-class', 'stuck|shine', '#widget_actions_wrap, .tgme_action_button_new')
 tass.*#$#.header { position: unset !important; }
 tele2.ru#$#.main-content { margin: 10px 0 0 !important; }
 tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardMiaOffers"],[data-cartridge-type="DashboardBonusContainer"]
@@ -495,6 +499,10 @@ tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 twitter.com###layers > div:first-child
 ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
+velodrive.ru#%#//scriptlet('remove-class', 'sticked|is-sticky', '.header, .sticky-wrapper')
+velodrive.ru#$##header__content { position: unset !important; }
+velodrive.ru#$#.category-menu > .nav { margin: 5px 0 !important; }
+velodrive.ru#$#.page__breadcrumbs { padding: 10px 0 0 !important; }
 virustotal.com#$##omnibarWrapper { position: absolute !important; box-shadow: none !important; }
 vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
 vtb.ru#$#.header, [class^='HeaderRedesigned__HeaderComponent'] { position: absolute!important; border: none!important; }
