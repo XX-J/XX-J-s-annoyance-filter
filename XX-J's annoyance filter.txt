@@ -150,6 +150,11 @@ club.dns-shop.ru#$#.club-header { position: absolute !important; }
 dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
 dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 
+dzen.ru#$#.video-site-app__header { position: absolute !important; }
+dzen.ru##[class$="-content__description"] + :has([style="width: 100%;"]), [class$="-recommended__subscribe-carousel"]
+dzen.ru#$#[class^="video-card-view__publisher-title"], .video-card-view__title > .cut { white-space: break-spaces!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
+dzen.ru#$#.video-card-view__more { position: absolute!important; right: 8px!important; top: 8px!important; background: #101113!important; border-radius: 6px!important; }
+
 
 eldorado.ru##.dy-top-banners
 eldorado.ru#$#header { margin-top: 0 !important; }
@@ -308,6 +313,7 @@ maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
 maxidom.ru#$#.catalog, .filter-catalog { margin-top: 0 !important; padding: 0 !important; }
 maxidom.ru#$#.bx_sidebar { padding: 0 15px 0 6px !important; }
 maxidom.ru#$#.items-list { margin: 0 !important; width: 75% !important; }
+
 docs.microsoft.com#$#.columns.has-large-gaps { margin-right: -1rem !important; }
 ||support.microsoft.com/scripts/signin/signinhandler.js
 moba.ru###headerfixed, .top_big_one_banner
@@ -318,6 +324,11 @@ mozilla.org#$#.c-navigation, .main-document-header-container { position: unset!i
 developer.mozilla.org#$#.code-example, code, pre { font-weight: 600 !important; }
 msn.com#$#.head { position: unset !important; }
 msn.com#$##precontent, #maincontent { margin-top: 0 !important; }
+
+mts.ru#$#.header__body { top: unset!important; position: relative!important; box-shadow: none!important; }
+lk.mts.ru#$#.mts-header, mts-lk-multi-account, .mts-carousel-scroller__items { position: unset!important; height: auto!important; margin: 0!important; transform: none!important; opacity: 1!important; visibility: unset!important; }
+mts.ru##mts-main-banner-widget,.section-box__main-slider, mts-lk-banner
+
 mvideo.ru#$#header, .header_fixed { position: absolute !important; box-shadow: none !important; }
 mvideo.ru#$#.location-icon_animated { animation: none !important; }
 mvideo.ru#$#.app-header-columns { display: grid !important; }
@@ -463,6 +474,9 @@ rutracker.*#$##tr-submit-btn:upward(1) { padding: 0 !important; }
 rutracker.*#$##tr-submit-btn { height: 30px !important; font-size: 100% !important; }
 
 rutube.ru#$#.header-module__mainHeader { position: absolute !important; width: 100% !important; }
+rutube.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) { let El = Node.querySelector('[class^="rai_raichu-endscreen__endScreenCancel_"]'); if (El) { setTimeout( () => { El.click() }, 90) } else { El = Node.querySelector('[class^="rai_raichu-stub-wrapper__btn_"]'); if (El) El.click() }}}}).observe( document, {childList: true, subtree: true})
+rutube.ru#$#[class^="rai_raichu-settings__settingsItems_"] { overflow: auto !important; }
+rutube.ru#$#.wdp-card-module__wrapper, .wdp-card-description-module__videoTitle, .wdp-card-description-module__author { height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; white-space: break-spaces!important; }
 
 
 !   Страница авторизации:
@@ -587,11 +601,6 @@ zen.yandex.*#$#.comments-content, .article-recommender { margin: 0 auto !importa
 yandex.*#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset!important; -webkit-line-clamp: unset!important; }
 yandex.*#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50%!important; }
 yandex.*#$#[class^="card-rtb-label-view"], .zen-ui-channel-info__title { white-space: unset!important; overflow: unset!important; }
-
-zen.yandex.*#$#.video-site-app__header { position: absolute !important; }
-zen.yandex.*##.video-viewer-content__description + :has(> [style="width: 100%;"]), .video-viewer-sidebar__item > :first-child:has(> [style="width: 100%;"]),.video-viewer-recommended__subscribe-carousel,.panel-loadable-view__feed > :has(> [style="width: 100%;"])
-zen.yandex.*#$#[class^="video-card-view__publisher-title"] { white-space: unset!important; overflow: unset!important; height: unset!important; }
-zen.yandex.*#$#.video-card-view__title > .cut { -webkit-line-clamp: unset !important; max-height: unset !important; }
 
 
 !   Мобильное приложение на странице входа:
