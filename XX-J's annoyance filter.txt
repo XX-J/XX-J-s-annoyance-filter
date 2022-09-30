@@ -163,6 +163,7 @@ facebook.com#$#div[role="banner"] > div[class], [role="tablist"] + [role="tablis
 facebook.com#$#div[class][role="main"] > div[class][style], .fixed_elem { position: unset !important; }
 facebook.com##div:has(> div > div[class][role="main"]) + [data-nosnippet], body > div:contains(Пожалуйста, выполните вход, чтобы увидеть эту страницу.)
 facebook.com#%#//scriptlet('remove-attr', 'id|class|aria-hidden|style', 'div[role="banner"] ~ div[class]')
+ferra.ru##img + div[style*="background-image:"]
 
 
 github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
@@ -418,11 +419,10 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###app > div:has(> div > div > div > [id^="xmrij-"])
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> [style^="min-height:"] > div > [id^="xmrij-"])
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> div > [style="min-height:600px"] > div > [id^="xmrij-"])
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1), #app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div, #app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div, #app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div { width: unset!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { width: 25%!important; margin: 0!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) { width: 72%!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) { width: 75%!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; height: unset!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding h2:contains(Лента новостей):upward(3) { width: 21%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { left: 22%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
 
 !  Не закреплять видеоплеер и Автораскрытие текста новостей:
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#if (document.querySelector('button[data-blocks^="mini_video_player"]')) { document.querySelector('button[data-blocks^="mini_video_player"]').click() }; new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) if (Node.matches('button[data-blocks^="mini_video_player"]') || Node.matches('button[data-blocks^="readmore"]')) { Node.click() } else { for (let SelectedElement of Node.querySelectorAll('button[data-blocks^="mini_video_player"], button[data-blocks^="readmore"]')) SelectedElement.click() }}}).observe( document, {childList: true, subtree: true})
@@ -433,12 +433,11 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> #bigColumn) ~ div:has(> div + div), #root [data-rnet^="rnet_"]:upward(2)
 
 vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/contextmenu|pause|ended/')
-vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-skin--gradient, .eplayer-skin-seek-handler
-vp.rambler.ru#$#.eplayer-skin-title:not(:has(> div:empty)), .eplayer-skin-controls { background: #000d !important; }
-vp.rambler.ru#$#.eplayer-skin-contols-div { background: #000d!important; bottom: 0!important; height: 38px!important; }
-vp.rambler.ru#$#.eplayer-skin-seek { height: 4px !important; z-index: 1 !important; }
-vp.rambler.ru#$#.eplayer-skin-seek-pane { top: 0 !important; height: 9px !important; }
-vp.rambler.ru#$#.eplayer-skin-seek-loaded, .eplayer-skin-seek-bar { height: 100% !important; }
+vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-holdable.eplayer-hide-control-start:empty, [data-seek] > [data-seek-bar]
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:not(:has(> div:empty)) { background: #000d !important; }
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start > [data-title] { white-space: break-spaces!important; -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; cursor: auto!important; pointer-events: auto!important; color: var(--skin-text-color)!important; }
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:has([data-seek]) { height: 38px !important; }
+vp.rambler.ru#$#[data-seek] > div:nth-of-type(1) { height: 12px !important; border-radius: 2px !important; }
 
 
 ||repack.me/templates/Great/*newyear
@@ -542,7 +541,8 @@ yandex.*#%#//scriptlet('abort-on-property-read', 'scrollTo')
 [$domain=yandex.*,path=|/pogoda^]#$#[role="main"] > div { margin-top: 0 !important; margin-right: 0 !important; }
 
 !   Яндекс.Поиск:
-[$domain=yandex.*,path=|/search^]##ul#search-result > li:has(a[data-event-required="true"])
+[$domain=yandex.*,path=|/search^]#$#.serp-header .search2 { max-width: unset !important; }
+[$domain=yandex.*,path=|/search^]##.distr-nav, [class*="location_right"]:has(:contains(раузер)), ul#search-result > li:has(a[data-event-required="true"])
 
 !   Яндекс.Новости:
 [$domain=yandex.*,path=|/news^]##.mg-grid__col_xs_12 + div, .mg-grid__col_xs_8 + div:has(aside) + div, .mg-grid__col_xs_8 + div + div > div > div > div > div:has(> [data-log-id]):remove()
