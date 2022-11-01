@@ -194,17 +194,18 @@ ferra.ru,lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mu
 
 
 github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
-github.com#$#[class*="position-sticky"], .site-subnav-sticky { position: unset !important; width: unset !important; }
-github.com#$#.pr-toolbar { margin-top: -16px !important; width: unset !important; }
+github.com#$#[class*="position-sticky"], .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
+github.com#$#.js-profile-timeline-year-list { width: auto !important; }
 github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
 github.com#$#markdown-toolbar tool-tip { right: 0; }
 
 google.*#$##searchform { position: absolute !important; }
 ||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
-chrome.google.com#$#div[class][role='banner']:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
-chrome.google.com#$#div[class][style^='display: block; background-color:'] { top: 0 !important; }
+chrome.google.com#$#div[class][role="banner"]:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
+chrome.google.com#$#div[class][style^="display: block; background-color:"] { top: 0 !important; }
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
+support.google.com#$#header[role="banner"] { position: absolute!important; box-shadow: none!important; }
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
 gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !important; box-shadow: none !important; }
@@ -333,7 +334,7 @@ otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Отве
 ||smotri.cdnmail.ru/assets/default/static/white_noise.gif
 player-smotri.mail.ru#$#[class^="WrapperElements-sc-"] { padding-bottom: 0 !important; }
 player-smotri.mail.ru#$#[class^="ControlsBar-sc-"] [class^="FadingWrapper-sc-"] { background: #000d !important; }
-pulse.mail.ru#$#.header { position: unset !important; }
+pulse.mail.ru#$#header { position: unset !important; }
 
 
 maxidom.ru##.fixbar, [style="padding: 10px 0px;"], .item-banner-long
@@ -341,7 +342,7 @@ maxidom.ru#$#.catalog, .filter-catalog { margin-top: 0 !important; padding: 0 !i
 maxidom.ru#$#.bx_sidebar { padding: 0 15px 0 6px !important; }
 maxidom.ru#$#.items-list { margin: 0 !important; width: 75% !important; }
 
-docs.microsoft.com#$#.columns.has-large-gaps { margin-right: -1rem !important; }
+learn.microsoft.com#$#.columns { margin-left: auto !important; margin-right: auto !important; }
 ||support.microsoft.com/scripts/signin/signinhandler.js
 moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
@@ -539,6 +540,8 @@ tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="Dash
 tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !important; }
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
+api.twitter.com#$#body { overflow: auto !important; }
+api.twitter.com#$##header { position: absolute !important; }
 twitter.com###layers > div:first-child
 ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
