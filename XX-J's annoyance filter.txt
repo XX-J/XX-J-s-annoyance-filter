@@ -117,7 +117,7 @@ car.ru#$#.page-top-sell__button { margin-left: 20px !important; }
 car.ru##.close-button
 car.ru#$#.form-group-checkbox__form-control { width: 1em !important; height: 1em !important; }
 car.ru#%#//scriptlet('remove-class', 'lg-with-ads')
-car.ru#$#.slide-news-stub-wrapper { max-width: unset!important; width: unset!important; height: 75vh!important; }
+car.ru#$#.slide-news-stub-wrapper { max-width: unset!important; width: unset!important; height: unset!important; margin-top: 60px!important; }
 
 citilink.ru#$#header, .MainHeader__inner { position: unset !important; box-shadow: none !important; }
 citilink.ru##.MainHeader__logo-small,.CatalogMenu__banner, .Main__slider-wrapper,  .ProductCardCategoryList__slider
@@ -289,11 +289,11 @@ cloud.mail.ru#$#[class^="ReactViewer__arrow--"]::before { left: 0 !important; wi
 cloud.mail.ru##[class^="ReactViewer__attachesinfo--"]
 
 
-e.mail.ru##[role='dialog']:contains(У вас ненадёжный пароль.), [class^='flexContainer-']:has([data-test-id='checkPhoneActive-panel']), [id^='octavius-notify-quota-'], input[tabindex] + div:contains(Письмо отправлено)
+e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class], input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru##.letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.letter__footer, .application-mail__layout > span > :nth-child(n+3)
 
-!   Центруем, убираем вариабельную ширину между кнопками и ставим на место съехавшую кнопку 'Фильтр':
-e.mail.ru#$#.portal-menu td { width: unset!important; white-space: unset!important; text-align: center!important; }
+!   Убрать принудительную ширину и поставить на место съехавшую кнопку 'Фильтр':
+e.mail.ru#$#.portal-menu td:nth-of-type(1) { width: unset !important; white-space: unset !important; }
 
 !   Убрать 'сужатель' письма:
 e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
@@ -303,9 +303,10 @@ e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 
 !   Поменять расположение панелей:
 e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
+e.mail.ru#$#.portal-menu td:nth-of-type(2) > div:nth-of-type(1) { justify-content: end !important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
 e.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !important; }
-e.mail.ru#$#.application-mail__layout [class*='sidebar-column-resizer'] { left: calc(100% - var(--sidebar-column-width))!important; }
+e.mail.ru#$#.application-mail__layout [class*="sidebar-column-resizer"] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
 e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
 
@@ -343,7 +344,8 @@ maxidom.ru#$#.bx_sidebar { padding: 0 15px 0 6px !important; }
 maxidom.ru#$#.items-list { margin: 0 !important; width: 75% !important; }
 
 learn.microsoft.com#$#.columns { margin-left: auto !important; margin-right: auto !important; }
-||support.microsoft.com/scripts/signin/signinhandler.js
+mnogo.ru#$#.top-page > header { position: absolute !important; }
+mnogo.ru##.notification-cookies
 moba.ru###headerfixed, .top_big_one_banner
 body_background_dark.png|$domain=monkrus.ws
 ^snow.js|$domain=monkrus.ws
@@ -536,7 +538,7 @@ t.me#$##widget_actions_wrap { position: unset !important; }
 t.me#%#//scriptlet('remove-class', 'stuck|shine', '#widget_actions_wrap, .tgme_action_button_new')
 tass.*#$#.header { position: unset !important; }
 tele2.ru#$#.main-content { margin: 10px 0 0 !important; }
-tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardMiaOffers"],[data-cartridge-type="DashboardBonusContainer"]
+tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardBonusContainer"], .dashboard-mia-offers
 tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !important; }
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
