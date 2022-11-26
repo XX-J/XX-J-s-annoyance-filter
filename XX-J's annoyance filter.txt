@@ -150,35 +150,35 @@ club.dns-shop.ru#$#.club-header { position: absolute !important; }
 dostfilms.*#$#body, header, .carousel { background-image: none !important; margin: auto !important; }
 dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 
+
 !   Главная:
-dzen.ru##:has(> [class^="dzen-"][class*="__search-"]) > :not([class^="dzen-"]):has(:contains(/Браузер/i)), [id^="zen-row-"]:has(article > div:not([class^="card-news"]) + div), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view, [class^="desktop-interview-modal__wrapper"]
-dzen.ru#$#[class*="__search-"] ~ [class^="dzen-"][class*="__content-"] { margin-top: 0 !important; }
+[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"])
+[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#header ~ [class*="__morda-"] > main { margin-top: 0 !important; }
+dzen.ru##[id^="zen-row-"]:has(article > div:not([class^="card-news"]) + div), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view, [class^="desktop-interview-modal__wrapper"]
 dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
 dzen.ru#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50% !important; }
 dzen.ru#$#.card-layer-header-view__pre-header { padding-left: 10px !important; }
-dzen.ru#$#.card-rtb-label-view,.card-rtb-label-view__text, .zen-ui-channel-info__title { white-space: break-spaces !important; }
+dzen.ru#$#.card-rtb-label-view,.card-rtb-label-view__text, .zen-ui-channel-info__title { white-space: pre-wrap !important; }
 dzen.ru#$#.card-layer-header-view { height: unset !important; }
 dzen.ru##[id^="zen-row-"] .card-layer-header-view__controls
 dzen.ru#$#[id^="zen-row-"]:hover .card-layer-header-view__controls { display: block!important; position: absolute!important; right: 8px!important; background: var(--zenColorBackgroundOverflow)!important; border-radius: 9px!important; }
 !dzen.ru#%#//scriptlet('abort-on-property-read', 'scrollTo') - проверить!
 
 !   Новости:
-[$domain=yandex.*,path=|/news^]##.mg-grid__col_xs_12 + div, .mg-grid__col_xs_8 + div:has(aside) + div, .mg-grid__col_xs_8 + div + div > div > div > div > div:has(> [data-log-id]):remove()
-[$domain=yandex.*,path=|/news^]#$#.mg-grid__col_xs_12 { flex: 0 0 100%!important; max-width: 100%!important; }
-[$domain=yandex.*,path=|/news^]#$#.mg-grid__col_xs_8 { flex: 0 0 calc(100% * 2/3)!important; max-width: calc(100% * 2/3)!important; }
-[$domain=yandex.*,path=|/news^]#$#.mg-grid__col_xs_8 ~ div:has(aside) { flex: 0 0 calc(100% / 3)!important; max-width: calc(100% / 3)!important; }
-[$domain=yandex.*,path=|/news^]##.mg-grid__col_xs_8 > [class*="__banger"],  .news-feed > div > :has([style="width: 100%;"])
+[$domain=dzen.ru,path=|/news^]#$#.news-app > [class^="news-dzen-header"] { position: absolute !important; }
+[$domain=dzen.ru,path=|/news^]##[class*="mg-grid__col_xs_"].mg-grid__col_sm_true + div, .mg-grid__col_xs_12.mg-grid__col_sm_true > section ~ div, .news-feed  .mg-grid__col_xs_6:has(> div > div:only-of-type)
+[$domain=dzen.ru,path=|/news^]#$#[class^="mg-card__text"], .mg-card__title, .mg-card__annotation { white-space: pre-wrap!important; overflow-wrap: break-word!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
 
 !   Статьи:
-dzen.ru#$#.ui-lib-header-container2, [class^="app-redesign-view__header"] { position: unset !important; border: none !important; }
+dzen.ru#$#header, .ui-lib-header-container2 { position: unset !important; border: none !important; }
 dzen.ru#$#.article { padding-top: 20px !important; }
 dzen.ru##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div, .zen-ui-channel-info__title._interpunct::after
 
 !   Видео:
 dzen.ru#$#.video-site-app__header { position: absolute !important; }
 dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) { let El = Node.querySelector('.zen-ui-video-video-next-preview__cancel-btn'); if (El) { El.click(); setTimeout( () => { document.querySelector('.zen-ui-video-video-state__button').click() }, 500) }}}}).observe( document, { childList: true, subtree: true })
-dzen.ru##[class$="-content__description"] + :has([style="width: 100%;"]), [class$="-recommended__subscribe-carousel"]
-dzen.ru#$#[class^="video-card-view__publisher-title"], .video-card-view__title > .cut { white-space: break-spaces!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
+dzen.ru##[class$="-content__description"] + :has([style="width: 100%;"]), .viewer-layout__sidebar [class$="__item"] > div:first-child:not(.panel-view),.viewer-layout__sidebar [class$="__feed"] > div:not([class][data-item-id]), [class$="-recommended__subscribe-carousel"]
+dzen.ru#$#[class^="video-card-view__publisher-title"], .video-card-view__title > .cut { white-space: pre-wrap!important; overflow-wrap: break-word!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
 dzen.ru#$#.video-card-view__more { position: absolute!important; right: 8px!important; top: 8px!important; background: var(--zenColorBackgroundPrimary)!important; border-radius: 6px!important; }
 
 
@@ -197,7 +197,7 @@ github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-to
 github.com#$#[class*="position-sticky"], .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.js-profile-timeline-year-list { width: auto !important; }
-github.com#$#.blob-code-inner { font-size: 100%!important; white-space: pre-wrap!important; word-break: break-all!important; }
+github.com#$#.blob-code-inner, .CodeMirror-line { white-space: pre-wrap!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 github.com#$#markdown-toolbar tool-tip { right: 0; }
 
 google.*#$##searchform { position: absolute !important; }
@@ -207,6 +207,7 @@ chrome.google.com#$#div[class][style^="display: block; background-color:"] { top
 mail.google.com##div:has(> div > div > a:contains(Освободите место))
 support.google.com#$#header[role="banner"] { position: absolute!important; box-shadow: none!important; }
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
+
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
 gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !important; box-shadow: none !important; }
 gosuslugi.ru#$##header .main-navigation { height: 50px !important; }
@@ -238,7 +239,9 @@ kimovil.com#$#div.highcharts-tooltip > span { left: 0!important; top: 0!importan
 kimovil.com#$#.table-of-contents { position: relative !important; top: 0 !important; }
 kimovil.com#$#.table-of-contents > div > * { box-shadow: none !important; }
 
+kino-serialy.net#%#//scriptlet('abort-current-inline-script', 'document.ondragstart')
 kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
+||kino-serialy.net/templates/kino/images/bg.
 kino-serialy.net#$#.wrap { padding: 0 !important; }
 kino-serialy.net##.ftwo + table, br + .fsubtitle
 kinopoisk.ru#$#[class*="styles_headerContainer__"] { position: unset !important; }
@@ -467,7 +470,7 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/contextmenu|pause|ended/')
 vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-holdable.eplayer-hide-control-start:empty, [data-seek] > [data-seek-bar]
 vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:not(:has(> div:empty)) { background: #000d !important; }
-vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start > [data-title] { white-space: break-spaces!important; -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; cursor: auto!important; pointer-events: auto!important; color: var(--skin-text-color)!important; }
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start > [data-title] { white-space: pre-wrap!important; -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; cursor: auto!important; pointer-events: auto!important; color: var(--skin-text-color)!important; }
 vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:has([data-seek]) { height: 38px !important; }
 vp.rambler.ru#$#[data-seek] > div:nth-of-type(1) { height: 10px !important; border-radius: 2px !important; }
 vp.rambler.ru#$#[data-quality-container] { bottom: 35px !important; }
@@ -508,13 +511,13 @@ rutracker.*#$##tr-submit-btn { height: 30px !important; font-size: 100% !importa
 rutube.ru#$#.header-module__mainHeader { position: absolute !important; width: 100% !important; }
 rutube.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) { let El = Node.querySelector('[class^="rai_raichu-endscreen__endScreenCancel_"]'); if (El) { setTimeout( () => { El.click() }, 90) } else { El = Node.querySelector('[class^="rai_raichu-stub-wrapper__btn_"]'); if (El) El.click() }}}}).observe( document, { childList: true, subtree: true })
 rutube.ru#$#[class^="rai_raichu-settings__settingsItems_"] { overflow: auto !important; }
-rutube.ru#$#.wdp-card-module__wrapper, .wdp-card-description-module__videoTitle, .wdp-card-description-module__author { height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; white-space: break-spaces!important; }
+rutube.ru#$#.wdp-card-module__wrapper, .wdp-card-description-module__videoTitle, .wdp-card-description-module__author { height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; white-space: pre-wrap!important; }
 
 
 !   Страница авторизации:
 ||online.sberbank.ru/*/antifraud*.js
 ||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
-online.sberbank.ru###smart-banner-app:upward(1), div:has(form#homeAuth) + div:has([style^='background-image']):remove()
+online.sberbank.ru###smart-banner-app:upward(1), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
 online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto !important; }
 online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset !important; }
 !   Личный кабинет:
@@ -542,9 +545,16 @@ tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="Dash
 tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !important; }
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
+tproger.ru#$#.container-header { position: unset !important; }
+tproger.ru#$#code:not([class]) { color: #07a!important; font-size: initial!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
+tproger.ru##.line-numbers-rows, .toolbar
+tproger.ru#$#pre[class*="language-"] { padding: 10px !important; }
+tproger.ru#$#code[class*="language-"] { white-space: pre-wrap!important; overflow-wrap: break-word!important; }
 api.twitter.com#$#body { overflow: auto !important; }
 api.twitter.com#$##header { position: absolute !important; }
 twitter.com###layers > div:first-child
+
+
 ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
 velodrive.ru#%#//scriptlet('remove-class', 'sticked|is-sticky', '.header, .sticky-wrapper')
@@ -555,24 +565,22 @@ virustotal.com#$##omnibarWrapper { position: absolute !important; box-shadow: no
 vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
 vtb.ru#$#.header, [class^='HeaderRedesigned__HeaderComponent'] { position: absolute!important; border: none!important; }
 vtb.ru#$#[class*='NativeSection-section-header'] { position: unset !important; }
-wifire.tv#$#.header { min-height: unset !important; margin: 0 !important; }
-wifire.tv#$#.header__logo { padding: 15px !important; }
+wifire.tv#$#.header { min-height: unset !important; margin-bottom: 20px !important; }
+wifire.tv#$#.header__logo { padding-top: 5px !important; padding-bottom: 15px !important; }
 xcom-shop.ru##.card-path__wrapper + div
 
 
-!   Открепить шапку:
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-header__wrapper, .navigation, [class^='news-'][class$='__wrapper'], [class^='news-'][class$='__wrapper'] > [class*='news-'], .header__container, .ui-lib-header-container2__wrapper { position: initial!important; }
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*#$#.serp-navigation { position: relative!important; top: unset!important; }
-!   Курсор в поиске и в почте:
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.extended-text, .mail-Page { cursor: auto!important; pointer-events: auto!important; }
+ya.ru##.dist-stripe, .search3  .link-bro
 
 !   Яндекс.Погода:
-[$domain=yandex.*,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration
+[$domain=yandex.*,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"]  .card_without-card-decoration
 [$domain=yandex.*,path=|/pogoda^]#$#[role="main"] > div { margin-top: 0 !important; margin-right: 0 !important; }
 
 !   Яндекс.Поиск:
-[$domain=yandex.*,path=|/search^]#$#.serp-header .search2 { max-width: unset !important; }
+[$domain=yandex.*,path=|/search^]#$#.serp-header__wrapper,.navigation { position: absolute !important; }
+[$domain=yandex.*,path=|/search^]#$#.serp-header  .search2 { max-width: unset !important; }
 [$domain=yandex.*,path=|/search^]##.distr-nav, [class*="location_right"]:has(:contains(/Браузер/i)), ul#search-result > li:has(a[data-event-required="true"])
+[$domain=yandex.*,path=|/search^]#$#.ExtendedText { cursor: auto !important; pointer-events: auto !important; }
 
 !   Яндекс.Турбо:
 [$domain=yandex.*,path=|/turbo^]##.layout__right
@@ -583,7 +591,7 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~market.yandex.*,~music.yandex.*,~to
 [$domain=yandex.*,path=|/images^]##.ImagesViewerDirectStripe, .MMSidebar-FixedPaneVisibilityAnchor, .JustifierRowLayout-Incut
 
 !   Яндекс.Карты:
-[$domain=yandex.*,path=|/maps^]##._mobile .interstitial-view
+[$domain=yandex.*,path=|/maps^]##._mobile  .interstitial-view
 
 !   Яндекс Кью:
 [$domain=yandex.*,path=|/q^]#$#header { position: unset !important; }
@@ -601,21 +609,29 @@ disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto
 disk.yandex.*#$#.public__main { width: 80% !important; margin: 1em auto 0 !important; }
 disk.yandex.*#$#.folder-content__header, .folder-content__header-shadow { position: unset!important; padding: 0 0 10px!important; }
 disk.yandex.*#$#.folder-content__header-name { flex-grow: unset !important; margin-right: 2em !important; }
-disk.yandex.*#$#.content_dir .action-buttons { justify-content: flex-end !important; }
+disk.yandex.*#$#.content_dir  .action-buttons { justify-content: flex-end !important; }
 disk.yandex.*#$#.folder-content__header-name > h1:first-child { margin-left: 2em !important; }
 disk.yandex.*#$#.folder-content__back-button { margin-top: .8em !important; }
-disk.yandex.*#$#.folder-content__header-name h1 { font-size: 2em !important; line-height: 1.1em !important; }
+disk.yandex.*#$#.folder-content__header-name  h1 { font-size: 2em !important; line-height: 1.1em !important; }
 
 docviewer.yandex.*#$#header { position: absolute !important; }
-docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
+docviewer.yandex.*##.fullscreen-container  iframe:not([src^="/restart?"]), .fullscreen-container  [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 
 market.yandex.*##[data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
-market.yandex.*#$##ProductImageGallery [data-zone-name="image"] [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
+market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div { position: unset!important; background: unset!important; box-shadow: unset!important; }
+market.yandex.*#$##ProductImageGallery  [data-zone-name="image"]  [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
 
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset !important; }
 music.yandex.*#$#.progress__left, .progress__right { display: block !important; }
+
+!   Яндекс Справка:
+[$domain=yandex.*,path=|/support^]#$#html { height: unset !important; }
+[$domain=yandex.*,path=|/support^]#$#.layout__head, .layout__content, .layout__footer { position: unset!important; border-bottom: none!important; padding: 0!important; margin: 0!important; }
+[$domain=yandex.*,path=|/support^]##.document-menu::before
+[$domain=yandex.*,path=|/support^]#$#.layout__left { position: fixed !important; }
+[$domain=yandex.*,path=|/support^]#$#.document-menu__inner { padding-top: 0 !important; }
 
 
 !   Мобильное приложение на странице входа:
