@@ -1,4 +1,8 @@
-!   https://raw.githubusercontent.com/XX-J/XX-J-s-annoyance-filter/master/XX-J's%20annoyance%20filter.txt
+
+! Title: XX-J's Annoyance filter
+! Description: For cut off shitty ads, others annoyances and making website styles look practical.
+! Homepage: https://github.com/XX-J/XX-J-s-annoyance-filter
+! Update: https://raw.githubusercontent.com/XX-J/XX-J-s-annoyance-filter/master/XX-J's%20annoyance%20filter.txt
 
 
 #$#html { scrollbar-width: unset !important; scrollbar-color: #55698a #edeae4 !important; }
@@ -457,7 +461,7 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
 
 !  Не закреплять видеоплеер и Автораскрытие текста новостей:
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#new MutationObserver( Mutations => { let prevEl; for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) for (let El of Node.querySelectorAll('[data-blocks="mini_video_player::close_button"], [data-blocks="readmore::cut_short"]')) if (El != prevEl) { prevEl = El; setTimeout( () => { El.click() }, 90) }}}).observe( document, { childList: true, subtree: true })
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#let El = document.querySelector('[data-blocks="mini_video_player::close_button"]'); if (El) setTimeout( () => { El.click() }, 90); new MutationObserver( Mutations => { let prevEl; for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) for (let El of Node.querySelectorAll('[data-blocks="mini_video_player::close_button"], [data-blocks="readmore::cut_short"]')) if (El != prevEl) { prevEl = El; setTimeout( () => { El.click() }, 90) }}}).observe( document, { childList: true, subtree: true })
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', 'copy')
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root [data-blocks="main_now"] article + div, #root [data-blocks="rec_block"]
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> div > div > div > [id^="adfox-"]):not(:has([id^="cluster-video"]))
@@ -468,10 +472,11 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> #bigColumn) ~ div:has(> div + div), #root [data-rnet^="rnet_"]:upward(2)
 
 vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/contextmenu|pause|ended/')
-vp.rambler.ru##.eagleplayer-advertisement-remain-time, .eplayer-holdable.eplayer-hide-control-start:empty, [data-seek] > [data-seek-bar]
-vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:not(:has(> div:empty)) { background: #000d !important; }
-vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start > [data-title] { white-space: pre-wrap!important; -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; cursor: auto!important; pointer-events: auto!important; color: var(--skin-text-color)!important; }
-vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:has([data-seek]) { height: 38px !important; }
+vp.rambler.ru##.eagleplayer-advertisement-remain-time,.eplayer-time-to-ad, .eplayer-holdable.eplayer-hide-control-start:empty, [data-seek] > [data-seek-bar]
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:not(:has(> div:empty)) { background: #000d!important; }
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:has([data-title]) { padding: 9px 15px!important; }
+vp.rambler.ru#$#[data-title] { white-space: pre-wrap!important; -webkit-touch-callout: default!important; -webkit-user-drag: element!important; -webkit-user-select: text!important; user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; cursor: auto!important; pointer-events: auto!important; color: var(--skin-text-color)!important; }
+vp.rambler.ru#$#.eplayer-skin-component.eplayer-holdable.eplayer-hide-control-start:has([data-seek]) { height: 38px!important; }
 vp.rambler.ru#$#[data-seek] > div:nth-of-type(1) { height: 10px !important; border-radius: 2px !important; }
 vp.rambler.ru#$#[data-quality-container] { bottom: 35px !important; }
 
