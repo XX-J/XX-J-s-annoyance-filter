@@ -164,8 +164,8 @@ dzen.ru#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__co
 dzen.ru#$#.card-layer-header-view__pre-header { padding-left: 10px !important; }
 dzen.ru#$#.card-rtb-label-view,.card-rtb-label-view__text, .zen-ui-channel-info__title { white-space: pre-wrap !important; }
 dzen.ru#$#.card-layer-header-view { height: unset !important; }
-dzen.ru##[id^="zen-row-"] .card-layer-header-view__controls
-dzen.ru#$#[id^="zen-row-"]:hover .card-layer-header-view__controls { display: block!important; position: absolute!important; right: 8px!important; background: var(--zenColorBackgroundOverflow)!important; border-radius: 9px!important; }
+dzen.ru##[id^="zen-row-"]  .card-layer-header-view__controls
+dzen.ru#$#[id^="zen-row-"]:hover  .card-layer-header-view__controls { display: block!important; position: absolute!important; right: 8px!important; background: var(--zenColorBackgroundOverflow)!important; border-radius: 9px!important; }
 !dzen.ru#%#//scriptlet('abort-on-property-read', 'scrollTo') - проверить!
 
 !   Новости:
@@ -181,8 +181,8 @@ dzen.ru##.publication-columns-layout__left,.publication-columns-layout__right, .
 !   Видео:
 dzen.ru#$#.video-site-app__header { position: absolute !important; }
 dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) { let El = Node.querySelector('.zen-ui-video-video-next-preview__cancel-btn'); if (El) { El.click(); setTimeout( () => { document.querySelector('.zen-ui-video-video-state__button').click() }, 500) }}}}).observe( document, { childList: true, subtree: true })
-dzen.ru##[class$="-content__description"] + :has([style="width: 100%;"]), .viewer-layout__sidebar [class$="__item"] > div:first-child:not(.panel-view),.viewer-layout__sidebar [class$="__feed"] > div:not([class][data-item-id]), [class$="-recommended__subscribe-carousel"]
-dzen.ru#$#[class^="video-card-view__publisher-title"], .video-card-view__title > .cut { white-space: pre-wrap!important; overflow-wrap: break-word!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
+dzen.ru##[class$="-content__description"] + div:not([class$="-content__comments"]), .viewer-layout__sidebar  [class$="__item"] > div:first-child:not(.panel-view), .viewer-layout__sidebar  [class$="__feed"] > :not([data-item-id])
+dzen.ru#$#[class^="video-card-view__publisher-title"], .video-card-view__title > .cut { white-space: pre-wrap!important; overflow-wrap: anywhere!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
 dzen.ru#$#.video-card-view__more { position: absolute!important; right: 8px!important; top: 8px!important; background: var(--zenColorBackgroundPrimary)!important; border-radius: 6px!important; }
 
 
