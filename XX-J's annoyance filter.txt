@@ -129,6 +129,8 @@ citilink.ru#$#.PopupCatalogMenu__container { width: unset !important; }
 citilink.ru#$#.CatalogMenu__container { grid-template-areas: "left search" "left right"!important; grid-template-columns: max-content!important; }
 ||dynamicyield.com^$script,domain=citilink.ru
 citilink.ru#$#main, main > .Main { margin: 0 !important; padding: 0 !important; }
+cnews.ru#$#body, .header { margin: 0 !important; position: unset !important; }
+cnews.ru#$#.header_container, .section_topnews > .container, footer > .container { margin: auto !important; }
 codepen.io,cdpn.io##.referer-warning
 
 ||browser.sentry-cdn.com/*/bundle.min.js
@@ -213,8 +215,11 @@ support.google.com#$#header[role="banner"] { position: absolute!important; box-s
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
 
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
-gosuslugi.ru#$#.is-sticky .top-wrapper, lib-header { position: absolute !important; box-shadow: none !important; }
-gosuslugi.ru#$##header .main-navigation { height: 50px !important; }
+gosuslugi.ru#%#//scriptlet('prevent-setInterval', 'an.invoke.apply', '60000')
+gosuslugi.ru#%#//scriptlet('prevent-addEventListener', 'visibilitychange')
+gosuslugi.ru#$#header > lib-header { position: absolute !important; }
+greasyfork.org#$#pre { white-space: pre-wrap!important; overflow-wrap: break-word!important; width: unset!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
+greasyfork.org#$#ol { padding-inline-start: 50px !important; }
 
 
 habr.com#$#.tm-base-layout__header_is-sticky, .tm-article-sticky-panel { position: unset !important; }
@@ -336,7 +341,7 @@ my.mail.ru#$#.sp-video__item-page-new__video-wrapper { width: unset !important; 
 my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!important; right: 0!important; width: 24%!important; }
 my.mail.ru#%#//scriptlet('prevent-addEventListener', 'ended')
 
-otvet.mail.ru##.fixedsticky-dummy, .nt--position
+otvet.mail.ru##.fixedsticky-dummy, .pm-toolbar__button__inner[href="/ask"] + div:has(:contains(Задайте вопрос)), .nt--position
 otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) div:contains(ответ) + div > div + div > div > div:matches-css(padding-top: 20px):matches-css(padding-right: 20px):matches-css(padding-bottom: 20px):matches-css(padding-left: 20px)
 otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) + div
 ||smotri.cdnmail.ru/assets/default/static/white_noise.gif
@@ -358,7 +363,9 @@ body_background_dark.png|$domain=monkrus.ws
 ^snow.js|$domain=monkrus.ws
 ||addons-amo.cdn.mozilla.net/amo-*.js
 mozilla.org#$#.c-navigation, .main-document-header-container { position: unset!important; box-shadow: none!important; border: none!important; }
-developer.mozilla.org#$#.code-example, code, pre { font-weight: 600 !important; }
+developer.mozilla.org,mdn.mozilla.net#$#code, pre { white-space: pre-wrap!important; overflow-wrap: break-word!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; height: unset!important; max-height: unset!important; }
+mdn.mozilla.net##button.copy
+mdn.github.io#$#textarea { font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 msn.com#$#.head { position: unset !important; }
 msn.com#$##precontent, #maincontent { margin-top: 0 !important; }
 
@@ -520,11 +527,12 @@ rutube.ru#$#.wdp-card-module__wrapper, .wdp-card-description-module__videoTitle,
 
 
 !   Страница авторизации:
-||online.sberbank.ru/*/antifraud*.js
-||online.sberbank.ru/PhizIC-res/group-ib/main_*.js
-online.sberbank.ru###smart-banner-app:upward(1), div:has(form#homeAuth) + div:has([style^="background-image"]):remove()
-online.sberbank.ru#$#form#homeAuth:upward(5) { margin: auto !important; }
-online.sberbank.ru#$#form#homeAuth:upward(7) { min-height: unset !important; }
+||online.sberbank.ru/*/bizone/
+||online.sberbank.ru/*/bowser.*.js
+||online.sberbank.ru/*/unallowedbrowsers.json
+||online.sberbank.ru/*/PRELOGINBANNERS/ru-web-web-default.json
+online.sberbank.ru#$#form#homeAuth:upward(6) { min-height: unset !important; }
+online.sberbank.ru#$#form#homeAuth:upward(4) { margin: auto !important; padding: 10px 0 !important; }
 !   Личный кабинет:
 ||online.sberbank.ru/region.offers/
 ||online.sberbank.ru/region.fast.actions/*/img/
