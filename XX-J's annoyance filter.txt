@@ -143,6 +143,7 @@ crowdin.com#$#.project-scrolled-header__content { position: absolute !important;
 
 
 dialogdv.ru##.bxsliderleft_bl
+disqus.com#$#pre, code { white-space: pre-wrap!important; overflow-wrap: break-word!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 
 ||as.dns-shop.ru/*/homepage-analitycs.js
 ||as.dns-shop.ru/*/outdated-browsers-notification.js
@@ -218,13 +219,15 @@ gorzdrav.spb.ru#$#.header { position: absolute !important; }
 gosuslugi.ru#%#//scriptlet('prevent-setInterval', 'an.invoke.apply', '60000')
 gosuslugi.ru#%#//scriptlet('prevent-addEventListener', 'visibilitychange')
 gosuslugi.ru#$#header > lib-header { position: absolute !important; }
-greasyfork.org#$#pre { white-space: pre-wrap!important; overflow-wrap: break-word!important; width: unset!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
-greasyfork.org#$#ol { padding-inline-start: 50px !important; }
+greasyfork.org,sleazyfork.org#$#pre { white-space: pre-wrap!important; overflow-wrap: break-word!important; width: unset!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
+greasyfork.org,sleazyfork.org#$#ol { padding-inline-start: 50px !important; }
 
 
 habr.com#$#.tm-base-layout__header_is-sticky, .tm-article-sticky-panel { position: unset !important; }
+habr.com#$#code { white-space: pre-wrap!important; overflow-wrap: break-word!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 hightech.fm#$#header { position: absolute !important; }
 ixbt.com#%#//scriptlet('prevent-addEventListener', 'mouseout', 'undefined')
+javascript.ru#$#pre, code, code  em { white-space: pre-wrap!important; overflow-wrap: break-word!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 
 
 !   Оптимизированный интерфейс. Поиск:
