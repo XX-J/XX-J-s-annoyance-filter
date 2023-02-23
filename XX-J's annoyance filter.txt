@@ -304,8 +304,11 @@ cloud.mail.ru##[class^="ReactViewer__attachesinfo--"]
 
 
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class], input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru##.letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.letter__footer, .application-mail__layout > span > :nth-child(n+3)
+e.mail.ru##.ph-union-quota, .letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3)
 
+!   Компактный заголовок в новом интерфейсе:
+e.mail.ru#$#.ph-whiteline, .ph-container, .ph-auth { height: unset !important; }
+e.mail.ru#$#.application_new-toolbar { --vkui--octavius_size_headline_height--regular: 44px!important; --octavius--padding_maincontent: 4px!important; }
 !   Убрать принудительную ширину и поставить на место съехавшую кнопку 'Фильтр':
 e.mail.ru#$#.portal-menu td:nth-of-type(1) { width: unset !important; white-space: unset !important; }
 
@@ -315,14 +318,22 @@ e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wra
 e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !important; }
 e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 
-!   Поменять расположение панелей:
+!   Поменять расположение панелей в новом интерфейсе:
+e.mail.ru#$#.react-async + .application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular))!important; padding: 0 0 0 var(--octavius--padding_maincontent)!important; }
+e.mail.ru#$#.only-new-toolbar .select__items { right: 0 !important; margin: 4px 0 !important; }
+e.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !important; }
+e.mail.ru#$#.react-async + .application-mail__layout [class*="sidebar-column-resizer"] { left: calc(100% - var(--sidebar-column-width) - var(--octavius--padding_maincontent))!important; }
+e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
+e.mail.ru#$#.react-async + .application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width) - var(--octavius--padding_maincontent))!important; }
+e.mail.ru#$#.content-header > div > div:last-child { justify-content: end !important; }
+!   Поменять расположение панелей в старом интерфейсе:
 e.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
 e.mail.ru#$#.portal-menu td:nth-of-type(2) > div:nth-of-type(1) { justify-content: end !important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - 56px)!important; }
+e.mail.ru#$#.portal-menu + .application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - var(--vkui--octavius_size_portal-menu_height--regular))!important; }
 e.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !important; }
-e.mail.ru#$#.application-mail__layout [class*="sidebar-column-resizer"] { left: calc(100% - var(--sidebar-column-width))!important; }
+e.mail.ru#$#.portal-menu + .application-mail__layout [class*="sidebar-column-resizer"] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
-e.mail.ru#$#.application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
+e.mail.ru#$#.portal-menu + .application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
 
 
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
@@ -555,11 +566,14 @@ t.me#$#.tgme_head_wrap { position: absolute !important; }
 t.me#$##widget_actions_wrap { position: unset !important; }
 t.me#%#//scriptlet('remove-class', 'stuck|shine', '#widget_actions_wrap, .tgme_action_button_new')
 tass.*#$#.header { position: unset !important; }
+
+tele2.ru##.bell, [data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardBonusContainer"], .dashboard-mia-offers
+tele2.ru#$#.inbox-indicator__bell__unread { top: -4px!important; left: -14px!important; font-size: .8rem!important; color: unset!important; }
 tele2.ru#$#.main-content { margin: 10px 0 0 !important; }
-tele2.ru##[data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardBonusContainer"], .dashboard-mia-offers
 tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !important; }
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
+
 tproger.ru#$#.container-header { position: unset !important; }
 tproger.ru#$#code:not([class]) { color: #07a!important; font-size: initial!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 tproger.ru##.line-numbers-rows, .toolbar
@@ -650,28 +664,28 @@ music.yandex.*#$#.progress__left, .progress__right { display: block !important; 
 
 
 !   Мобильное приложение на странице входа:
-yoomoney.ru#$#[class*='StyledTplLayout-'] { display: block !important; }
-yoomoney.ru##[class*='StyledTplLayoutContent']:has([class*='StyledAppInfo'])
+yoomoney.ru#$#[class*="StyledTplLayout-"] { display: block !important; }
+yoomoney.ru##[class*="StyledTplLayoutContent"]:has([class*="StyledAppInfo"])
 
 ||yoomoney.ru/offerwall/
-yoomoney.ru###header [class*='StyledWrapper-']:has(.qa-header-smart-banner)
-yoomoney.ru#$#[class*='StyledMenuContainer'] { overflow: auto !important; }
+yoomoney.ru#$#body, [class*="StyledMenuContainer"] { overflow: auto !important; padding-right: 0 !important; }
+yoomoney.ru##.MuiDialog-root[role="presentation"], .qa-header-smart-banner:upward([class*="StyledWrapper-"])
 
 !   Компактный интерфейс:
 yoomoney.ru#$#html { --space-s: 4px!important; --space-m: 6px!important; --space-l: 8px!important; --space-xl: 10px!important; --space-xxl: 12px!important; --space-xxxl: 14px!important; --space-xxxxl: 16px!important; }
-yoomoney.ru#$#[class*='StyledHeaderWrapper'], .qa-account-widget { min-height: unset !important; height: unset !important; }
-yoomoney.ru#$#[class*='StyledServiceLogoWrapper'] { padding-top: 5px !important; }
-yoomoney.ru#$#[class*='StyledNotifierAndUserWrapper'] { margin: 0 !important; }
+yoomoney.ru#$#[class*="StyledHeaderWrapper"], .qa-account-widget { min-height: unset !important; height: unset !important; }
+yoomoney.ru#$#[class*="StyledServiceLogoWrapper"] { padding-top: 5px !important; }
+yoomoney.ru#$#[class*="StyledNotifierAndUserWrapper"] { margin: 0 !important; }
 
-yoomoney.ru#$#[class*='StyledTplSectionArea'] { padding-top: 0 !important; }
+yoomoney.ru#$#[class*="StyledTplSectionArea"] { padding-top: 0 !important; }
 yoomoney.ru#$#span.qa-title { padding: 2px !important; }
 yoomoney.ru#$#.qa-category { height: var(--space-l) !important; }
-yoomoney.ru##.qa-timeline > .qa-onboarding-progress, .qa-timeline > [class*='StyledDecorator']:contains(Пора проверить личные данные), .qa-timeline > [class*='StyledDecorator']:has(.qa-offer-events), [class*='StyledDesktopMarketingOffersWrapper']
+yoomoney.ru##.qa-timeline > .qa-onboarding-progress, .qa-timeline > [class*="StyledDecorator"]:contains(Пора проверить личные данные), .qa-timeline > [class*="StyledDecorator"]:has(.qa-offer-events), [class*="StyledDesktopMarketingOffersWrapper"]
 
 yoomoney.ru#$#.qa-auto-payment-title { white-space: unset !important; }
 
 !   На странице оплаты:
-yoomoney.ru##[class^='Paranja__StyledParanja']
+yoomoney.ru##[class^="Paranja__StyledParanja"]
 
 
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
