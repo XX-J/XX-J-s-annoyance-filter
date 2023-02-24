@@ -309,14 +309,13 @@ e.mail.ru##.ph-union-quota, .letter-list__react .ReactVirtualized__Grid__innerSc
 !   Компактный заголовок в новом интерфейсе:
 e.mail.ru#$#.ph-whiteline, .ph-container, .ph-auth { height: unset !important; }
 e.mail.ru#$#.application_new-toolbar { --vkui--octavius_size_headline_height--regular: 44px!important; --octavius--padding_maincontent: 4px!important; }
-!   Убрать принудительную ширину и поставить на место съехавшую кнопку 'Фильтр':
+!   Компактная основная панель кнопок в старом интерфейсе:
+e.mail.ru#$#:root { --vkui--octavius_size_portal-menu_height--regular: 36px !important; }
+e.mail.ru#$#.portal-menu { padding: 0 !important; height: var(--vkui--octavius_size_portal-menu_height--regular) !important; }
+e.mail.ru##[href="https://trk.mail.ru/c/t9iat7"]
+e.mail.ru#$#.application .search-panel__wrapper { top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+! Убрать принудительную ширину и поставить на место съехавшую кнопку 'Фильтр':
 e.mail.ru#$#.portal-menu td:nth-of-type(1) { width: unset !important; white-space: unset !important; }
-
-!   Убрать 'сужатель' письма:
-e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
-e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
-e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !important; }
-e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 
 !   Поменять расположение панелей в новом интерфейсе:
 e.mail.ru#$#.react-async + .application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular))!important; padding: 0 0 0 var(--octavius--padding_maincontent)!important; }
@@ -334,6 +333,12 @@ e.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !imp
 e.mail.ru#$#.portal-menu + .application-mail__layout [class*="sidebar-column-resizer"] { left: calc(100% - var(--sidebar-column-width))!important; }
 e.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
 e.mail.ru#$#.portal-menu + .application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
+
+!   Убрать 'сужатель' письма:
+e.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
+e.mail.ru#%#//scriptlet('remove-class', 'html-expander-wrapper|html-expander-wrapper_collapsed|html-expander-wrapper_type_table')
+e.mail.ru#$#.html-expander-wrapper__button + [style] { transform: unset !important; }
+e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 
 
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
@@ -599,7 +604,7 @@ wifire.tv#$#.header__logo { padding-top: 5px !important; padding-bottom: 15px !i
 xcom-shop.ru##.card-path__wrapper + div
 
 
-ya.ru##.dist-stripe, .search3  .link-bro
+ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Погода:
 [$domain=yandex.*|dzen.ru,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"]  .card_without-card-decoration
@@ -644,7 +649,7 @@ disk.yandex.*#$#.folder-content__back-button { margin-top: .8em !important; }
 disk.yandex.*#$#.folder-content__header-name  h1 { font-size: 2em !important; line-height: 1.1em !important; }
 
 docviewer.yandex.*#$#header { position: absolute !important; }
-docviewer.yandex.*##.fullscreen-container  iframe:not([src^="/restart?"]), .fullscreen-container  [style="width: 100%;"]
+docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 
 market.yandex.*##[data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
