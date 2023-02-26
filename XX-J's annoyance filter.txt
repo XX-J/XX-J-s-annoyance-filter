@@ -639,7 +639,7 @@ yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~mus
 ||browser-updater.yandex.net^
 
 !   Оптимизированный интерфейс:
-disk.yandex.*,mail.yandex.*#$#body, .mail-Layout-Pane_content { overflow-y: auto !important; }
+disk.yandex.*#$#body { overflow-y: auto !important; }
 disk.yandex.*#$#.public__main { width: 80% !important; margin: 1em auto 0 !important; }
 disk.yandex.*#$#.folder-content__header, .folder-content__header-shadow { position: unset!important; padding: 0 0 10px!important; }
 disk.yandex.*#$#.folder-content__header-name { flex-grow: unset !important; margin-right: 2em !important; }
@@ -651,6 +651,31 @@ disk.yandex.*#$#.folder-content__header-name  h1 { font-size: 2em !important; li
 docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
+
+!   Оптимизированный интерфейс:
+mail.yandex.*#$#.mail-Page { cursor: auto !important; }
+mail.yandex.*#$#.mail-App-Content, .mail-Layout, .mail-Layout-Aside-Inner-Box { padding: 0 !important; }
+mail.yandex.*#$#.mail-Page_minified:not(.mail-Page_404) .mail-Layout-Container { top: 0 !important; }
+
+mail.yandex.*#$#.mail-Layout-Aside { padding: 0 !important; height: 100% !important; }
+mail.yandex.*#$#.qa-LeftColumn-MainButtons { padding: var(--space-xs) !important; margin: 0 !important; }
+mail.yandex.*##[class^="DisableAdsButton__root--"], .ns-view-react-left-column + div:not(:empty), .qa-LeftColumn-Footer-Android,.qa-LeftColumn-Footer-iOS,.qa-LeftColumn-Footer-Career,.qa-LeftColumn-Footer-Advertising,.qa-LeftColumn-Footer-Promo
+mail.yandex.*#$#.ns-view-react-left-footer { display: flex !important; flex-grow: 1 !important; align-items: end !important; }
+mail.yandex.*#$#.qa-LeftColumn-Footer { width: 100% !important; margin: var(--space-m) 0 !important; }
+mail.yandex.*#$#.Popup2_visible { visibility: visible !important; margin: 0 !important; pointer-events: auto !important; }
+mail.yandex.*#$#.mail-SkinSaver-Box { flex-grow: unset !important; }
+mail.yandex.*#$#.mail-SkinSaver { padding: 0 !important; }
+mail.yandex.*#$#.mail-Layout-Copyright-Box * { margin-top: 0 !important; margin-bottom: 0 !important; }
+
+mail.yandex.*##.mail-Advanced-Search + div:not(:empty)
+!mail.yandex.*#%#//scriptlet('remove-class', 'with-messages-direct', 'html')
+!mail.yandex.*#$#:root { --message-viewer-side-margin: 0 !important; }
+mail.yandex.*#$#[class^="MessageViewerLayout__header--"] { margin: 0!important; padding-right: var(--message-viewer-side-margin)!important; background: var(--color-bg-default)!important; }
+mail.yandex.*#$#[class^="MessageViewerLayout__body--"] { max-width: unset!important; margin: 0 var(--space-xs)!important; }
+mail.yandex.*#$#.mail-Layout-Pane_content { overflow-y: auto !important; }
+!   Настройки:
+mail.yandex.*#$#.b-heading_breadcrumbs { position: unset !important; }
+
 
 market.yandex.*##[data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
 market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div { position: unset!important; background: unset!important; box-shadow: unset!important; }
