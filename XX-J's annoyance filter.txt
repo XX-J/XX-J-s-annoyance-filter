@@ -172,7 +172,8 @@ dzen.ru#$#[id^="zen-row-"]:hover  .card-layer-header-view__controls { display: b
 
 !   Новости:
 [$domain=dzen.ru,path=|/news^]#$#.news-app > [class^="news-dzen-header"] { position: absolute !important; }
-[$domain=dzen.ru,path=|/news^]##[class*="mg-grid__col_xs_"].mg-grid__col_sm_true + div, .mg-grid__col_xs_12.mg-grid__col_sm_true > section ~ div, .news-feed  .mg-grid__col_xs_6:has(> div > div:only-of-type)
+[$domain=dzen.ru,path=|/news^]##[class*="mg-grid__col_xs_"][style] + div, .mg-grid__col_xs_12[style] > section ~ div, .news-story + div
+[$domain=dzen.ru,path=|/news^]#$#[class*="mg-grid__col_xs_"][style]:first-child { flex: unset!important; max-width: unset!important; padding: 0!important; }
 [$domain=dzen.ru,path=|/news^]#$#[class^="mg-card__text"], .mg-card__title, .mg-card__annotation { white-space: pre-wrap!important; overflow-wrap: break-word!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
 
 !   Статьи:
@@ -230,7 +231,8 @@ javascript.ru#$#pre, code, code  em { white-space: pre-wrap!important; overflow-
 
 
 !   Оптимизированный интерфейс. Поиск:
-kimovil.com#$#[id^='header-'] { position: absolute !important; }
+kimovil.com#$#[id^="header-"] { position: absolute !important; }
+kimovil.com#$#.l-user { width: unset !important; }
 kimovil.com#$#div > .heading, .h-top { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 kimovil.com##.h-top + div
 kimovil.com#$#.device-results-list { margin-top: 0 !important; }
@@ -312,6 +314,8 @@ e.mail.ru#$#.application_new-toolbar { --vkui--octavius_size_headline_height--re
 !   Компактная основная панель кнопок в старом интерфейсе:
 e.mail.ru#$#:root { --vkui--octavius_size_portal-menu_height--regular: 36px !important; }
 e.mail.ru#$#.portal-menu { padding: 0 !important; height: var(--vkui--octavius_size_portal-menu_height--regular) !important; }
+e.mail.ru#$#.page-portal-header, [data-test-id="to-inbox"] { height: unset !important; }
+e.mail.ru#$#[data-test-id="to-inbox"] > span { line-height: var(--vkui--octavius_size_portal-menu_height--regular) !important; }
 e.mail.ru##[href="https://trk.mail.ru/c/t9iat7"]
 e.mail.ru#$#.application .search-panel__wrapper { top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
 ! Убрать принудительную ширину и поставить на место съехавшую кнопку 'Фильтр':
@@ -655,11 +659,12 @@ docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: ca
 !   Оптимизированный интерфейс:
 mail.yandex.*#$#.mail-Page { cursor: auto !important; }
 mail.yandex.*#$#.mail-App-Content, .mail-Layout, .mail-Layout-Aside-Inner-Box { padding: 0 !important; }
-mail.yandex.*#$#.mail-Page_minified:not(.mail-Page_404) .mail-Layout-Container { top: 0 !important; }
+mail.yandex.*#$#.mail-Page_minified:not(.mail-Page_404) .mail-Layout-Container, .PSHeader { top: 0 !important; }
 
-mail.yandex.*#$#.mail-Layout-Aside { padding: 0 !important; height: 100% !important; }
+mail.yandex.*#$#.mail-Layout-Aside { padding: 0 var(--space-xs) !important; height: 99.5vh !important; }
 mail.yandex.*#$#.qa-LeftColumn-MainButtons { padding: var(--space-xs) !important; margin: 0 !important; }
 mail.yandex.*##[class^="DisableAdsButton__root--"], .ns-view-react-left-column + div:not(:empty), .qa-LeftColumn-Footer-Android,.qa-LeftColumn-Footer-iOS,.qa-LeftColumn-Footer-Career,.qa-LeftColumn-Footer-Advertising,.qa-LeftColumn-Footer-Promo
+mail.yandex.*#@%#//scriptlet('abort-on-property-read', 'Object.prototype.adv')
 mail.yandex.*#$#.ns-view-react-left-footer { display: flex !important; flex-grow: 1 !important; align-items: end !important; }
 mail.yandex.*#$#.qa-LeftColumn-Footer { width: 100% !important; margin: var(--space-m) 0 !important; }
 mail.yandex.*#$#.Popup2_visible { visibility: visible !important; margin: 0 !important; pointer-events: auto !important; }
@@ -668,16 +673,19 @@ mail.yandex.*#$#.mail-SkinSaver { padding: 0 !important; }
 mail.yandex.*#$#.mail-Layout-Copyright-Box * { margin-top: 0 !important; margin-bottom: 0 !important; }
 
 mail.yandex.*##.mail-Advanced-Search + div:not(:empty)
-mail.yandex.*#%#//scriptlet('remove-class', 'with-messages-direct', 'html')
-!mail.yandex.*#$#:root { --message-viewer-side-margin: 0 !important; }
-mail.yandex.*#$#[class^="MessageViewerLayout__header--"] { margin: 0!important; padding-right: var(--message-viewer-side-margin)!important; background: var(--color-bg-default)!important; }
-mail.yandex.*#$#[class^="MessageViewerLayout__body--"] { max-width: unset!important; margin: 0 var(--space-xs)!important; }
+mail.yandex.*#$#.mail-Toolbar-Item_settings { opacity: .7 !important; }
+mail.yandex.*#$#.mail-Advanced-Search, .mail-Layout-Panes { top: 47px !important; }
+mail.yandex.*#$#.mail-App-Advanced-Search .mail-Layout-Panes { top: 94px !important; }
 mail.yandex.*#$#.mail-Layout-Pane_content { overflow-y: auto !important; }
-!   Настройки:
-mail.yandex.*#$#.b-heading_breadcrumbs { position: unset !important; }
+
+!  Настройки:
+mail.yandex.*#$#.mail-Page_setup, .mail-Page_setup .mail-App { height: unset !important; overflow: unset !important; }
+mail.yandex.*#$#.mail-Page_setup .mail-Layout-Container, .mail-Page_setup .mail-Layout-Panes, [class^="SetupIndex-m__root--"],.b-setup { position: unset!important; }
+mail.yandex.*#$#.mail-Page_setup .mail-Layout-Aside { position: sticky !important; top: 0 !important; }
+mail.yandex.*#$#.b-heading_breadcrumbs { position: unset !important; padding: var(--space-xs) 0 !important; }
 
 
-market.yandex.*##[data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
+market.yandex.*##[data-apiary-widget-id="/headBanner"], [data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
 market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div { position: unset!important; background: unset!important; box-shadow: unset!important; }
 market.yandex.*#$##ProductImageGallery  [data-zone-name="image"]  [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
 
