@@ -272,6 +272,9 @@ lrepacks.*##.b-page_newyear, .fixedbut
 lrepacks.*#$#.logo { padding: 0 !important; }
 
 
+mail.ru##.ph-union-quota
+[$domain=mail.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]###asteroid-cloud, [slot="main-column"] > div[class]:nth-child(2)
+
 !||bs.yandex.ru/count/
 !||an.mail.ru/count/
 !||img.imgsmail.ru/*/logger/
@@ -283,7 +286,6 @@ lrepacks.*#$#.logo { padding: 0 !important; }
 !hi-tech.mail.ru#$#.block .cols__column, .comments { display: block!important; margin: auto!important; width: 60%!important; }
 !hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'undefined')
 !hi-tech.mail.ru#%#//scriptlet('prevent-addEventListener', 'scroll', 'k')
-
 
 cloud.mail.ru###react-modals:has([data-qa-modal="update-license-dialog"])
 cloud.mail.ru#$#body:has(#react-modals [data-qa-modal="update-license-dialog"]) { overflow: auto !important; padding: 0 !important; }
@@ -306,7 +308,7 @@ cloud.mail.ru##[class^="ReactViewer__attachesinfo--"]
 
 
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class], input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru##.ph-union-quota, .letter-list__react .ReactVirtualized__Grid__innerScrollContainer > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3)
+e.mail.ru##[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3)
 
 !   Компактный заголовок в новом интерфейсе:
 e.mail.ru#$#.ph-whiteline, .ph-container, .ph-auth { height: unset !important; }
@@ -347,9 +349,10 @@ e.mail.ru#$#.letter__body, .letter-body__body { overflow: unset !important; }
 
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
 
-my.mail.ru#$#.b-head__menu, .b-head { position: unset !important; margin: unset !important; }
+my.mail.ru#$#.b-head__menu { position: relative !important; box-shadow: none !important; }
+my.mail.ru#$#.b-head { margin: 0 !important; }
 my.mail.ru#$#.b-left-menu-wrapper { top: 0 !important; }
-my.mail.ru##.b-fourth-pseudo-column, .b-column-right__block-news-cloud
+my.mail.ru##[data-mru-fragment$="/SubscriptionsWidget"]:upward(1), .b-fourth-pseudo-column, .b-column-right__block-news-cloud
 
 ||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/right-banners/
 ||imgsmail.ru/mail/ru/images/js/myjs/mm/out/min/video-html5/commerce/custom-overlay_rev*.js
@@ -357,7 +360,7 @@ my.mail.ru##.b-fourth-pseudo-column, .b-column-right__block-news-cloud
 my.mail.ru#$#.sp-video__head { position: absolute !important; }
 my.mail.ru#$#.sp-video__body__main > .l-common__block { width: 95vw !important; margin: 0 0 0 4% !important; }
 my.mail.ru#$#.l-common__left-menu { display: initial !important; margin-left: -4% !important; }
-my.mail.ru##[class^='b-video__'][class*='-rb-banner'], .sp-video__body__right-banner
+my.mail.ru##[class^="b-video__"][class*="-rb-banner"], .sp-video__body__right-banner
 my.mail.ru#$#.b-video__section__item-page-player { width: 75% !important; }
 my.mail.ru#$#.sp-video__item-page-new__video-wrapper { width: unset !important; height: calc(120vh * 9 / 16) !important; }
 my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!important; right: 0!important; width: 24%!important; }
@@ -583,6 +586,7 @@ tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !impor
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
 
+topwar.ru#$#.headmenu { position: unset !important; }
 tproger.ru#$#.container-header { position: unset !important; }
 tproger.ru#$#code:not([class]) { color: #07a!important; font-size: initial!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 tproger.ru##.line-numbers-rows, .toolbar
@@ -603,6 +607,7 @@ virustotal.com#$##omnibarWrapper { position: absolute !important; box-shadow: no
 vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
 vtb.ru#$#.header, [class^='HeaderRedesigned__HeaderComponent'] { position: absolute!important; border: none!important; }
 vtb.ru#$#[class*='NativeSection-section-header'] { position: unset !important; }
+whatwg.org#$#pre, code { margin: 0!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 wifire.tv#$#.header { min-height: unset !important; margin-bottom: 20px !important; }
 wifire.tv#$#.header__logo { padding-top: 5px !important; padding-bottom: 15px !important; }
 xcom-shop.ru##.card-path__wrapper + div
@@ -728,7 +733,7 @@ yoomoney.ru##[class^="Paranja__StyledParanja"]
 
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
 youla.ru#$#header > div + div > div { padding: 16px 0 !important; height: 64px !important; }
-youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container)
+youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container), ytd-popup-container:contains(Подпишитесь на канал)
 youtube.com#$##masthead-container, #chips-wrapper, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
 
 zvonili.com#$#html { padding: unset !important; }
