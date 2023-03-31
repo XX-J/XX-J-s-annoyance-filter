@@ -200,6 +200,10 @@ ferra.ru##img + div[style*="background-image:"]
 ferra.ru,lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) for (let Node of Mutation.addedNodes) if (Node instanceof SVGElement && Node.previousSibling instanceof HTMLElement && Node.previousSibling.matches('iframe[src*="vp.rambler.ru"]')) setTimeout( () => { Node.onclick() }, 90) }).observe( document, { childList: true, subtree: true })
 
 
+||gazeta.ru/*/activate.*.js
+||gazeta.ru/*/block_counter.*.js
+gazeta.ru###_id_header_pseudo
+
 github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
 github.com#$#[class*="position-sticky"], .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
