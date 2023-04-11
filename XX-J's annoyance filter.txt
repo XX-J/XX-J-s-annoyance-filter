@@ -738,7 +738,8 @@ yoomoney.ru##[class^="Paranja__StyledParanja"]
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
 youla.ru#$#header > div + div > div { padding: 16px 0 !important; height: 64px !important; }
 youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container), ytd-popup-container:contains(Подпишитесь на канал)
-youtube.com#$##masthead-container, #chips-wrapper, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
+youtube.com#$##masthead-container, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
+youtube.com#$#:not([not-sticky]) > #chips-wrapper { position: absolute !important; }
 
 zvonili.com#$#html { padding: unset !important; }
 zvonili.com#$#.jumbotron { padding: 1em 0 .5em !important; margin: unset !important; }
