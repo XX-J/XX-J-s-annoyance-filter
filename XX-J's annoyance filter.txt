@@ -204,7 +204,7 @@ ferra.ru,lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mu
 ||gazeta.ru/*/block_counter.*.js
 gazeta.ru###_id_header_pseudo
 
-github.com##.progress-pjax-loader, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
+github.com##.progress-pjax-loader, [class*="position-sticky"].is-placeholder, .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
 github.com#$#[class*="position-sticky"], .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.js-profile-timeline-year-list { width: auto !important; }
@@ -312,7 +312,7 @@ cloud.mail.ru##[class^="ReactViewer__attachesinfo--"]
 
 
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class], input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru##[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3)
+e.mail.ru##div:has(+ .only-new-toolbar),[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3),  [class^="Quota__link--"]
 
 !   Компактный заголовок в новом интерфейсе:
 e.mail.ru#$#.ph-whiteline, .ph-container, .ph-auth { height: unset !important; }
@@ -486,15 +486,13 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 ||rambler.ru/browser/check-support.js
 ||rambler.ru/static/recommender.js
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/pagehide|pageshow|rnews-update-event|visibilitychange/')
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$#div[class][itemscope][itemtype] { position: absolute !important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$#nav + div + div:upward(2) { position: unset!important; transform: none!important; box-shadow: inset 0 -1px 0 0 #e0ebff!important; }
 
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###app > div:has(> div > div > div > [id^="xmrij-"])
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> [style^="min-height:"] > div > [id^="xmrij-"])
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###app div:has(> div > [style="min-height:600px"] > div > [id^="xmrij-"])
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding h2:contains(Лента новостей):upward(3) { width: 21%!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { left: 22%!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###app > div:has(+ .commercial-branding), #app div:has(> [style^="min-height:"] > div > [id^="xmrij-"]), #app > .commercial-branding > div > div > div + div:has([style^="min-height:"] > div > [id^="xmrij-"])
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding h2:contains(Лента новостей):upward(3) { width: 21%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { left: 22%!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
 
 !  Не закреплять видеоплеер и Автораскрытие текста новостей:
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#let El = document.querySelector('[data-blocks="mini_video_player::close_button"]'); if (El) setTimeout( () => { El.click() }, 90); new MutationObserver( Mutations => { let prevEl; for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) for (let El of Node.querySelectorAll('[data-blocks="mini_video_player::close_button"], [data-blocks="readmore::cut_short"]')) if (El != prevEl) { prevEl = El; setTimeout( () => { El.click() }, 90) }}}).observe( document, { childList: true, subtree: true })
