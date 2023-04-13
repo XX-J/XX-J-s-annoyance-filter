@@ -312,7 +312,7 @@ cloud.mail.ru##[class^="ReactViewer__attachesinfo--"]
 
 
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class], input[tabindex] + div:contains(Письмо отправлено)
-e.mail.ru##div:has(+ .only-new-toolbar),[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3),  [class^="Quota__link--"]
+e.mail.ru##div:has(> .only-new-toolbar:nth-child(2)) > div:first-child,[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3),  [class^="Quota__link--"]
 
 !   Компактный заголовок в новом интерфейсе:
 e.mail.ru#$#.ph-whiteline, .ph-container, .ph-auth { height: unset !important; }
