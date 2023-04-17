@@ -158,7 +158,7 @@ dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zag
 
 
 !   Главная:
-[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"])
+![$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"])
 [$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#header ~ [class*="__morda-"] > main { margin-top: 0 !important; }
 dzen.ru##[id^="zen-row-"]:has(article > div:not([class^="card-news"]) + div), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view, [class^="desktop-interview-modal__wrapper"]
 dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
