@@ -157,8 +157,11 @@ dostfilms.*#$#body, header, .carousel { background-image: none !important; margi
 dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 
 
+||clck.dzen.ru^
+||dzeninfra.ru/zen-misc/aab/cod.txt
+
 !   Главная:
-![$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"])
+[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"]), [class*="ad-campaign-qr-banner__wrapper-"], [class^="feed-scrolling-snackbar__container-"]
 [$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#header ~ [class*="__morda-"] > main { margin-top: 0 !important; }
 dzen.ru##[id^="zen-row-"]:has(article > div:not([class^="card-news"]) + div), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view, [class^="desktop-interview-modal__wrapper"]
 dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
@@ -175,6 +178,10 @@ dzen.ru#$#[id^="zen-row-"]:hover  .card-layer-header-view__controls { display: b
 [$domain=dzen.ru,path=|/news^]##[class*="mg-grid__col_xs_"][style] + div, .mg-grid__col_xs_12[style] > section ~ div, .news-story + div
 [$domain=dzen.ru,path=|/news^]#$#[class*="mg-grid__col_xs_"][style]:first-child { flex: unset!important; max-width: unset!important; padding: 0!important; }
 [$domain=dzen.ru,path=|/news^]#$#[class^="mg-card__text"], .mg-card__title, .mg-card__annotation { white-space: pre-wrap!important; overflow-wrap: break-word!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
+
+!   Страница Канала:
+[$domain=dzen.ru,path=|/id^]#$#header { position: unset !important; }
+[$domain=dzen.ru,path=|/id^]##[data-itemid^="publishers_channel_subscribe_card_"]
 
 !   Статьи:
 dzen.ru#$#header, .ui-lib-header-container2 { position: unset !important; border: none !important; }
@@ -488,22 +495,20 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/pagehide|pageshow|rnews-update-event|visibilitychange/')
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$#nav + div + div:upward(2) { position: unset!important; transform: none!important; box-shadow: inset 0 -1px 0 0 #e0ebff!important; }
 
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###app > div:has(+ .commercial-branding), #app div:has(> [style^="min-height:"] > div > [id^="xmrij-"]), #app > .commercial-branding > div > div > div + div:has([style^="min-height:"] > div > [id^="xmrij-"])
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding h2:contains(Лента новостей):upward(3) { width: 21%!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { left: 22%!important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##app > .commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
+www.rambler.ru###app > div:has(+ .commercial-branding), div:has(> [style^="min-height:"] > div > [id^="xmrij-"]), .commercial-branding > div > div > div + div:has([style^="min-height:"] > div > [id^="xmrij-"])
+www.rambler.ru#$#.commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) { width: unset!important; }
+www.rambler.ru#$#.commercial-branding h2:contains(Лента новостей):upward(3) { width: 21%!important; }
+www.rambler.ru#$#.commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) { left: 22%!important; }
+www.rambler.ru#$#.commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
+www.rambler.ru#$#[data-head-desktop^="top_news:"]:upward(2),[data-head-desktop^="top_news:"] { height: unset!important; max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 
-!  Не закреплять видеоплеер и Автораскрытие текста новостей:
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#let El = document.querySelector('[data-blocks="mini_video_player::close_button"]'); if (El) setTimeout( () => { El.click() }, 90); new MutationObserver( Mutations => { let prevEl; for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) for (let El of Node.querySelectorAll('[data-blocks="mini_video_player::close_button"], [data-blocks="readmore::cut_short"]')) if (El != prevEl) { prevEl = El; setTimeout( () => { El.click() }, 90) }}}).observe( document, { childList: true, subtree: true })
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', 'copy')
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###root [data-blocks="main_now"] article + div, #root [data-blocks="rec_block"]
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> div > div > div > [id^="adfox-"]):not(:has([id^="cluster-video"]))
+~id.rambler.ru,~vp.rambler.ru,rambler.ru###root [id^="adfox-"]:upward(4), #root aside:nth-child(2):upward(4),#root aside:nth-child(3), #root [data-rnet^="rnet_"]:upward(2)
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##root article > nav + div { display: flex !important; justify-content: center !important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##root [title="Player"]:upward(4) { width: unset !important; height: unset !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###carousel :contains(/Листайте дальше, чтобы пропустить рекламу/i):upward([data-index]):remove()
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##carousel [data-index] > div > div:not(:only-child) { padding: 0 !important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##carousel [data-blocks="more_button"] { padding-left: 14px !important; }
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###root #bigColumn + div > div + div
-~id.rambler.ru,~vp.rambler.ru,rambler.ru###root div:has(> #bigColumn) ~ div:has(> div + div), #root [data-rnet^="rnet_"]:upward(2)
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##carousel [data-index] > div > div:nth-of-type(2) { min-height: unset!important; padding: 0!important; }
+~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##carousel [data-index] > ul { height: unset!important; padding-top: 20px!important; padding-bottom: 20px!important; }
 
 vp.rambler.ru#%#//scriptlet('prevent-addEventListener', '/contextmenu|pause|ended/')
 vp.rambler.ru##.eagleplayer-advertisement-remain-time,.eplayer-time-to-ad, .eplayer-holdable.eplayer-hide-control-start:empty, [data-seek] > [data-seek-bar]
