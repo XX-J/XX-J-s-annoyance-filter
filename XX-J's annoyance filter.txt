@@ -492,7 +492,7 @@ price.ru#$#.tabs-anchor + .container { position: unset !important; }
 
 ||rambler.ru/browser/check-support.js
 ||rambler.ru/static/recommender.js
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/pagehide|pageshow|rnews-update-event|visibilitychange/')
+~id.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', '/pagehide|pageshow|rnews-update-event|visibilitychange|copy/')
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$#nav + div + div:upward(2) { position: unset!important; transform: none!important; box-shadow: inset 0 -1px 0 0 #e0ebff!important; }
 
 www.rambler.ru###app > div:has(+ .commercial-branding), div:has(> [style^="min-height:"] > div > [id^="xmrij-"]), .commercial-branding > div > div > div + div:has([style^="min-height:"] > div > [id^="xmrij-"])
@@ -502,7 +502,6 @@ www.rambler.ru#$#.commercial-branding > div > div:nth-of-type(1) > div:nth-of-ty
 www.rambler.ru#$#.commercial-branding > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) { width: 77%!important; }
 www.rambler.ru#$#[data-head-desktop^="top_news:"]:upward(2),[data-head-desktop^="top_news:"] { height: unset!important; max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 
-~id.rambler.ru,~vp.rambler.ru,rambler.ru#%#//scriptlet('prevent-addEventListener', 'copy')
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru###root [id^="adfox-"]:upward(4), #root aside:nth-child(2):upward(4),#root aside:nth-child(3), #root [data-rnet^="rnet_"]:upward(2)
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##root article > nav + div { display: flex !important; justify-content: center !important; }
 ~id.rambler.ru,~vp.rambler.ru,rambler.ru#$##root [title="Player"]:upward(4) { width: unset !important; height: unset !important; }
