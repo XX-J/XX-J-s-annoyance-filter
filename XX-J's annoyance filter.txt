@@ -227,9 +227,10 @@ support.google.com#$#header[role="banner"] { position: absolute!important; box-s
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
 
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
-gosuslugi.ru#%#//scriptlet('prevent-setInterval', 'an.invoke.apply', '60000')
-gosuslugi.ru#%#//scriptlet('prevent-addEventListener', 'visibilitychange')
-gosuslugi.ru#$#header > lib-header { position: absolute !important; }
+gosuslugi.ru#%#//scriptlet('prevent-setInterval', '!periodicCheckShowCustomAnimation', '60000')
+www.gosuslugi.ru#$#.header > div { position: unset !important; }
+www.gosuslugi.ru##.header + .container-fixed
+lk.gosuslugi.ru#$#lib-header { position: absolute !important; }
 greasyfork.org,sleazyfork.org#$#pre { white-space: pre-wrap!important; overflow-wrap: break-word!important; width: unset!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 greasyfork.org,sleazyfork.org#$#ol { padding-inline-start: 50px !important; }
 
