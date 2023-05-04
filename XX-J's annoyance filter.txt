@@ -43,20 +43,24 @@ bash.im,kimovil.com,msi.com,my-expert.ru,onlinetrade.ru,playground.ru,rambler.ru
 adguard.com###navigation
 adguard.com#$#.sticky-bar { position: absolute !important; top: 100% !important; }
 
+
 !   На Главной:
 ||alicdn.com/ae-*-ui/??hashmap*.js
 ||alicdn.com/*alilog/
 ||alicdn.com/retcode/cloud-sdk/bl.js
 ||acs.aliexpress.*/mtop.aliexpress.lighthouse.config.get/
+
 !   В поиске:
 ||cobra.aliexpress.*/p4pforlist.html
 ||alicdn.com/ae-search-ui/standalone/index.*.js
+
 !   На странице товара:
 ||cobra.aliexpress.*/b2bad.html
 ||cdp.aliexpress.*/60.htm
 ||cdp.aliexpress.*/74.htm
 ||moduleanalysis.aliexpress.com/calc.htm
 ||aliexpress.*/check.gif
+
 !   В списке заказов:
 ||alicdn.*/alime/dialog/alicare-dialog.js
 
@@ -103,8 +107,8 @@ allcables.ru##w-div
 mag.auto.ru#$#.ArticleHeader, .ArticleHeader__previousArticle { position: unset !important; }
 mag.auto.ru##.ArticleHeader + .PageArticle__indexLink
 avito.ru##.item-view-shop-header, .b-shop-logo, .js-shop-showcase
-avito.ru#$#[class^='index-sticky-'], [class^='index-header-'] { position: unset !important; box-shadow: none !important; }
-avito.ru#$#[class^='items-items-'] > [class*='items-item-'] { width: calc(100% - 10px) !important; }
+avito.ru#$#[class^="index-sticky-"], [class^="index-header-"] { position: unset !important; box-shadow: none !important; }
+avito.ru#$#[class^="items-items-"] > [class*="items-item-"] { width: calc(100% - 10px) !important; }
 
 
 backit.me#$#header { position: absolute !important; }
@@ -157,11 +161,11 @@ dostfilms.*#$#body, header, .carousel { background-image: none !important; margi
 dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 
 
-||clck.dzen.ru^
-||dzeninfra.ru/zen-misc/aab/cod.txt
+!||clck.dzen.ru^
+!||dzeninfra.ru/zen-misc/aab/cod.txt
 
 !   Главная:
-[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[class*="ad-campaign-qr-banner__wrapper-"], [class^="feed-scrolling-snackbar__container-"]
+[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"]), [class*="ad-campaign-qr-banner__wrapper-"], [class^="feed-scrolling-snackbar__container-"]
 [$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#header ~ [class*="__morda-"] > main { margin-top: 0 !important; }
 dzen.ru##[id^="zen-row-"]:has(article > div:not([class^="card-news"]) + div), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view, [class^="desktop-interview-modal__wrapper"]
 dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
@@ -171,29 +175,30 @@ dzen.ru#$#.card-rtb-label-view,.card-rtb-label-view__text, .zen-ui-channel-info_
 dzen.ru#$#.card-layer-header-view { height: unset !important; }
 dzen.ru##[id^="zen-row-"]  .card-layer-header-view__controls
 dzen.ru#$#[id^="zen-row-"]:hover  .card-layer-header-view__controls { display: block!important; position: absolute!important; right: 8px!important; background: var(--zenColorBackgroundOverflow)!important; border-radius: 9px!important; }
-!dzen.ru#%#//scriptlet('abort-on-property-read', 'scrollTo') - проверить!
+! Не прокручивать при клике:
+dzen.ru#%#document.addEventListener('click', Event => { if (Event.target instanceof HTMLAnchorElement && Event.target.matches('[class^="card-"][class$="__clickable"]')) Event.stopPropagation() }, true)
+! Автораскрытие коротких статей:
+dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { if (Mutation.target.matches('.zen-ui-rich-text-clamp._is-openable')) setTimeout( () => { Mutation.target.click() }, 90) }}).observe( document, { attributeFilter: ['class'], subtree: true })
 
 !   Новости:
-[$domain=dzen.ru,path=|/news^]#$#.news-app > [class^="news-dzen-header"] { position: absolute !important; }
+dzen.ru#$#.news-app > [class^="news-dzen-header"], .video-site-app__header { position: absolute !important; }
 [$domain=dzen.ru,path=|/news^]##[class*="mg-grid__col_xs_"][style] + div, .mg-grid__col_xs_12[style] > section ~ div, .news-story + div
 [$domain=dzen.ru,path=|/news^]#$#[class*="mg-grid__col_xs_"][style]:first-child { flex: unset!important; max-width: unset!important; padding: 0!important; }
-[$domain=dzen.ru,path=|/news^]#$#[class^="mg-card__text"], .mg-card__title, .mg-card__annotation { white-space: pre-wrap!important; overflow-wrap: break-word!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
+dzen.ru#$#[class^="mg-card__text"],.mg-card__title,.mg-card__annotation, [class^="video-card-view__publisher-title"],.cut { white-space: pre-wrap!important; overflow-wrap: break-word!important; -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
 
-!   Страница Канала:
-[$domain=dzen.ru,path=|/id^]#$#header { position: unset !important; }
-[$domain=dzen.ru,path=|/id^]##[data-itemid^="publishers_channel_subscribe_card_"]
+!      Поиск, Канал:
+dzen.ru#$#header:not([data-testid="site-header"]), .ui-lib-header-container2 { position: unset !important; }
+dzen.ru##[data-itemid^="publishers_channel_subscribe_card_"]
 
 !   Статьи:
-dzen.ru#$#header, .ui-lib-header-container2 { position: unset !important; border: none !important; }
-dzen.ru#$#.article { padding-top: 20px !important; }
-dzen.ru##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div, .zen-ui-channel-info__title._interpunct::after
+[$domain=dzen.ru,path=|/a^]#$#.article { padding-top: 20px !important; }
+[$domain=dzen.ru,path=|/a^]##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div
 
 !   Видео:
-dzen.ru#$#.video-site-app__header { position: absolute !important; }
-dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) { let El = Node.querySelector('.zen-ui-video-video-next-preview__cancel-btn'); if (El) { El.click(); setTimeout( () => { document.querySelector('.zen-ui-video-video-state__button').click() }, 500) }}}}).observe( document, { childList: true, subtree: true })
-dzen.ru##[class$="-content__description"] + div:not([class$="-content__comments"]), .viewer-layout__sidebar  [class$="__item"] > div:first-child:not(.panel-view), .viewer-layout__sidebar  [class$="__feed"] > :not([data-item-id])
-dzen.ru#$#[class^="video-card-view__publisher-title"], .video-card-view__title > .cut { white-space: pre-wrap!important; overflow-wrap: anywhere!important; overflow: unset!important; height: unset!important; -webkit-line-clamp: unset!important; max-height: unset!important; }
-dzen.ru#$#.video-card-view__more { position: absolute!important; right: 8px!important; top: 8px!important; background: var(--zenColorBackgroundPrimary)!important; border-radius: 6px!important; }
+[$domain=dzen.ru,path=|/video^]##.channel-item-view__subscribe-button,  [class$="-content__description"] + :not([class$="-content__comments"]), [class^="tile-tabs__root-"] + :not(.panel-view), .viewer-layout__sidebar [class$="__feed"] > :not([data-item-id]):not(.more-mark):not(:only-child)
+[$domain=dzen.ru,path=|/video^]#$#[class^="tile-tabs__root-"] { justify-content: center !important; }
+[$domain=dzen.ru,path=|/video^]#$#[class^="tile-tabs__root-"] button { padding: 0 10px !important; }
+[$domain=dzen.ru,path=|/video^]#$#.video-card-view__more { position: absolute!important; right: 8px!important; top: 12px!important; background: var(--zenColorBackgroundPrimary)!important; border-radius: 6px!important; }
 
 
 eldorado.ru##.dy-top-banners
@@ -215,7 +220,8 @@ github.com##.progress-pjax-loader, [class*="position-sticky"].is-placeholder, .s
 github.com#$#[class*="position-sticky"], .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
 github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
 github.com#$#.js-profile-timeline-year-list { width: auto !important; }
-github.com#$#.blob-code-inner, .CodeMirror-line { white-space: pre-wrap!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
+github.com#$#pre,code, .blob-code-inner,.CodeMirror-line { white-space: pre-wrap!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
+github.com#$#:not(pre) > code { padding: .1em .3em !important; }
 github.com#$#markdown-toolbar tool-tip { right: 0; }
 
 google.*#$##searchform { position: absolute !important; }
@@ -638,7 +644,7 @@ ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Картинки:
 [$domain=yandex.*,path=|/images^]#$#.serp-header__wrapper, .page-layout__advanced-search { position: unset !important; }
-[$domain=yandex.*,path=|/images^]##.incut, .MediaViewer-LayoutFooter, [class*="-FixedPane"]
+[$domain=yandex.*,path=|/images^]##.incut, #distr-pcode-container, .MediaViewer-LayoutFooter, [class*="-FixedPane"]
 
 !   Яндекс.Карты:
 [$domain=yandex.*,path=|/maps^]##._mobile .interstitial-view
