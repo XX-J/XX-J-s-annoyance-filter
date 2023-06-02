@@ -48,20 +48,15 @@ forum.adguard.com#%#//scriptlet('remove-attr', 'class|data-xf-init', '.p-navStic
 
 !   Главная:
 ||alicdn.com/*alilog/
+!||aliexpress.*/Warden/
+||aliexpress.*/ModuleBanner/
+||aliexpress.*/SnowPrivacyPolicyBanner/
+!||alicdn.com/*fireyejs/
+!||alicdn.com/*secdev/
 aliexpress.*#$#div:has(+ [class*="SnowCommonHeader__container_"]), [class^="SnowFooter_PaymentCopyright__container_"] { padding: 0!important; }
 aliexpress.*#$#[class*="SnowCommonHeader__container_"], [class*="SnowCommonHeader__container_"] > div { position: unset!important; margin-bottom: 0!important; }
 aliexpress.*#$#[class*="ProductSnippet__container_"] { user-select: text!important; -webkit-user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 aliexpress.*#$#[class*="ProductSnippet__name_"] { -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
-!aliexpress.*##.ui-banner-slider-wrap, .list-item:has(.item-ad-tag),.ams-region, .store-header-bg,.overview-rating-balloon,.gps-recommend-dialog-wrap > :nth-child(n+2), .im-contact-tips
-!   Не даёт убирать прокрутку:
-!aliexpress.*#$#body { overflow-y: auto!important; padding-right: unset!important; }
-!aliexpress.*#%#//scriptlet('prevent-addEventListener', 'scroll', '_headerScrollHandler')
-!aliexpress.*#$##search-key { padding: 0 0 0 6px!important; }
-!aliexpress.*#$#.left-affix { top: 0!important; min-height: unset!important; max-height: 100vh!important; }
-!aliexpress.*#$#.left-menu-container { max-height: unset!important; }
-!aliexpress.*#$#.gps-recommend-dialog-wrap, .p-info { width: auto!important; height: auto!important; }
-!feedback.aliexpress.com#$#.simple-pager { display: block!important; }
-!aliexpress.*#$#.ui-window-content { max-height: none!important; }
 
 !   Поиск:
 !||cobra.aliexpress.*/p4pforlist.html
@@ -73,6 +68,8 @@ aliexpress.*#$#[class*="ProductSnippet__name_"] { -webkit-line-clamp: unset!impo
 !||cdp.aliexpress.*/74.htm
 !||moduleanalysis.aliexpress.com/calc.htm
 !||aliexpress.*/check.gif
+aliexpress.*#$#[class*="HazeStickyNavigation__container_"] { width: 29%!important; top: 0!important; right: 0!important; left: unset!important; }
+aliexpress.*#$#[class*="HazeStickyNavigation__list_"] { flex-wrap: wrap !important; }
 
 !   Список заказов:
 !||alicdn.*/alime/dialog/alicare-dialog.js
@@ -310,7 +307,7 @@ mail.ru##.ph-union-quota
 cloud.mail.ru##[data-qa-modal="update-license-dialog"]:upward(1), [data-qa-modal="quota-popup"]:upward(1), [data-qa-tooltip="tooltip-features"], [class^="AsidePromoModal__root-"]
 cloud.mail.ru#$#body { overflow: auto !important; padding: 0 !important; }
 cloud.mail.ru#$##portal-menu { position: unset !important; box-shadow: none !important; }
-cloud.mail.ru##[class^="FeaturesButton__root-"],[class^="ToolbarItem__root-"][data-name="cloud"], #react-top-worm,[class^="Worm__root-"],[class^="StoriesWidget__root-"], [class^="SingleSpace__buttonBlock-"]
+cloud.mail.ru##[class^="FeaturesButton__root-"],[class^="ToolbarItem__root-"][data-name="cloud"], #react-top-worm,[class^="Worm__root-"],[class^="StoriesWidget__root-"], [class^="SingleSpace__buttonBlock-"], [class^="ErrorPage__advDesktop-"],[class^="ErrorPage__downloadAppContainer-"]
 cloud.mail.ru#$#[class^="Public-desktop__container-"], [class^="MainPage__rightBlock-"] { margin-top: 0 !important; }
 cloud.mail.ru#$#[class^="MainPage__toolbar-"] { margin: 4px 0 0 !important; }
 
@@ -325,6 +322,7 @@ cloud.mail.ru#$#[class^="ReactViewer__arrow-"]::before { left: 0 !important; wid
 cloud.mail.ru##[class^="ViewerHeader__marketingPromoButton-"], [class^="ReactViewer__attachesinfo-"]
 
 
+e.mail.ru#@%#//scriptlet('json-prune', '*.slot')
 e.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class],#octavius-notify-oversize-attaches, input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru##div:has(> .only-new-toolbar:nth-child(2)) > div:first-child,[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3),  [class^="Quota__link--"]
 
