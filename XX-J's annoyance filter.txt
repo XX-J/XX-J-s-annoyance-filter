@@ -438,7 +438,6 @@ onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset !important; }
 
 ||ozone.ru/*client-metrics/
-||ozone.ru/*common-all-tag-list.js
 ||ozone.ru/*sku-adv-search-shelf.js
 ||ozone.ru/*cookie-bubble.js
 !   Поиск:
@@ -447,9 +446,9 @@ ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; pa
 ozon.ru##[data-replace-layout-path="[2][0][0][0][0][0]"] > div:nth-child(3), [data-replace-layout-path="[2][0][1][0][1][0]"] > div:first-child:has([style^="transition"]), [data-widget="megaPaginator"] ~ div
 ozon.ru#$#a.tile-hover-target > span { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 !   Карточка товара:
-ozon.ru##header ~ [data-replace-layout-path="[3][0]"], [data-widget="webStickyProducts"], [data-widget="skuShelfGoods"]:upward(2), #section-description [style^="max-height"] ~ div
+ozon.ru##header ~ [data-replace-layout-path="[3][0]"]:not(.container), [data-widget="webStickyProducts"], [data-widget="skuShelfGoods"]:upward(2), #section-description [style^="max-height"] ~ div
 ozon.ru#$##section-description [style^="max-height"] { max-height: unset!important; }
-!   Отзывы - Вопросы:
+!   Отзывы-Вопросы:
 ozon.ru##div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]), div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]) + [style^="height"]
 
 
