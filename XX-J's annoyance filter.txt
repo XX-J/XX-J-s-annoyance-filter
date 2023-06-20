@@ -436,13 +436,21 @@ ok.ru#$##footer { position: relative !important; margin-top: -105px !important; 
 oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset !important; }
-||ozone.ru/graphics/client-metrics/
-||ozone.ru/assets/uw-desktop-atom-sku-shelf-goods
-||ozone.ru/assets/pdp-desktop-compare-shelf
-||ozone.ru/assets/marketing-all-adv_banner
-ozon.ru##header > div:first-child::before,[triggering-object-selector='#short-product-info-trigger-new'], [data-widget='webStickyProducts']
-ozon.ru#$#header > div:first-child { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
-ozon.ru##div:has(.widget-search-result-container) ~ div:contains(/(Рекомендации для вас|Популярные бренды)/i)
+
+||ozone.ru/*client-metrics/
+||ozone.ru/*common-all-tag-list.js
+||ozone.ru/*sku-adv-search-shelf.js
+||ozone.ru/*cookie-bubble.js
+!   Поиск:
+ozon.ru###stickyHeader::before
+ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
+ozon.ru##[data-replace-layout-path="[2][0][0][0][0][0]"] > div:nth-child(3), [data-replace-layout-path="[2][0][1][0][1][0]"] > div:first-child:has([style^="transition"]), [data-widget="megaPaginator"] ~ div
+ozon.ru#$#a.tile-hover-target > span { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
+!   Карточка товара:
+ozon.ru##header ~ [data-replace-layout-path="[3][0]"], [data-widget="webStickyProducts"], [data-widget="skuShelfGoods"]:upward(2), #section-description [style^="max-height"] ~ div
+ozon.ru#$##section-description [style^="max-height"] { max-height: unset!important; }
+!   Отзывы - Вопросы:
+ozon.ru##div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]), div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]) + [style^="height"]
 
 
 patreon.com#$#a[href='#renderPageContentWrapper'] + div, header { position: absolute !important; }
@@ -701,7 +709,7 @@ mail.yandex.*#$#.mail-Page_setup .mail-Layout-Aside { position: sticky !importan
 mail.yandex.*#$#.b-heading_breadcrumbs { position: unset !important; padding: var(--space-xs) 0 !important; }
 
 
-market.yandex.*##[data-apiary-widget-id="/headBanner"], [data-apiary-widget-id$="productStickyCard"], [data-apiary-widget-id$="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"], [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
+market.yandex.*##[data-apiary-widget-id="/headBanner"], [data-apiary-widget-id$="productStickyCard"], [data-cms-page-id="search-page"] > div:has([data-zone-name="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"]), [data-test-id="virtuoso-item-list"] > [data-index]:not(:has(article)), [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
 market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div { position: unset!important; background: unset!important; box-shadow: unset!important; }
 market.yandex.*#$##ProductImageGallery  [data-zone-name="image"]  [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
 
