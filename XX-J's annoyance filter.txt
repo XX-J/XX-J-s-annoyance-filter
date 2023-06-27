@@ -446,7 +446,7 @@ onlinetrade.ru#$#.header__cover { padding: unset !important; }
 !   Поиск:
 ozon.ru###stickyHeader::before
 ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
-ozon.ru##[data-replace-layout-path="[2][0][0][0][0][0]"] > div:nth-child(3), [data-replace-layout-path="[2][0][1][0][1][0]"] > div:first-child:has([style^="transition"]), [data-widget="megaPaginator"] ~ div
+ozon.ru##[data-replace-layout-path="[2][0][0][0][0][0]"]:not([style]) > div:nth-child(3), [data-replace-layout-path="[2][0][1][0][1][0]"] > div:first-child:has([style^="transition"]), [data-widget="megaPaginator"] ~ div
 ozon.ru#$#a.tile-hover-target > span { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 !   Карточка товара:
 ozon.ru##header ~ [data-replace-layout-path="[3][0]"]:not(.container), [data-widget="webStickyProducts"], [data-widget="skuShelfGoods"]:upward(2), #section-description [style^="max-height"] ~ div, [data-widget="tagList"]
