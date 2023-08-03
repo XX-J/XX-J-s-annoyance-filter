@@ -178,13 +178,13 @@ dzen.ru#%#for (let EventType of ['click', 'auxclick']) document.addEventListener
 dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { if (Mutation.target.matches('.zen-ui-rich-text-clamp._is-openable')) setTimeout( () => { Mutation.target.click() }, 90) }}).observe( document, { attributeFilter: ['class'], subtree: true })
 
 !   Новости:
-dzen.ru#$#.news-app > [class^="news-dzen-header"], .video-site-app__header { position: absolute !important; }
-[$domain=dzen.ru,path=|/news^]##[class*="mg-grid__col_xs_"][style] + div, .mg-grid__col_xs_12[style] > section ~ div, .news-story + div
-[$domain=dzen.ru,path=|/news^]#$#[class*="mg-grid__col_xs_"][style]:first-child { flex: unset!important; max-width: unset!important; padding: 0!important; }
+dzen.ru#$#[class^="news-app-layout"] > [class^="news-dzen-header"], .video-site-app__header { position: absolute!important; border: none!important; }
+[$domain=dzen.ru,path=|/news^]##[class*="_myTarget"]
+[$domain=dzen.ru,path=|/news^]#$#[class*="_myTarget"] + [class$="_content"] { margin: 0 !important; }
 dzen.ru#$#[class^="mg-card__text"],.mg-card__title,.mg-card__annotation, [class^="video-card-view__publisher-title"],.cut { white-space: pre-wrap!important; overflow-wrap: break-word!important; -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
 
 !      Поиск, Канал:
-dzen.ru#$#header:not([data-testid="site-header"]), .ui-lib-header-container2 { position: unset !important; }
+dzen.ru#$#header:not([data-testid="site-header"]), [class^="video-site-category-tabs-view__categoriesTabs-"], .ui-lib-header-container2 { position: unset !important; }
 dzen.ru##[data-itemid^="publishers_channel_subscribe_card_"]
 
 !   Статьи:
@@ -192,7 +192,7 @@ dzen.ru##[data-itemid^="publishers_channel_subscribe_card_"]
 [$domain=dzen.ru,path=|/a^]##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div
 
 !   Видео:
-[$domain=dzen.ru,path=|/video^]##.channel-item-view__subscribe-button,  [class$="-content__description"] + :not([class$="-content__comments"]), [class^="tile-tabs__root-"] + :not(.panel-view), .viewer-layout__sidebar [class$="__feed"] > :not([data-item-id]):not(.more-mark):not(:only-child)
+[$domain=dzen.ru,path=|/video^]##.channel-item-view__subscribe-button,  [class$="-content__description"] + :not([class$="-content__comments"]), [class^="tile-tabs__root-"] + :not([class^="panel-view_"]), .viewer-layout__sidebar [class$="__feed"] > :not([data-item-id]):not(.more-mark):not(:only-child)
 [$domain=dzen.ru,path=|/video^]#$#[class^="tile-tabs__root-"] { justify-content: center !important; }
 [$domain=dzen.ru,path=|/video^]#$#[class^="tile-tabs__root-"] button { padding: 0 10px !important; }
 [$domain=dzen.ru,path=|/video^]#$#.video-card-view__more { position: absolute!important; right: 8px!important; top: 12px!important; background: var(--zenColorBackgroundPrimary)!important; border-radius: 6px!important; }
@@ -268,11 +268,6 @@ kimovil.com#$#div.highcharts-tooltip > span { left: 0!important; top: 0!importan
 kimovil.com#$#.table-of-contents { position: relative !important; top: 0 !important; }
 kimovil.com#$#.table-of-contents > div > * { box-shadow: none !important; }
 
-kino-serialy.net#%#//scriptlet('abort-current-inline-script', 'document.ondragstart')
-kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
-||kino-serialy.net/templates/kino/images/bg.
-kino-serialy.net#$#.wrap { padding: 0 !important; }
-kino-serialy.net##.ftwo + table, br + .fsubtitle
 kinopoisk.ru#$#[class*="styles_headerContainer__"] { position: unset !important; }
 kinopoisk.ru##[class^="styles_abbreviated__"], [class*="styles_rootRendered__"]
 kotofoto.ru##.bl-friday-banner
@@ -289,6 +284,11 @@ lrepacks.*#$#.logo { padding: 0 !important; }
 lrepacks.*#$#.header-bottom { position: unset !important; }
 lrepacks.*#$##menu-primary-menu > li > a { padding: .5rem 1rem !important; }
 lrepacks.*#$##menu-primary-menu > li > :not(a) { top: unset !important; transform: unset !important; }
+luxfilm.net,kino-serialy.net#%#//scriptlet('abort-current-inline-script', 'document.ondragstart')
+luxfilm.net,kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
+/templates/kino/images/bg.$domain=luxfilm.net|kino-serialy.net
+luxfilm.net,kino-serialy.net#$#.wrap { padding: 0 !important; }
+luxfilm.net,kino-serialy.net##.ftwo + table, br + .fsubtitle
 
 
 mail.ru##.ph-union-quota
@@ -446,16 +446,18 @@ onlinetrade.ru#$#.header__cover { padding: unset !important; }
 !   Поиск:
 ozon.ru###stickyHeader::before
 ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
-ozon.ru##[data-replace-layout-path="[2][0][0][0][0][0]"]:not([style]) > div:nth-child(3), [data-replace-layout-path="[2][0][1][0][1][0]"] > div:first-child:has([style^="transition"]), [data-widget="megaPaginator"] ~ div
-ozon.ru#$#a.tile-hover-target > span { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
+ozon.ru##[data-widget="tagList"], [data-widget="skuShelfGoods"], [data-widget="skuShelfGoods"] + [data-widget="separator"], [data-replace-layout-path="[2][0][1][0][1][0]"] > div:not([data-widget="actionStepsMulti"]):has(~ [data-widget="searchResultsSort"]), [data-widget="megaPaginator"] ~ *
+ozon.ru#$#a.tile-hover-target > * { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 !   Карточка товара:
-ozon.ru##header ~ [data-replace-layout-path="[3][0]"]:not(.container), [data-widget="webStickyProducts"], [data-widget="skuShelfGoods"]:upward(2), #section-description [style^="max-height"] ~ div, [data-widget="tagList"]
-ozon.ru#$##section-description [style^="max-height"] { max-height: unset!important; }
+ozon.ru##header + div:has(~ .container), [data-widget="webStickyProducts"], #section-description [style^="max-height"] ~ div, [data-widget="separator"] + [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="skuGrid"]
+ozon.ru#$##section-description [style^="max-height"] { max-height: unset !important; }
 !   Отзывы-Вопросы:
 ozon.ru##div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]), div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]) + [style^="height"]
+!   Сообщения:
+ozon.ru##[data-widget="webMessenger"] div[style="background-color:var(--ozCtrlWarningPale);"]:first-child
 
 
-patreon.com#$#a[href='#renderPageContentWrapper'] + div, header { position: absolute !important; }
+patreon.com#$#a[href="#renderPageContentWrapper"] + div, header { position: absolute !important; }
 patreon.com###renderPageContentWrapper > div > div[aria-hidden]
 
 
@@ -636,8 +638,8 @@ xcom-shop.ru##.card-path__wrapper + div
 ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Погода:
-[$domain=yandex.*|dzen.ru,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration
-[$domain=yandex.*|dzen.ru,path=|/pogoda^]#$#[role="main"] > div { margin-right: 0 !important; }
+[$domain=yandex.*|dzen.ru,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"]  .card_without-card-decoration, div:empty:upward(#content_right)
+[$domain=yandex.*|dzen.ru,path=|/pogoda^]#$#[role="main"] > div, #content_left > div { margin-right: 0 !important; }
 
 !   Яндекс.Поиск:
 [$domain=yandex.*,path=|/search^]#$#.serp-header__wrapper,.navigation { position: absolute !important; }
