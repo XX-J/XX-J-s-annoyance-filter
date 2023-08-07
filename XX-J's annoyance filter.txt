@@ -48,15 +48,19 @@ forum.adguard.com#%#//scriptlet('remove-attr', 'class|data-xf-init', '.p-navStic
 
 !   Главная:
 ||alicdn.com/*alilog/
-!||aliexpress.*/Warden/
+||aliexpress.*/Warden/
 ||aliexpress.*/ModuleBanner/
 ||aliexpress.*/SnowPrivacyPolicyBanner/
 !||alicdn.com/*fireyejs/
 !||alicdn.com/*secdev/
-aliexpress.*#$#div:has(+ [class*="SnowCommonHeader__container_"]), [class^="SnowFooter_PaymentCopyright__container_"] { padding: 0!important; }
-aliexpress.*#$#[class*="SnowCommonHeader__container_"], [class*="SnowCommonHeader__container_"] > div { position: unset!important; margin-bottom: 0!important; }
+aliexpress.*#$#[class*="_SnowContainer__container_"]:has(header) { position: unset !important; }
+aliexpress.*#$#[class*="_ShipToHeaderItem__container_"] { position: absolute!important; right: 2%!important; z-index: 51!important; }
+aliexpress.*#$#[class^="ShipToHeaderItem_Tooltip__tooltipContent_"] { transform: translateX(-80%) !important; }
+aliexpress.*#$#[class^="ShipToHeaderItem_AddressForm__form_"] { overflow: auto !important; }
+aliexpress.*##[class^="RedHeader_Sticker__intersectionChecker_"]
+aliexpress.*##[class*="_ModuleBanner__outer-wrapper_"], div:empty:has(+ [class*="_SnowWaterfallTabs__root_"]), [class*="_SnowWaterfallTabs__intersectionTop_"]
 aliexpress.*#$#[class*="ProductSnippet__container_"] { user-select: text!important; -webkit-user-select: text!important; -moz-user-select: text!important; -ms-user-select: text!important; }
-aliexpress.*#$#[class*="ProductSnippet__name_"] { -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
+aliexpress.*#$#[class*="ProductSnippet__name_"] { max-height: unset!important; height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 
 !   Поиск:
 !||cobra.aliexpress.*/p4pforlist.html
@@ -68,8 +72,8 @@ aliexpress.*#$#[class*="ProductSnippet__name_"] { -webkit-line-clamp: unset!impo
 !||cdp.aliexpress.*/74.htm
 !||moduleanalysis.aliexpress.com/calc.htm
 !||aliexpress.*/check.gif
-aliexpress.*#$#[class*="HazeStickyNavigation__container_"] { width: 29%!important; top: 0!important; right: 0!important; left: unset!important; }
-aliexpress.*#$#[class*="HazeStickyNavigation__list_"] { flex-wrap: wrap !important; }
+aliexpress.*#$#[class*="HazeStickyNavigation__container_"] { position: fixed!important; margin: 0!important; width: 25%!important; top: 1%!important; right: 4%!important; left: unset!important; border-radius: 24px!important; }
+aliexpress.*#$#[class*="HazeStickyNavigation__list_"] { flex-wrap: wrap !important; background-color: #f8f8f8 !important; }
 
 !   Список заказов:
 !||alicdn.*/alime/dialog/alicare-dialog.js
@@ -366,6 +370,8 @@ e.mail.ru,octavius.mail.ru#$#.letter__body, .letter-body__body { overflow: unset
 
 
 help.mail.ru#$#.ph-whiteline, .portal-menu, .search__form { position: absolute !important; }
+help.mail.ru##.mail_project_root > .header
+
 
 my.mail.ru#$#.b-head__menu { position: relative !important; box-shadow: none !important; }
 my.mail.ru#$#.b-head { margin: 0 !important; }
@@ -383,6 +389,7 @@ my.mail.ru#$#.b-video__section__item-page-player { width: 75% !important; }
 my.mail.ru#$#.sp-video__item-page-new__video-wrapper { width: unset !important; height: calc(120vh * 9 / 16) !important; }
 my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!important; right: 0!important; width: 24%!important; }
 my.mail.ru#%#//scriptlet('prevent-addEventListener', 'ended')
+
 
 otvet.mail.ru##.fixedsticky-dummy, .pm-toolbar__button__inner[href="/ask"] + div:has(:contains(Задайте вопрос)), .nt--position
 otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) div:contains(ответ) + div > div + div > div > div:matches-css(padding-top: 20px):matches-css(padding-right: 20px):matches-css(padding-bottom: 20px):matches-css(padding-left: 20px)
