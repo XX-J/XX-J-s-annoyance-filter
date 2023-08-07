@@ -332,20 +332,11 @@ cloud.mail.ru##[class^="ViewerHeader__marketingPromoButton-"], [class^="ReactVie
 e.mail.ru,octavius.mail.ru##[role="dialog"]:contains(У вас ненадёжный пароль.), [class^="flexContainer-"]:has([data-test-id="checkPhoneActive-panel"]), [id^="octavius-notify-quota-"],.application > .settings-dock + div[class],#octavius-notify-oversize-attaches, input[tabindex] + div:contains(Письмо отправлено)
 e.mail.ru,octavius.mail.ru##div:has(> .only-new-toolbar:nth-child(2)) > div:first-child,[role="rowgroup"] > div:has(.promo-block-letter-wrapper),[role="rowgroup"] > div:has(> div > div > div > div > div > div + div),.renovator, .letter-meta,.translator__icon,.letter__tooltip:empty,.letter__footer,.thread__kaspersky a ~ *, .application-mail__layout > span > :nth-child(n+3),  [class^="Quota__link--"]
 
-!   Компактный заголовок в новом интерфейсе:
+!   Компактный заголовок:
 e.mail.ru,octavius.mail.ru#$#.ph-whiteline, .ph-container, .ph-auth { height: unset !important; }
 e.mail.ru,octavius.mail.ru#$#.application_new-toolbar { --vkui--octavius_size_headline_height--regular: 44px!important; --octavius--padding_maincontent: 4px!important; }
-!   Компактная основная панель кнопок в старом интерфейсе:
-e.mail.ru,octavius.mail.ru#$#:root { --vkui--octavius_size_portal-menu_height--regular: 36px !important; }
-e.mail.ru,octavius.mail.ru#$#.portal-menu { padding: 0 !important; height: var(--vkui--octavius_size_portal-menu_height--regular) !important; }
-e.mail.ru,octavius.mail.ru#$#.page-portal-header, [data-test-id="to-inbox"] { height: unset !important; }
-e.mail.ru,octavius.mail.ru#$#[data-test-id="to-inbox"] > span { line-height: var(--vkui--octavius_size_portal-menu_height--regular) !important; }
-e.mail.ru,octavius.mail.ru##[href="https://trk.mail.ru/c/t9iat7"]
-e.mail.ru,octavius.mail.ru#$#.application .search-panel__wrapper { top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
-! Убрать принудительную ширину и поставить на место съехавшую кнопку 'Фильтр':
-e.mail.ru,octavius.mail.ru#$#.portal-menu td:nth-of-type(1) { width: unset !important; white-space: unset !important; }
 
-!   Поменять расположение панелей в новом интерфейсе:
+!   Поменять расположение панелей:
 e.mail.ru,octavius.mail.ru#$#.react-async + .application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular))!important; padding: 0 0 0 var(--octavius--padding_maincontent)!important; }
 e.mail.ru,octavius.mail.ru#$#.only-new-toolbar .select__items { right: 0 !important; margin: 4px 0 !important; }
 e.mail.ru,octavius.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !important; }
@@ -353,14 +344,9 @@ e.mail.ru,octavius.mail.ru#$#.react-async + .application-mail__layout [class*="s
 e.mail.ru,octavius.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
 e.mail.ru,octavius.mail.ru#$#.react-async + .application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width) - var(--octavius--padding_maincontent))!important; }
 e.mail.ru,octavius.mail.ru#$#.content-header > div > div:last-child { justify-content: end !important; }
-!   Поменять расположение панелей в старом интерфейсе:
-e.mail.ru,octavius.mail.ru#$#.portal-menu tr { flex-direction: row-reverse !important; }
-e.mail.ru,octavius.mail.ru#$#.portal-menu td:nth-of-type(2) > div:nth-of-type(1) { justify-content: end !important; }
-e.mail.ru,octavius.mail.ru#$#.portal-menu + .application-mail__layout > span > :nth-child(2) > div:has(> :nth-child(2)) > :nth-child(1) { float: right!important; height: calc(100vh - var(--vkui--octavius_size_headline_height--regular) - var(--vkui--octavius_size_portal-menu_height--regular))!important; }
-e.mail.ru,octavius.mail.ru#$#.letter-list__react .ReactVirtualized__List { will-change: auto !important; }
-e.mail.ru,octavius.mail.ru#$#.portal-menu + .application-mail__layout [class*="sidebar-column-resizer"] { left: calc(100% - var(--sidebar-column-width))!important; }
-e.mail.ru,octavius.mail.ru#$#.application-mail__layout .paginator-container_offset_3pane_common { left: calc(100% - 60px)!important; }
-e.mail.ru,octavius.mail.ru#$#.portal-menu + .application-mail__layout > span > :nth-child(2) > div > :nth-child(2) { float: left!important; width: calc(100% - var(--sidebar-column-width))!important; }
+
+!   Заходить в 'Спам' без подтверждения:
+e.mail.ru,octavius.mail.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { for (let Node of Mutation.addedNodes) if (Node instanceof HTMLElement) { let El = Node.querySelector('#spamWarningAlert .vkuiButton--mode-secondary'); if (El) { setTimeout( () => { El.click() }, 1) }}}}).observe( document, { childList: true, subtree: true })
 
 !   Убрать 'сужатель' письма:
 e.mail.ru,octavius.mail.ru#$#div:has(> div > .html-expander-wrapper__button) { height: unset !important; }
