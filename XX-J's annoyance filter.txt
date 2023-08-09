@@ -596,6 +596,8 @@ tass.*#$#.header { position: unset !important; }
 tele2.ru##.bell, [data-cartridge-type="PersonalizedBanner"], [data-cartridge-type="DashboardCriticalNotificationsInbox"], [data-cartridge-type="DashboardBonusContainer"], .dashboard-mia-offers
 tele2.ru#$#.inbox-indicator__bell__unread { top: -4px!important; left: -14px!important; font-size: .8rem!important; color: unset!important; }
 tele2.ru#$#.main-content { margin: 10px 0 0 !important; }
+tele2.ru#%#//scriptlet('set-cookie', 'web-to-app-payment-dialog-hide', 'true')
+tele2.ru#$#.tc-edit__back-link { top: unset !important; }
 tele2.ru#$#.breadcrumbs-wrap { margin: 10px 0 30px !important; padding: 0 !important; }
 tele2.ru#$#.mia-injir-container { padding: 10px !important; }
 ||tele2.ru/ds-site/images/mia/miaoffers_gif.gif
