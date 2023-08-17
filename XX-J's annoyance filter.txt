@@ -65,6 +65,7 @@ aliexpress.*#$#[class*="ProductSnippet__name_"] { max-height: unset!important; h
 !   Поиск:
 !||cobra.aliexpress.*/p4pforlist.html
 !||alicdn.com/ae-search-ui/standalone/index.*.js
+aliexpress.*#$#[class*="_TopPanel__container_"] { position: unset !important; width: 70% !important; }
 
 !   Карточка товара:
 !||cobra.aliexpress.*/b2bad.html
@@ -72,6 +73,7 @@ aliexpress.*#$#[class*="ProductSnippet__name_"] { max-height: unset!important; h
 !||cdp.aliexpress.*/74.htm
 !||moduleanalysis.aliexpress.com/calc.htm
 !||aliexpress.*/check.gif
+aliexpress.*#$#[class*="_SnowStickyOffer__container_"] { padding: 0!important; width: 27%!important; top: 0!important; right: 2%!important; left: unset!important; }
 aliexpress.*#$#[class*="HazeStickyNavigation__container_"] { position: fixed!important; margin: 0!important; width: 25%!important; top: 1%!important; right: 4%!important; left: unset!important; border-radius: 24px!important; }
 aliexpress.*#$#[class*="HazeStickyNavigation__list_"] { flex-wrap: wrap !important; background-color: #f8f8f8 !important; }
 
