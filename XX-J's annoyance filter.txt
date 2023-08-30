@@ -655,7 +655,7 @@ ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Картинки:
 [$domain=yandex.*,path=|/images^]#$#.serp-header__wrapper, .page-layout__advanced-search { position: unset !important; }
-[$domain=yandex.*,path=|/images^]##.incut, #distr-pcode-container, .MediaViewer-LayoutFooter, [class*="-FixedPane"]
+[$domain=yandex.*,path=|/images^]###distr-pcode-container, .MediaViewer-LayoutFooter, [class$="-Card_bottomAdv"], [class$="-Incut"]
 
 !   Яндекс.Карты:
 [$domain=yandex.*,path=|/maps^]##._mobile .interstitial-view
