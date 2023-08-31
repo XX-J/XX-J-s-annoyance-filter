@@ -435,19 +435,25 @@ oldi.ru##.mainbanner
 onlinetrade.ru##.header__warmline, .fullWidth_bnr, .note__warning
 onlinetrade.ru#$#.header__cover { padding: unset !important; }
 
+
 ||ozone.ru/*client-metrics/
 ||ozone.ru/*sku-adv-search-shelf.js
 ||ozone.ru/*cookie-bubble.js
 !   Поиск:
-ozon.ru##.vue-portal-target:contains(Сменить город на )
+ozon.ru##.vue-portal-target:contains(/Сменить город на |Понравился товар\?/)
 ozon.ru###stickyHeader::before
 ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
 ozon.ru##[data-widget="tagList"], [data-widget="skuShelfGoods"], [data-widget="skuShelfGoods"] + [data-widget="separator"], [data-replace-layout-path="[2][0][1][0][1][0]"] > div:not([data-widget="actionStepsMulti"]):has(~ [data-widget="searchResultsSort"]), [data-widget="megaPaginator"] ~ *
 ozon.ru#$#[data-widget="searchResultsSort"] { min-height: unset!important; position: absolute!important; top: calc(20px + 100px + var(--gap))!important; right: 0!important; }
 ozon.ru#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap) + 40px)!important; right: 0!important; }
-ozon.ru#$#a.tile-hover-target > *, [data-widget="skuGrid"] .tsBody500Medium:upward(1) { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
+ozon.ru##a.tile-hover-target:hover section
+ozon.ru#$#div + a.tile-hover-target > *, [data-widget="skuGrid"] .tsBody500Medium:upward(1) { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 !   Карточка товара:
 ozon.ru##header + div:has(~ .container), [data-widget="webStickyProducts"], #section-description [style^="max-height"] ~ div, [data-widget="separator"] + [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="skuGrid"]
+ozon.ru#$#[data-widget="webMarketingLabels"]:upward(2) { top: unset!important; left: -.6em!important; bottom: -.6em!important; max-width: unset!important; padding: 0!important; }
+ozon.ru#$#[data-widget="webMarketingLabels"] > div { flex-direction: row !important; gap: .6em !important; }
+ozon.ru#$#[data-widget="webGallery"] > div > div:first-child > div:has(> svg) { right: -.7em!important; bottom: -.8em!important; padding: 0!important; }
+ozon.ru##[data-widget="webGallery"]:has([qa-id="video-player"]) [data-widget="webMarketingLabels"]
 ozon.ru#$##section-description [style^="max-height"] { max-height: unset !important; }
 ozon.ru#$#.vue-portal-target > div > div > div > div { padding-top: 0!important; padding-bottom: 0!important; }
 ozon.ru#$#.vue-portal-target [tabindex="-1"] > div { user-select: text!important; -webkit-user-select: text!important; -moz-user-select: text!important; }
