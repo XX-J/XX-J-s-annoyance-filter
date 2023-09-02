@@ -659,7 +659,7 @@ ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Поиск:
 [$domain=yandex.*,path=|/search^]#$#.HeaderDesktop { position: absolute !important; }
-[$domain=yandex.*,path=|/search^]##.main__center > .main__top:has(+ .main__content), ul#search-result > li:has(a[data-event-required="true"])
+[$domain=yandex.*,path=|/search^]##.distr-nav, ul#search-result > li:has(a[data-event-required="true"])
 [$domain=yandex.*,path=|/search^]#$#.ExtendedText { cursor: auto !important; pointer-events: auto !important; }
 
 !   Яндекс.Турбо:
@@ -690,10 +690,10 @@ disk.yandex.*#$#body { overflow-y: auto !important; }
 disk.yandex.*#$#.public__main { width: 80% !important; margin: 1em auto 0 !important; }
 disk.yandex.*#$#.folder-content__header, .folder-content__header-shadow { position: unset!important; padding: 0 0 10px!important; }
 disk.yandex.*#$#.folder-content__header-name { flex-grow: unset !important; margin-right: 2em !important; }
-disk.yandex.*#$#.content_dir  .action-buttons { justify-content: flex-end !important; }
+disk.yandex.*#$#.content_dir .action-buttons { justify-content: flex-end !important; }
 disk.yandex.*#$#.folder-content__header-name > h1:first-child { margin-left: 2em !important; }
 disk.yandex.*#$#.folder-content__back-button { margin-top: .8em !important; }
-disk.yandex.*#$#.folder-content__header-name  h1 { font-size: 2em !important; line-height: 1.1em !important; }
+disk.yandex.*#$#.folder-content__header-name h1 { font-size: 2em !important; line-height: 1.1em !important; }
 
 docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
