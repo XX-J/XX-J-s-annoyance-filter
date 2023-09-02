@@ -643,16 +643,16 @@ wikipedia.org##.vector-sticky-header-container
 xcom-shop.ru##.card-path__wrapper + div
 
 
+||browser-updater.yandex.net^
 ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Погода:
-[$domain=yandex.*|dzen.ru,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"]  .card_without-card-decoration, div:empty:upward(#content_right)
+[$domain=yandex.*|dzen.ru,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration, #content_bottom ~ [class*="-segment"] .adv-ecom, div:empty:upward(#content_right)
 [$domain=yandex.*|dzen.ru,path=|/pogoda^]#$#[role="main"] > div, #content_left > div { margin-right: 0 !important; }
 
 !   Яндекс.Поиск:
-[$domain=yandex.*,path=|/search^]#$#.serp-header__wrapper,.navigation { position: absolute !important; }
-[$domain=yandex.*,path=|/search^]#$#.serp-header .search2 { max-width: unset !important; }
-[$domain=yandex.*,path=|/search^]##.distr-nav, [class*="location_right"]:has(:contains(/Браузер/i)), ul#search-result > li:has(a[data-event-required="true"])
+[$domain=yandex.*,path=|/search^]#$#.HeaderDesktop { position: absolute !important; }
+[$domain=yandex.*,path=|/search^]##.main__center > .main__top:has(+ .main__content), ul#search-result > li:has(a[data-event-required="true"])
 [$domain=yandex.*,path=|/search^]#$#.ExtendedText { cursor: auto !important; pointer-events: auto !important; }
 
 !   Яндекс.Турбо:
@@ -671,12 +671,12 @@ ya.ru##.dist-stripe, .search3 .link-bro
 [$domain=yandex.*,path=|/q^]##div:has(> [id^="content-control-"]) + div:has(> div:only-child)
 
 !   Яндекс.Видео:
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#header.VideoHeader { position: unset!important; }
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*#$#.b-page_type_preview.b-page_viewer-header > .page-layout { margin-top: 0!important; }
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.VideoViewer-Info + [class*='_placement_']
-yandex.*,~disk.yandex.*,~docviewer.yandex.*,~mail.yandex.*,~market.yandex.*,~music.yandex.*,~toloka.yandex.*,~translate.yandex.*,~zen.yandex.*##.VideoViewer .Viewer-ScrollContainer > [class*='_platform_']
+[$domain=yandex.*,path=|/video^]#$#.serp-header__wrapper, .PageHeaderContainer { position: unset !important; }
+[$domain=yandex.*,path=|/video^]#$#.VideoMeta, .VideoMeta-Item_description { height: unset!important; overflow: unset!important; white-space: unset!important; }
 
-||browser-updater.yandex.net^
+!   Яндекс.Товары:
+[$domain=yandex.*,path=|/products^]#$#.serp-header__wrapper { position: unset !important; }
+[$domain=yandex.*,path=|/products^]##.Header + section:has(+ main#search)
 
 !   Оптимизированный интерфейс:
 disk.yandex.*#$#body { overflow-y: auto !important; }
