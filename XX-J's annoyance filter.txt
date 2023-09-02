@@ -692,11 +692,12 @@ docviewer.yandex.*#$#header { position: absolute !important; }
 docviewer.yandex.*##.fullscreen-container iframe:not([src^="/restart?"]), .fullscreen-container [style="width: 100%;"]
 docviewer.yandex.*#$#[class=""] > div[class] { top: unset !important; height: calc(100vh - 100%) !important; }
 
+
 !   Оптимизированный интерфейс:
 mail.yandex.*#$#.mail-Page { cursor: auto !important; }
 mail.yandex.*#$#.mail-App-Content, .mail-Layout, .mail-Layout-Aside-Inner-Box { padding: 0 !important; }
 mail.yandex.*#$#.mail-Page_minified:not(.mail-Page_404) .mail-Layout-Container, .PSHeader { top: 0 !important; }
-
+! Левая колонка:
 mail.yandex.*#$#.mail-Layout-Aside { padding: 0 var(--space-xs) !important; height: 99.5vh !important; }
 mail.yandex.*#$#.qa-LeftColumn-MainButtons { padding: var(--space-xs) !important; margin: 0 !important; }
 mail.yandex.*##[class^="DisableAdsButton__root--"], .ns-view-react-left-column + div:not(:empty), .qa-LeftColumn-Footer-Android,.qa-LeftColumn-Footer-iOS,.qa-LeftColumn-Footer-Career,.qa-LeftColumn-Footer-Advertising,.qa-LeftColumn-Footer-Promo
@@ -707,7 +708,7 @@ mail.yandex.*#$#.Popup2_visible { visibility: visible !important; margin: 0 !imp
 mail.yandex.*#$#.mail-SkinSaver-Box { flex-grow: unset !important; }
 mail.yandex.*#$#.mail-SkinSaver { padding: 0 !important; }
 mail.yandex.*#$#.mail-Layout-Copyright-Box * { margin-top: 0 !important; margin-bottom: 0 !important; }
-
+! Правая колонка:
 mail.yandex.*##.mail-Advanced-Search + div:not(:empty)
 mail.yandex.*#$#.mail-Toolbar-Item_settings { opacity: .7 !important; }
 mail.yandex.*#$#.mail-Advanced-Search, .mail-Layout-Panes { top: 47px !important; }
