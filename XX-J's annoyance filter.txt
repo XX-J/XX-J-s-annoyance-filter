@@ -721,9 +721,21 @@ mail.yandex.*#$#.mail-Page_setup .mail-Layout-Aside { position: sticky !importan
 mail.yandex.*#$#.b-heading_breadcrumbs { position: unset !important; padding: var(--space-xs) 0 !important; }
 
 
-market.yandex.*##[data-apiary-widget-id="/headBanner"], [data-apiary-widget-id$="productStickyCard"], [data-cms-page-id="search-page"] > div:has([data-zone-name="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"]), [data-test-id="virtuoso-item-list"] > [data-index]:not(:has(article)), [data-apiary-widget-id$="kkmCarousel"]:upward(1),[data-apiary-widget-id$="alsoViewedProducts"]:upward(1), [data-apiary-widget-id$="groupOfRecommendationsWidgets"]
-market.yandex.*#$#[data-apiary-widget-id$="/productTabs"] > div > div { position: unset!important; background: unset!important; box-shadow: unset!important; }
-market.yandex.*#$##ProductImageGallery  [data-zone-name="image"]  [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
+!   На Главной:
+market.yandex.*##main > div:has(> header:nth-child(2)) > div:first-child, [data-zone-data*="bannerAdfoxId"]
+market.yandex.*#$#header { position: unset !important; }
+[$domain=market.yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#[data-apiary-widget-name$="/RootScrollBox"] + [data-apiary-widget-name$="/VisibilityLoaderMarket"]:upward(3) { width: 100%!important; padding: 0!important; }
+[$domain=market.yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[data-zone-name="MediaCarousel"], div[class] + div[class]:has([data-zone-data*="adPlace"])
+market.yandex.*#$#[data-auto="snippet-title"], [data-baobab-name="title"], [data-zone-name="title"] ~ div * { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
+
+!   Карточка товара:
+market.yandex.*##[data-apiary-widget-id$="stickyProductCard"], [data-cms-page-id="search-page"] > div:has([data-zone-name="SearchClarify"], [data-apiary-widget-id*="HeaderIncut"]), [data-test-id="virtuoso-item-list"] > [data-index]:not(:has(article)),  [data-apiary-widget-id$="/productSummaryExtendableContent"], [data-zone-name="vendorProductLinePromo"]
+! Кнопки "Добавить к сравнению" и "...в Избранное" не влезают:
+market.yandex.*#$#[data-auto="compare-button"] { height: 1.2em !important; }
+market.yandex.*##[data-auto="compare-button"] > span, [data-auto="wishlist-button"] > div:nth-child(2) > span
+! Закрепление увеличенной при наведении картинки товара:
+market.yandex.*#$##ProductImageGallery [data-zone-name="image"] [style^="background-image:"] { position: fixed!important; bottom: 1%!important; z-index: 2001!important; }
+
 
 ||music.yandex.*/blocks/player-progress/
 music.yandex.*#$#.progress__line { transition: unset !important; }
