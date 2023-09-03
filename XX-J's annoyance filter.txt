@@ -393,6 +393,21 @@ maxidom.ru#$#.catalog, .filter-catalog { margin-top: 0 !important; padding: 0 !i
 maxidom.ru#$#.bx_sidebar { padding: 0 15px 0 6px !important; }
 maxidom.ru#$#.items-list { margin: 0 !important; width: 75% !important; }
 
+!||group-ib.com^  --Проверить \/
+!||megamarket.ru/*/idw-smm
+!||megamarket.ru/*/promoContentService/
+!||megamarket.ru/*/seoService/
+!||megamarket.ru/*/abTestService/
+!||megamarket.ru/*/analyticsDataService/
+!   Поиск:
+megamarket.ru#$##page-header .sticky { position: absolute !important; box-shadow: none !important; }
+megamarket.ru##[class*="department-header-banners"], .catalog-listing__description + .promo-constructor
+! Фильтр доставки справа:
+megamarket.ru#$#.listing-delivery-filters { position: absolute!important; right: 7em!important; z-index: 1!important; }
+!   Карточка товара:
+megamarket.ru##[class*="header-float-wrapper"], .page-catalog-banner, .pdp-see-also:upward(.prod-sections), .product-card-bottom-banners
+megamarket.ru#$#.product-list-item-title, .goods-item-card__title { -webkit-line-clamp: unset!important; height: unset!important; overflow: unset!important; }
+
 learn.microsoft.com#$#.columns { margin-left: auto !important; margin-right: auto !important; }
 mnogo.ru#$#.top-page > header { position: absolute !important; }
 mnogo.ru##.notification-cookies
