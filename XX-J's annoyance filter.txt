@@ -379,9 +379,9 @@ my.mail.ru#$#.sp-video__item-page-new__right { top: 0!important; left: unset!imp
 my.mail.ru#%#//scriptlet('prevent-addEventListener', 'ended')
 
 
-otvet.mail.ru##.fixedsticky-dummy, .pm-toolbar__button__inner[href="/ask"] + div:has(:contains(Задайте вопрос)), .nt--position
-otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) div:contains(ответ) + div > div + div > div > div:matches-css(padding-top: 20px):matches-css(padding-right: 20px):matches-css(padding-bottom: 20px):matches-css(padding-left: 20px)
-otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) + div
+otvet.mail.ru#$#.header-menu { position: unset !important; }
+otvet.mail.ru##.fixedsticky-dummy, [href="/ask"] + div:contains(Задайте вопрос), .nt--position
+otvet.mail.ru##div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) div:contains(ответ) + div > div + div > div > div:matches-css(padding-top: 20px):matches-css(padding-right: 20px):matches-css(padding-bottom: 20px):matches-css(padding-left: 20px), div:contains(Вопросы-лидеры) + div:contains(Ответить на вопрос) + div
 ||smotri.cdnmail.ru/assets/default/static/white_noise.gif
 player-smotri.mail.ru#$#[class^="WrapperElements-sc-"] { padding-bottom: 0 !important; }
 player-smotri.mail.ru#$#[class^="ControlsBar-sc-"] [class^="FadingWrapper-sc-"] { background: #000d !important; }
@@ -652,8 +652,8 @@ ura.news#$#.vc-header { position: unset !important; }
 vc.ru#$#.site-header { position: unset !important; }
 velodrive.ru#%#//scriptlet('remove-class', 'sticked|is-sticky', '.header, .sticky-wrapper')
 velodrive.ru#$##header__content { position: unset !important; }
-velodrive.ru#$#.category-menu > .nav { margin: 5px 0 !important; }
-velodrive.ru#$#.page__breadcrumbs { padding: 10px 0 0 !important; }
+velodrive.ru#$#.category-menu > .nav { margin: .5em 0 !important; }
+velodrive.ru#$#.page__breadcrumbs { padding: 1em 0 !important; }
 virustotal.com#$##omnibarWrapper { position: absolute !important; box-shadow: none !important; }
 vk.com#$#.wall_post_text, .reply, .pv_box { cursor: auto !important; }
 vtb.ru#$#.header, [class^='HeaderRedesigned__HeaderComponent'] { position: absolute!important; border: none!important; }
@@ -662,6 +662,9 @@ whatwg.org#$#pre, code { margin: 0!important; font-family: "JetBrains Mono NL", 
 wifire.tv#$#.header { min-height: unset !important; margin-bottom: 20px !important; }
 wifire.tv#$#.header__logo { padding-top: 5px !important; padding-bottom: 15px !important; }
 wikipedia.org##.vector-sticky-header-container
+!||a.wb.ru^  --Проверить (аналитика)
+wildberries.ru#$#.filters-block__wrap { position: unset!important; box-shadow: none!important; padding: 0!important; }
+wildberries.ru#$#.product__header { white-space: normal !important; }
 xcom-shop.ru##.card-path__wrapper + div
 
 
