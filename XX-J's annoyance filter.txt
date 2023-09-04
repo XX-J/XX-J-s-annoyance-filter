@@ -662,9 +662,21 @@ whatwg.org#$#pre, code { margin: 0!important; font-family: "JetBrains Mono NL", 
 wifire.tv#$#.header { min-height: unset !important; margin-bottom: 20px !important; }
 wifire.tv#$#.header__logo { padding-top: 5px !important; padding-bottom: 15px !important; }
 wikipedia.org##.vector-sticky-header-container
+
 !||a.wb.ru^  --Проверить (аналитика)
+!   Главная:
+wildberries.ru#$#li.j-geocity-wrap > span { max-width: unset !important; }
+wildberries.ru##li.j-geocity-wrap ~ li, .main-page__banner, .seo-text__container::after, .seo-text__btn-wrap
+wildberries.ru#$#.seo-text__container { height: unset !important; }
+!   Поиск:
 wildberries.ru#$#.filters-block__wrap { position: unset!important; box-shadow: none!important; padding: 0!important; }
 wildberries.ru#$#.product__header { white-space: normal !important; }
+!   Карточка товара:
+wildberries.ru##[data-link*="productCardMiniCard"], .collapsible__bottom, .comment-card__message-more
+wildberries.ru#$#.collapsable__content, .comment-card__message { height: unset!important; max-height: unset!important; }
+! Отзывы:
+wildberries.ru#$#.product-line { position: unset !important; }
+
 xcom-shop.ru##.card-path__wrapper + div
 
 
