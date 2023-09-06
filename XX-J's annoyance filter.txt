@@ -461,14 +461,15 @@ ozon.ru###stickyHeader::before
 ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
 ozon.ru##[data-widget="tagList"], [data-widget="skuShelfGoods"], [data-widget="skuShelfGoods"] + [data-widget="separator"], [data-replace-layout-path="[2][0][1][0][1][0]"] > div:not([data-widget="actionStepsMulti"]):has(~ [data-widget="searchResultsSort"]), [data-widget="megaPaginator"] ~ *
 ! Сортировка и выбранные фильтры справа вверху:
-ozon.ru#$#[data-widget="searchResultsSort"] { min-height: unset!important; position: absolute!important; top: calc(20px + 100px + var(--gap))!important; right: 0!important; }
-ozon.ru#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap) + 40px)!important; right: 0!important; }
+ozon.ru#$#[data-widget="searchResultsSort"] { min-height: unset!important; min-width: 13em!important; position: absolute!important; top: calc(20px + 100px + var(--gap))!important; right: .6em!important; }
+[$domain=ozon.ru,path=|/search^]#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap))!important; right: 14em!important; }
+[$domain=ozon.ru,path=|/category^]#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap) + 40px)!important; right: 0!important; }
 ! Чистый предпросмотр миниатюр товаров:
 ozon.ru##a.tile-hover-target:hover section
 ozon.ru#$#div + a.tile-hover-target > *, [data-widget="skuGrid"] .tsBody500Medium:upward(1) { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 
 !   Карточка товара:
-ozon.ru##header + div:has(~ .container), [data-widget="webStickyProducts"], #section-description [style^="max-height"] ~ div, [data-widget="separator"] + [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="skuGrid"]
+ozon.ru##header + [data-replace-layout-path="[2][0]"]:has(~ .container), [data-widget="webStickyProducts"], #section-description [style^="max-height"] ~ div, [data-widget="separator"] + [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="skuGrid"]
 ! Наложение доп. сведений на осн. изображение слева внизу:
 ozon.ru#$#[data-widget="webMarketingLabels"]:upward(2) { top: unset!important; left: -.6em!important; bottom: -.6em!important; max-width: unset!important; padding: 0!important; }
 ozon.ru#$#[data-widget="webMarketingLabels"] > div { flex-direction: row !important; gap: .6em !important; }
