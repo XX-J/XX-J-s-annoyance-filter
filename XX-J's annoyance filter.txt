@@ -219,22 +219,43 @@ ferra.ru,lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mu
 ||gazeta.ru/*/block_counter.*.js
 gazeta.ru###_id_header_pseudo
 
-github.com##.progress-pjax-loader, [class*="position-sticky"].is-placeholder, #repos-sticky-header > div > div:first-child > div:has(+ div), .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
-github.com#$#[class*="position-sticky"], #repos-sticky-header,#repos-sticky-header > div > div:first-child, .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
-github.com#$##repos-sticky-header + div > section { margin: 0 !important; }
-github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
-github.com#$#.js-profile-timeline-year-list { width: auto !important; }
-github.com#$#pre,code, .blob-code-inner,.CodeMirror-line, .react-code-text { white-space: pre-wrap!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
-github.com#$#:not(pre) > code { white-space: unset !important; padding: .1em .3em !important; }
-github.com#$#markdown-toolbar tool-tip { right: 0; }
+!github.com##.progress-pjax-loader, [class*="position-sticky"].is-placeholder, #repos-sticky-header > div > div:first-child > div:has(+ div), .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
+!github.com#$#[class*="position-sticky"], #repos-sticky-header,#repos-sticky-header > div > div:first-child, .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
+!github.com#$##repos-sticky-header + div > section { margin: 0 !important; }
+!github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
+!github.com#$#.js-profile-timeline-year-list { width: auto !important; }
+!github.com#$#pre,code, .blob-code-inner,.CodeMirror-line, .react-code-text { white-space: pre-wrap!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
+!github.com#$#:not(pre) > code { white-space: unset !important; padding: .1em .3em !important; }
+!github.com#$#markdown-toolbar tool-tip { right: 0; }
 
-google.*#$##searchform { position: absolute !important; }
-||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
-chrome.google.com#$#div[class][role="banner"]:upward(1) { position: absolute!important; box-shadow: none!important; z-index: 9!important; }
-chrome.google.com#$#div[class][style^="display: block; background-color:"] { top: 0 !important; }
-mail.google.com##div:has(> div > div > a:contains(Освободите место))
-support.google.com#$#header[role="banner"] { position: absolute!important; box-shadow: none!important; }
+
+!   Шапка съехала с ебла - нам такая не нужна!
+www.google.*#%#//scriptlet('remove-attr', 'jscontroller|jsaction|jsname', '#searchform, [role="banner"] > c-wiz > div > div[id]')
+!   Для большой картинки в поиске картинок:
+www.google.*#$#[role="main"] + div[id][style], [role="main"] + div[id][style] > div[id][jsaction][style] { top: 0!important; height: 100vh!important; margin: 0!important; }
+!   Страница скачивания Chrom'a:
+www.google.*#$#[class*="chr-header-v"][role="banner"] { position: absolute !important; }
+www.google.*##[class*="chr-header-v"][role="banner"] .cta-container
 ||translate.google.com/translate_a/element.js$domain=~google.*|~googleusercontent.com|~translate.goog
+one.google.com##div[id$="_CALLOUT"]:has(:contains(Хранилище заполнено на))
+!news.google.com#%#//scriptlet('log-addEventListener')
+!news.google.com#%#//scriptlet('prevent-addEventListener', 'click')
+||chrome.google.com$csp=script-src * 'unsafe-inline' 'unsafe-eval'
+chrome.google.com#$#html, body { overflow: unset !important; padding: 0 !important; }
+chrome.google.com,myaccount.google.com,myactivity.google.com,myadcenter.google.com,fit.google.com,support.google.com,policies.google.com#$#div[class][role="banner"]:upward(1), header[role="banner"]:not([style="background-color:transparent"]) { position: absolute!important; box-shadow: none!important; }
+chrome.google.com#$#div[class][style^="display: block; background-color:"] { position: absolute!important; overflow: unset!important; }
+chrome.google.com##div[class][style^="display: block; background-color:"] ~ [aria-hidden="true"]
+chrome.google.com#$#body > div[id][class][style] { width: unset!important; height: unset!important; right: 0!important; }
+myaccount.google.com#$#[data-help-context="SECURITY_CHECKUP_SCREEN"]  c-wiz[data-state][data-status] > div > div:first-of-type { position: unset!important; box-shadow: none!important; background-color: unset!important; }
+myaccount.google.com#$#[data-help-context="SECURITY_CHECKUP_SCREEN"]  c-wiz[data-state][data-status] > div > div:first-of-type > div[id] { border-bottom: 1px solid rgb(218,220,224)!important; }
+myaccount.google.com##[data-help-context="SECURITY_CHECKUP_SCREEN"]  c-wiz[data-state][data-status] > div > div + div:empty, [data-support-page-url] > div > div:has(> div:empty)
+myaccount.google.com#%#//scriptlet('remove-attr', 'class', 'body > c-wiz > div > div > div:first-child:not(:only-child)')
+myaccount.google.com#$#[role="navigation"][data-back-url]:upward(1) { position: absolute !important; }
+fit.google.com#$#[data-tracker-id] + div { height: unset !important; }
+support.google.com##header > .butterbar
+policies.google.com#$#[role="navigation"] + div:empty { border: none !important; }
+about.google,safety.google#$#.glue-header__drawer { position: absolute!important; top: 0!important; box-shadow: none!important; transform: none!important; }
+
 
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
 gosuslugi.ru#%#//scriptlet('prevent-setInterval', '!periodicCheckShowCustomAnimation', '60000')
@@ -703,7 +724,7 @@ ya.ru##.dist-stripe, .search3 .link-bro
 
 !   Яндекс.Картинки:
 [$domain=yandex.*,path=|/images^]#$#.serp-header__wrapper, .page-layout__advanced-search { position: unset !important; }
-[$domain=yandex.*,path=|/images^]###distr-pcode-container, .MediaViewer-LayoutFooter, [class$="-Card_bottomAdv"], [class$="-Incut"]
+[$domain=yandex.*,path=|/images^]###distr-pcode-container, [class*="_type_direct"],[class$="-Incut"], .MediaViewer-LayoutFooter,[class$="-Card_bottomAdv"]
 
 !   Яндекс.Карты:
 [$domain=yandex.*,path=|/maps^]##._mobile .interstitial-view
