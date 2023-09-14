@@ -165,12 +165,12 @@ dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zag
 
 !||clck.dzen.ru^
 !||dzeninfra.ru/zen-misc/aab/cod.txt
+@@||strm.yandex.ru/get/$domain=dzen.ru
 
 !   Главная:
-![$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##:has(> [class*="__search-"] + header) > :has(:contains(/Браузер/i)):not([class*="__search-"]):not(header):not([class*="__morda-"])
-[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[class*="ad-campaign-qr-banner__wrapper-"], [class^="punch-feed__feed-"], [class^="feed-scrolling-snackbar__container-"]
-[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#header ~ [class*="__morda-"] > main { margin-top: 0 !important; }
-dzen.ru##[id^="zen-row-"]:has(article > div:not([class^="card-news"]) + div), .zen-ui-card-block-subscribe-button,.card-layer-subscribe-button-view, [class^="desktop-interview-modal__wrapper"]
+[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[class*="_headerWhiteBackground-"], [class*="_linkBro-"],[class*="_widgetContainer-"] ~ div:not([class*="-layout-floors_"]):contains(/(Яндекс|Скачайте) браузер/i), [class*="_cardNews-"] + [class*="_bannerContainer-"]
+! Автообновление новостного блока:
+[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#%#//scriptlet('prevent-setInterval', 'Object.assign', '10000')
 dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
 dzen.ru#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50% !important; }
 dzen.ru#$#.card-layer-header-view__pre-header { padding-left: 10px !important; }
@@ -184,20 +184,25 @@ dzen.ru#%#for (let EventType of ['click', 'auxclick']) document.addEventListener
 dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) { if (Mutation.target.matches('.zen-ui-rich-text-clamp._is-openable')) setTimeout( () => { Mutation.target.click() }, 90) }}).observe( document, { attributeFilter: ['class'], subtree: true })
 
 !   Новости:
-dzen.ru#$#[class^="news-app-layout"] > [class^="news-dzen-header"], .video-site-app__header { position: absolute!important; border: none!important; }
+[$domain=dzen.ru,path=|/news^]#$#header { position: absolute!important; width: 100%!important; z-index: unset!important; box-shadow: none!important; }
+[$domain=dzen.ru,path=|/news^]#$#[class*="_search-"] { z-index: unset!important; }
+[$domain=dzen.ru,path=|/news^]#%#//scriptlet('prevent-addEventListener', '/contextmenu|ended/')
+||static.dzeninfra.ru/yandex-video-player-iframe-api-bundles/*/css/skin.css
+[$domain=dzen.ru,path=|/news^]##.player-container > [id^="announce-release"] ~ *:remove()
+[$domain=dzen.ru,path=|/news^]#$#.mg-grid__col_xs_8 + .mg-grid__col_xs_4 > [style], [class*="_myTarget"] + [class$="_content"] { margin: 0!important; }
 [$domain=dzen.ru,path=|/news^]##[class*="_myTarget"]
-[$domain=dzen.ru,path=|/news^]#$#[class*="_myTarget"] + [class$="_content"] { margin: 0 !important; }
 dzen.ru#$#[class^="mg-card__text"],.mg-card__title,.mg-card__annotation, [class^="video-card-view__publisher-title"],.cut { white-space: pre-wrap!important; overflow-wrap: break-word!important; -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
 
-!      Поиск, Канал:
-dzen.ru#$#header:not([data-testid="site-header"]), [class^="video-site-category-tabs-view__categoriesTabs-"], .ui-lib-header-container2 { position: unset !important; }
+!   Канал:
+dzen.ru#$#:not(.news-app-layout) > header, [class*="_categoriesTabs-"] { position: unset!important; box-shadow: none!important; }
 dzen.ru##[data-itemid^="publishers_channel_subscribe_card_"]
 
 !   Статьи:
-[$domain=dzen.ru,path=|/a^]#$#.article { padding-top: 20px !important; }
-[$domain=dzen.ru,path=|/a^]##.publication-columns-layout__left,.publication-columns-layout__right, .article + div + div
+[$domain=dzen.ru,path=|/a^]##[class*="-layout__right"], .article + div + div
+[$domain=dzen.ru,path=|/a^]#$#[class*="-layout__columns-container"] { justify-content: unset !important; }
 
 !   Видео:
+[$domain=dzen.ru,path=|/video^]#$#.video-site-app__header { position: absolute !important; }
 [$domain=dzen.ru,path=|/video^]##.channel-item-view__subscribe-button,  [class$="-content__description"] + :not([class$="-content__comments"]), [class^="tile-tabs__root-"] + :not([class^="panel-view_"]), .viewer-layout__sidebar [class$="__feed"] > :not([data-item-id]):not(.more-mark):not(:only-child)
 [$domain=dzen.ru,path=|/video^]#$#[class^="tile-tabs__root-"] { justify-content: center !important; }
 [$domain=dzen.ru,path=|/video^]#$#[class^="tile-tabs__root-"] button { padding: 0 10px !important; }
@@ -222,11 +227,8 @@ gazeta.ru###_id_header_pseudo
 !github.com##.progress-pjax-loader, [class*="position-sticky"].is-placeholder, #repos-sticky-header > div > div:first-child > div:has(+ div), .site-subnav-sticky.is-placeholder, readme-toc .is-placeholder, .pr-toolbar.is-placeholder,.toolbar-shadow,.show-if-stuck,.file-header.is-placeholder, .gh-header-sticky,.gh-header-shadow, .zeroclipboard-container
 !github.com#$#[class*="position-sticky"], #repos-sticky-header,#repos-sticky-header > div > div:first-child, .site-subnav-sticky, .pr-toolbar { position: unset!important; width: unset!important; }
 !github.com#$##repos-sticky-header + div > section { margin: 0 !important; }
-!github.com#$#.user-profile-sticky-bar { background-color: var(--color-canvas-default)!important; border: 1px solid var(--color-border-default)!important; border-radius: 6px!important; padding: 3px 7px!important; margin: 0 -5px!important; width: 23vw!important; }
-!github.com#$#.js-profile-timeline-year-list { width: auto !important; }
 !github.com#$#pre,code, .blob-code-inner,.CodeMirror-line, .react-code-text { white-space: pre-wrap!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 !github.com#$#:not(pre) > code { white-space: unset !important; padding: .1em .3em !important; }
-!github.com#$#markdown-toolbar tool-tip { right: 0; }
 
 
 !   Шапка съехала с ебла - нам такая не нужна!
