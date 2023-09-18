@@ -496,7 +496,7 @@ ozon.ru##a.tile-hover-target:hover section
 ozon.ru#$#div + a.tile-hover-target > *, [data-widget="skuGrid"] .tsBody500Medium:upward(1) { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
 
 !   Карточка товара:
-ozon.ru##header + [data-replace-layout-path="[2][0]"]:has(~ .container), [data-widget="webStickyProducts"], #section-description [style^="max-height"] ~ div, [data-widget="separator"] + [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="skuGrid"]
+ozon.ru##header ~ [data-replace-layout-path]:has([style^="height:"]):has(img):has(~ .container), [data-widget="webStickyProducts"], #section-description [style^="max-height"] ~ div, [data-widget="separator"] + [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="separator"], [data-widget="webListReviews"] ~ [data-widget="skuGrid"]
 ! Наложение доп. сведений на осн. изображение слева внизу:
 ozon.ru#$#[data-widget="webMarketingLabels"]:upward(2) { top: unset!important; left: -.6em!important; bottom: -.6em!important; max-width: unset!important; padding: 0!important; }
 ozon.ru#$#[data-widget="webMarketingLabels"] > div { flex-direction: row !important; gap: .6em !important; }
@@ -509,7 +509,9 @@ ozon.ru#$#.vue-portal-target [tabindex="-1"] > div { user-select: text!important
 !  Отзывы-Вопросы:
 ozon.ru##div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]), div:has(> [data-replace-layout-path="[2][0][0][0][4][0]"]) + [style^="height"]
 
-!   Сообщения:
+!   Личный кабинет:
+ozon.ru##[data-widget="bannerCarousel"]
+! Сообщения:
 ozon.ru##[data-widget="webMessenger"] div[style="background-color:var(--ozCtrlWarningPale);"]:first-child
 
 
