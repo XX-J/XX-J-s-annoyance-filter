@@ -118,6 +118,8 @@ bspb.ru#$##app-wrapper > hr + div { position: unset !important; }
 bspb.ru##main > div > div:has(> div > h4[style="margin-left:0px;"])
 
 
+callfilter.app#$#.aniicon, .reviewNewForm .text { animation: unset !important; }
+
 ||car.ru/*_hb_lazy_load.js
 ||car.ru/*_news_auto_add_blocks_v*.js
 car.ru#%#//scriptlet('prevent-setTimeout', 'location')
@@ -455,11 +457,12 @@ mvideo.ru#$#.app-header-columns { display: grid !important; }
 mvideo.ru##mvid-mobile-navbar-wrapper, .pdp-header__sticky-bar
 
 
+@@||nalog.ru^$document,badfilter
+nalog.ru#$#[class*="_header_"] { position: unset !important; }
 ||bust.narod.ru/files/back0.gif
-naked-science.ru#$#.section-comments { margin-top: 0 !important; }
 ||nnmclub.*/new_year/
 nnmclub.*,nnm-club.*#$#select#fs[multiple="multiple"] { height: 300px !important; }
-nplus1.ru/js/lib/jquery.mobile-events.min.js
+nplus1.ru#$#header { position: absolute !important; }
 
 
 obi.ru#$##Header .nav-meta { position: unset !important; }
@@ -790,7 +793,7 @@ mail.yandex.*#$#.b-heading_breadcrumbs { position: unset !important; padding: va
 
 
 !   На Главной:
-market.yandex.*##main > div:has(> header:nth-child(2)) > div:first-child, [data-zone-data*="bannerAdfoxId"]
+market.yandex.*##main > div:has(> header:nth-child(2)) > div:first-child,[data-zone-data*="bannerAdfoxId"], [data-auto="tooltip"]:has([data-zone-name="YandexBusinessTooltipAcquisition"])
 market.yandex.*#$#header { position: unset !important; }
 [$domain=market.yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#$#[data-apiary-widget-name$="/RootScrollBox"] + [data-apiary-widget-name$="/VisibilityLoaderMarket"]:upward(3) { width: 100%!important; padding: 0!important; }
 [$domain=market.yandex.*,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[data-zone-name="MediaCarousel"], div[class] + div[class]:has([data-zone-data*="adPlace"])
