@@ -165,21 +165,28 @@ dostfilms.*#$#body, header, .carousel { background-image: none !important; margi
 dostfilms.*##[class*="reklama"], .fullstory-descr > p:nth-child(2), [class^="zagolovok"], .zagolovok + .zashitatekstov, .opovesh-gosty
 
 
-!||clck.dzen.ru^
-!||dzeninfra.ru/zen-misc/aab/cod.txt
+!||ms.dzen.ru^  -- Проверить \/
+!||cdn.dzen.ru/pingx^
+!||dzeninfra.ru/zen-misc/aab^
+!||dzen.ru/*/launcher/stats^
 @@||strm.yandex.ru/get/$domain=dzen.ru
 
 !   Главная:
-[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]##[class*="_headerWhiteBackground-"], [class*="_linkBro-"],[class*="_widgetContainer-"] ~ div:not([class*="-layout-floors_"]):contains(/(Яндекс|Скачайте) браузер/i), [class*="_cardNews-"] + [class*="_bannerContainer-"]
+[$domain=dzen.ru,path=/^\/($|\?|&)/]##[class*="_headerWhiteBackground-"], [class*="_linkBro-"],[class*="_widgetContainer-"] ~ div:not([class*="-layout-floors_"]):contains(/браузер/i), [class*="_cardNews-"] + [class*="_bannerContainer-"], [class^="feed-scrolling-snackbar__container-"]
 ! Автообновление новостного блока:
-[$domain=dzen.ru,path=/^(\/(\[?&\]\[^/\]*)?)?$/]#%#//scriptlet('prevent-setInterval', 'Object.assign', '10000')
-dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
-dzen.ru#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 50% !important; }
+[$domain=dzen.ru,path=/^\/($|\?|&)/]#%#//scriptlet('prevent-setInterval', 'Object.assign', '10000')
+
+!   Общая лента:
+dzen.ru##article:not(:has(a)), [class^="card-block-subscribe-view__button-"],.card-layer-subscribe-button-view
+dzen.ru##.zen-ui-channel-info__title._interpunct::after
+!dzen.ru#$#.card-image-compact-view__image-wrapper + .card-image-compact-view__content-wrapper { max-width: 52%!important; }
 dzen.ru#$#.card-layer-header-view__pre-header { padding-left: 10px !important; }
-dzen.ru#$#.card-rtb-label-view,.card-rtb-label-view__text, .zen-ui-channel-info__title { white-space: pre-wrap !important; }
-dzen.ru#$#.card-layer-header-view { height: unset !important; }
-dzen.ru##[id^="zen-row-"]  .card-layer-header-view__controls
-dzen.ru#$#[id^="zen-row-"]:hover  .card-layer-header-view__controls { display: block!important; position: absolute!important; right: 8px!important; background: var(--zenColorBackgroundOverflow)!important; border-radius: 9px!important; }
+dzen.ru##[id^="zen-row-"] .card-layer-header-view__controls
+dzen.ru#$#[id^="zen-row-"]:hover .card-layer-header-view__controls { display: block!important; position: absolute!important; right: 8px!important; background: var(--zenColorBackgroundOverflow)!important; border-radius: 9px!important; }
+!dzen.ru#$#.card-image-compact-view__main-wrapper, .zen-ui-line-clamp { max-height: unset !important; -webkit-line-clamp: unset !important; }
+!dzen.ru#$#.card-rtb-label-view__text, .zen-ui-channel-info__title { white-space: pre-wrap !important; }
+!dzen.ru#$#.card-layer-header-view { height: unset !important; }
+!dzen.ru#$#.card-image-compact-view__main-wrapper, .card-rtb-label-view__text, .card-layer-header-view, .zen-ui-channel-info__title, .zen-ui-line-clamp { white-space: pre-wrap!important; overflow-wrap: break-word!important; -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
 ! Не прокручивать при клике:
 dzen.ru#%#for (let EventType of ['click', 'auxclick']) document.addEventListener(EventType, Event => { if (Event.target instanceof HTMLAnchorElement && Event.target.matches('[class^="card-"][class$="__clickable"]')) Event.stopImmediatePropagation() }, true)
 ! Автораскрытие коротких статей:
@@ -196,7 +203,7 @@ dzen.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) {
 dzen.ru#$#[class^="mg-card__text"],.mg-card__title,.mg-card__annotation, [class^="video-card-view__publisher-title"],.cut { white-space: pre-wrap!important; overflow-wrap: break-word!important; -webkit-line-clamp: unset!important; overflow: unset!important; height: unset!important; max-height: unset!important; }
 
 !   Канал:
-dzen.ru#$#:not(.news-app-layout) > header, [class*="_categoriesTabs-"] { position: unset!important; box-shadow: none!important; }
+dzen.ru#$#[class*="_wrapper-"] > header, [class*="_categoriesTabs-"] { position: unset!important; box-shadow: none!important; }
 dzen.ru##[data-itemid^="publishers_channel_subscribe_card_"]
 
 !   Статьи:
@@ -262,10 +269,10 @@ about.google,safety.google#$#.glue-header__drawer { position: absolute!important
 
 
 gorzdrav.spb.ru#$#.header { position: absolute !important; }
+gosuslugi.ru#$#portal-root .header > div { position: unset !important; }
+gosuslugi.ru##portal-root .header + .container-fixed
 gosuslugi.ru#%#//scriptlet('prevent-setInterval', '!periodicCheckShowCustomAnimation', '60000')
-www.gosuslugi.ru#$#.header > div { position: unset !important; }
-www.gosuslugi.ru##.header + .container-fixed
-lk.gosuslugi.ru#$#lib-header { position: absolute !important; }
+gosuslugi.ru#$#app-root lib-header { position: absolute !important; box-shadow: none !important; }
 greasyfork.org,sleazyfork.org#$#pre { white-space: pre-wrap!important; overflow-wrap: break-word!important; width: unset!important; font-size: .9rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 greasyfork.org,sleazyfork.org#$#ol { padding-inline-start: 50px !important; }
 
@@ -548,7 +555,8 @@ paypal.com#$#.home-hero-selection-hcr, .contact-container-footer { width: calc(1
 paypal.com#$#.vx_globalNav-toggleTrigger_overlay { display: inline !important; }
 
 
-pikabu.ru#$#.header { position: absolute !important; }
+pikabu.ru#$#.header { position: unset !important; box-shadow: none !important; transform: none !important; }
+pikabu.ru##.promo-button
 ||planetacomp.com/*/newyear.js
 ||planetacomp.com/*/new_year.png
 planetacomp.com#%#//scriptlet('abort-on-property-write', 'snow_active')
@@ -556,8 +564,7 @@ planetacomp.com##.b-page_newyear
 planetacomp.com#$#.calc-animation { animation: none !important; }
 planetacomp.com#$#.pc_hd_slog2 { background-color: #f8f8ff !important; }
 
-playground.ru#$#.navbar-header, .navbar-footer, .page-header-bottom { position: absolute !important; }
-playground.ru#$#.user-profile-sidebar { position: unset !important; }
+playground.ru#$#.page-header { position: absolute !important; box-shadow: none !important; }
 polus.*#$#header { position: unset !important; }
 polus.*#$#.menu-top, footer { position: absolute !important; bottom: unset !important; }
 polus.*##.footer-compare::after, .footer-fav::after
@@ -713,8 +720,9 @@ wildberries.ru#$#.product-line { position: unset !important; }
 xcom-shop.ru##.card-path__wrapper + div
 
 
+bs.yandex.ru/count^
 ||browser-updater.yandex.net^
-ya.ru##.dist-stripe, .search3 .link-bro
+ya.ru##.simple-popup__overlay:has(+ .dist-overlay__popup),.dist-overlay__popup,.dist-overlay__popup + .some-class, .search3 .link-bro
 
 !   Яндекс.Погода:
 [$domain=yandex.*|dzen.ru,path=|/pogoda^]##footer ~ .b-statcounter + div, #content_bottom ~ div:not([class*="-segment"]), #content_bottom ~ [class*="-segment"] .card_without-card-decoration, #content_bottom ~ [class*="-segment"] .adv-ecom, div:empty:upward(#content_right)
