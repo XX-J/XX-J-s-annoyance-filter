@@ -322,11 +322,16 @@ lrepacks.*#$#.logo { padding: 0 !important; }
 lrepacks.*#$#.header-bottom { position: unset !important; }
 lrepacks.*#$##menu-primary-menu > li > a { padding: .5rem 1rem !important; }
 lrepacks.*#$##menu-primary-menu > li > :not(a) { top: unset !important; transform: unset !important; }
+
 luxfilm.net,kino-serialy.net#%#//scriptlet('abort-current-inline-script', 'document.ondragstart')
 luxfilm.net,kino-serialy.net#%#//scriptlet('remove-attr', 'oncontextmenu|onkeydown')
 /templates/kino/images/bg.$domain=luxfilm.net|kino-serialy.net
 luxfilm.net,kino-serialy.net#$#.wrap { padding: 0 !important; }
-luxfilm.net,kino-serialy.net##.ftwo + table, br + .fsubtitle
+luxfilm.net,kino-serialy.net##.ftwo + table, br + .fsubtitle, footer
+annacdn.cc,newplayjj.com#%#document.addEventListener('contextmenu', Event => { Event.stopImmediatePropagation() }, true)
+annacdn.cc,newplayjj.com#$#iframe + * { visibility: visible !important; }
+annacdn.cc,newplayjj.com##iframe + * > :not(video), [style*="visibility: visible"]:has(> :last-child > :not([style*="visibility:"]) > svg > g > polyline)
+||u-stream.in^$frame,domain=luxfilm.net|kino-serialy.net,redirect=click2load.html
 
 
 mail.ru##.ph-union-quota
@@ -492,15 +497,15 @@ onlinetrade.ru#$#.header__cover { padding: unset !important; }
 ozon.ru##.vue-portal-target:contains(/Сменить город на |Понравился товар\?/)
 ozon.ru###stickyHeader::before
 ozon.ru#$##stickyHeader { position: unset!important; height: unset!important; padding: 0!important; margin: 0!important; }
-ozon.ru##[data-widget="tagList"], [data-widget="skuShelfGoods"], [data-widget="skuShelfGoods"] + [data-widget="separator"], [data-replace-layout-path="[2][0][1][0][1][0]"] > div:first-child:has([type="addToCartButtonWithQuantity"]), [data-widget="megaPaginator"] ~ *, .widget-search-result-container + div
+ozon.ru##[data-widget="tagList"], [data-widget="skuShelfGoods"], [data-widget="skuShelfGoods"] + [data-widget="separator"], [data-replace-layout-path][style] + [data-replace-layout-path] > div:first-child:has([type="addToCartButtonWithQuantity"]), [data-widget="megaPaginator"] ~ *, .widget-search-result-container + div
 ! Сортировка и выбранные фильтры справа вверху:
 [$domain=ozon.ru,path=|/search^]#$#[data-widget="fulltextResultsHeader"] { width: 13em !important; }
 [$domain=ozon.ru,path=|/highlight^]#$#[data-widget="resultsHeader"] { position: absolute!important; left: var(--gap)!important; top: calc(20px + 100px + var(--gap))!important; }
 ozon.ru#$#[data-widget="searchResultsSort"] { min-height: unset!important; min-width: 13em!important; position: absolute!important; top: calc(20px + 100px + var(--gap))!important; right: .6em!important; }
-[$domain=ozon.ru,path=|/search^]#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; width: 67%!important; top: calc(20px + 100px + var(--gap))!important; }
-[$domain=ozon.ru,path=|/search^]#$#[data-widget="searchResultsFiltersActive"] > div { justify-content: end!important; }
-[$domain=ozon.ru,path=|/category^]#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap) + 40px)!important; right: 0!important; }
-[$domain=ozon.ru,path=|/highlight^]#$#[data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap))!important; right: 14em!important; }
+[$domain=ozon.ru,path=|/search^]#$#body > :not(.vue-portal-target) [data-widget="searchResultsFiltersActive"] { position: absolute!important; width: 67%!important; top: calc(20px + 100px + var(--gap))!important; }
+[$domain=ozon.ru,path=|/search^]#$#body > :not(.vue-portal-target) [data-widget="searchResultsFiltersActive"] > div { justify-content: end!important; }
+[$domain=ozon.ru,path=|/category^]#$#body > :not(.vue-portal-target) [data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap) + 40px)!important; right: 0!important; }
+[$domain=ozon.ru,path=|/highlight^]#$#body > :not(.vue-portal-target) [data-widget="searchResultsFiltersActive"] { position: absolute!important; top: calc(32px + 100px + var(--gap))!important; right: 14em!important; }
 ! Чистый предпросмотр миниатюр товаров:
 ozon.ru##a.tile-hover-target:hover section
 ozon.ru#$#div + a.tile-hover-target > *, [data-widget="skuGrid"] .tsBody500Medium:upward(1) { max-height: unset!important; -webkit-line-clamp: unset!important; overflow: unset!important; }
@@ -514,6 +519,7 @@ ozon.ru#$#[data-widget="webGallery"] > div > div:first-child > div:has(> svg) { 
 ozon.ru##[data-widget="webGallery"]:has([qa-id="video-player"]) [data-widget="webMarketingLabels"], [data-widget="webGallery"] > div > div:first-child > div:contains(уценённый товар)
 ! Разворачиваем описание:
 ozon.ru#$##section-description [style^="max-height"] { max-height: unset !important; }
+ozon.ru#$#.vue-portal-target [body-scroll-lock-ignore] { overflow: auto !important; }
 ozon.ru#$#.vue-portal-target > div > div > div > div:has([reviewuuid]) { padding-top: 0!important; padding-bottom: 0!important; }
 ozon.ru#$#.vue-portal-target [tabindex="-1"] > div { user-select: text!important; -webkit-user-select: text!important; -moz-user-select: text!important; }
 !  Отзывы-Вопросы:
@@ -525,8 +531,8 @@ ozon.ru##[data-widget="bannerCarousel"]
 ozon.ru##[data-widget="webMessenger"] div[style="background-color:var(--ozCtrlWarningPale);"]:first-child
 
 
-patreon.com#$#a[href="#renderPageContentWrapper"] + div, header { position: absolute !important; }
-patreon.com###renderPageContentWrapper > div > div[aria-hidden]
+patreon.com#$#[class^="GlobalHeader_full_"] > header { position: absolute !important; }
+patreon.com#$##scrollView > div { height: 100% !important; }
 
 
 ||paypalobjects.com/*/fn-sync-telemetry-min.js
@@ -660,6 +666,8 @@ softreview.ucoz.ru#%#//scriptlet('remove-attr', 'onkeydown|onmouseup|onbeforecop
 softreview.ucoz.ru##body > iframe[style*='bottom: 0px;']
 sourceforge.net#$#.l-header-nav { position: unset !important; }
 stackoverflow.com#$#header { position: absolute !important; }
+stackoverflow.com#$#.left-sidebar--sticky-container, pre { scrollbar-width: unset!important; scrollbar-color: #55698a #edeae4!important; }
+stackoverflow.com#$#pre, code { white-space: pre-wrap!important; font-size: 1.1rem!important; font-family: "JetBrains Mono NL", Consolas, "Lucida Console", monospace!important; }
 starcraft.7x.ru#$#* { color: #000000 !important; background: #CCCCCC !important; }
 
 
@@ -855,11 +863,13 @@ yoomoney.ru##[class^="Paranja__StyledParanja"]
 
 youla.ru#$#header > div + div { position: absolute!important; box-shadow: none!important; top: 32px!important; height: 64px!important; }
 youla.ru#$#header > div + div > div { padding: 16px 0 !important; height: 64px !important; }
+@@||static.doubleclick.net/instream/ad_status.js$domain=youtube.com,badfilter
 youtube.com##.ytp-cards-button, yt-bubble-hint-renderer:upward(ytd-popup-container), ytd-popup-container:contains(Подпишитесь на канал)
 youtube.com#$##masthead-container, tp-yt-app-header { position: absolute!important; top: 0!important; left: 0!important; margin: 0!important; transform: none!important; }
 youtube.com#$#:not([not-sticky]) > #chips-wrapper { position: absolute !important; }
 youtube.com#$#a.yt-formatted-string, yt-formatted-string[ellipsis-truncate-styling] { white-space: normal !important; }
 youtube.com#$##video-title, #byline-container, #metadata-line { -webkit-line-clamp: unset!important; overflow: unset!important; max-height: unset!important; }
+
 
 zvonili.com#$#nav { position: absolute !important; }
 zvonili.com#$#.jumbotron { padding: 2em 0 0 !important; }
