@@ -223,7 +223,7 @@ eldorado.ru#$#header { margin-top: 0 !important; }
 epn.bz##.main__warning
 facebook.com#$#div[role="banner"] > div[class], [role="tablist"] + [role="tablist"]:upward(8) { position: absolute!important; }
 facebook.com#$#div[class][role="main"] > div[class][style], .fixed_elem { position: unset !important; }
-facebook.com##div:has(> div > div[class][role="main"]) + [data-nosnippet], body > div:contains(Пожалуйста, выполните вход, чтобы увидеть эту страницу.)
+facebook.com##div:has(> div > div[class][role="main"]) + [data-nosnippet], body > div:contains(Пожалуйста, выполните вход, чтобы увидеть эту страницу.), div[role="banner"] ~ div:has(#login_popup_cta_form)
 facebook.com#%#//scriptlet('remove-attr', 'id|class|aria-hidden|style', 'div[role="banner"] ~ div[class]')
 ferra.ru##img + div[style*="background-image:"]
 ferra.ru,lenta.ru#%#new MutationObserver( Mutations => { for (let Mutation of Mutations) for (let Node of Mutation.addedNodes) if (Node instanceof SVGElement && Node.previousSibling instanceof HTMLElement && Node.previousSibling.matches('iframe[src*="vp.rambler.ru"]')) setTimeout( () => { Node.onclick() }, 90) }).observe( document, { childList: true, subtree: true })
@@ -693,6 +693,7 @@ tproger.ru#$#pre[class*="language-"] { padding: 10px !important; }
 tproger.ru#$#code[class*="language-"] { white-space: pre-wrap!important; overflow-wrap: break-word!important; }
 api.twitter.com#$#body { overflow: auto !important; }
 api.twitter.com#$##header { position: absolute !important; }
+twitter.com#$#html { overflow: unset !important; }
 twitter.com###layers > div:first-child
 
 
